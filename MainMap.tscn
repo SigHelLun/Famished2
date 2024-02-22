@@ -67,7 +67,6 @@ material = SubResource("StandardMaterial3D_4g7y1")
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o3dvn"]
-load_path = "res://.godot/imported/asphalt_04_nor_gl_2k.jpg-7feb6ac08f466dc97bce499b631e2ee2.s3tc.ctex"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mls4g"]
 albedo_texture = ExtResource("2_qy6af")

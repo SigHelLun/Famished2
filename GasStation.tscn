@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=13 format=3 uid="uid://dav1xd1503e6g"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
