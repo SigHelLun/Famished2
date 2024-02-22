@@ -1,0 +1,92 @@
+[gd_scene load_steps=13 format=3 uid="uid://d3f0pup8urgpg"]
+
+[ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
+[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
+[ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_a3swj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
+albedo_texture = ExtResource("1_4kvxd")
+uv1_scale = Vector3(1, 5, 1)
+uv1_triplanar_sharpness = 9.84916
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
+material = SubResource("StandardMaterial3D_whi52")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qvcqs"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
+
+[sub_resource type="Sky" id="Sky_aeaw6"]
+sky_material = SubResource("ProceduralSkyMaterial_kmchk")
+
+[sub_resource type="Environment" id="Environment_jlspu"]
+background_mode = 2
+sky = SubResource("Sky_aeaw6")
+ambient_light_energy = 16.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sahni"]
+albedo_texture = ExtResource("3_a3swj")
+uv1_scale = Vector3(6, 6, 6)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fivpw"]
+material = SubResource("StandardMaterial3D_sahni")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a1jve"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Wall" type="MeshInstance3D" parent="."]
+transform = Transform3D(8.74228e-08, -1.44, -1.81195e-06, -2, -6.29444e-08, -3.38813e-21, -1.32005e-14, 2.17434e-07, -12, 8.996, 2, -0.004)
+mesh = SubResource("PlaneMesh_heru7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qvcqs")
+
+[node name="Wall2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.31134e-07, 1.44, 0, -3, -6.29444e-08, 0, 0, 0, 12, -9.00392, 2.9915, -0.00370741)
+mesh = SubResource("PlaneMesh_heru7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qvcqs")
+
+[node name="Wall3" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.73206e-15, -6.29444e-08, 9, -3, -6.29444e-08, 2.11758e-21, 1.31134e-07, -1.44, -3.93403e-07, -0.00392222, 2.9915, 11.9963)
+mesh = SubResource("PlaneMesh_heru7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qvcqs")
+
+[node name="Wall4" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.73206e-15, -6.29444e-08, -9, -3, -6.29444e-08, -3.38813e-21, -1.31134e-07, 1.44, -3.93403e-07, -0.00392222, 2.9915, -12.0037)
+mesh = SubResource("PlaneMesh_heru7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Wall4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Wall4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qvcqs")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_w2owo")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22945, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jlspu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249, 0.999802, 0.00930072, -0.999761, 0.0198102, -0.0197587, 5.15335, 0.00104618)
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(9, 0, 0, 0, 1, 0, 0, 0, 12, 0, 0, 0)
+mesh = SubResource("PlaneMesh_fivpw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_a1jve")
