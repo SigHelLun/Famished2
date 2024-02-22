@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
 
-const SPEED = 7.0
-const JUMP_VELOCITY = 4.5
+const SPEED = 5.0
+const JUMP_VELOCITY = 3
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
