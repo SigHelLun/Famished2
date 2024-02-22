@@ -1,3 +1,38 @@
-[gd_scene format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=7 format=3 uid="uid://vr7nuhlgeb28"]
+
+[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qvcqs"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
+
+[sub_resource type="Sky" id="Sky_aeaw6"]
+sky_material = SubResource("ProceduralSkyMaterial_kmchk")
+
+[sub_resource type="Environment" id="Environment_jlspu"]
+background_mode = 2
+sky = SubResource("Sky_aeaw6")
+ambient_light_energy = 16.0
 
 [node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.25963, 0, 0, 0, 1, 0, 0, 0, 2.40947, 0, 0, 0)
+mesh = SubResource("PlaneMesh_heru7")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qvcqs")
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_xfn1s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22945, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jlspu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249, 0.999802, 0.00930072, -0.999761, 0.0198102, -0.0197587, 5.15335, 0.00104618)
