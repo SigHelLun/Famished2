@@ -1,7 +1,6 @@
-[gd_scene load_steps=11 format=3 uid="uid://cwnfilfqvf5me"]
+[gd_scene load_steps=7 format=3 uid="uid://cwnfilfqvf5me"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_2rqko"]
-[ext_resource type="Script" path="res://Tel_Testzone_Base.gd" id="2_x2uw6"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
 
@@ -17,13 +16,6 @@ sky_material = SubResource("ProceduralSkyMaterial_kmchk")
 background_mode = 2
 sky = SubResource("Sky_aeaw6")
 ambient_light_energy = 16.0
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_18s8e"]
-
-[sub_resource type="BoxMesh" id="BoxMesh_so4v1"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1mrr0"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="Node3D" type="Node3D"]
 
@@ -45,26 +37,4 @@ environment = SubResource("Environment_jlspu")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249, 0.999802, 0.00930072, -0.999761, 0.0198102, -0.0197587, 5.15335, 0.00104618)
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.391726, 0)
-script = ExtResource("2_x2uw6")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(2.08204, 0, 0, 0, 8.18136, 0, 0, 0, 3.83594, 0, 0, -17.3692)
-shape = SubResource("SphereShape3D_18s8e")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Area3D"]
-transform = Transform3D(2.64292, 0, 0, 0, 7.35053, 0, 0, 0, 1, 0, 0, -18.1281)
-mesh = SubResource("BoxMesh_so4v1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Area3D/MeshInstance3D"]
-transform = Transform3D(0.991261, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D/MeshInstance3D/StaticBody3D"]
-transform = Transform3D(1.01994, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-shape = SubResource("ConcavePolygonShape3D_1mrr0")
-
 [connection signal="tree_entered" from="CharacterBody3D" to="CharacterBody3D" method="_on_tree_entered"]
-[connection signal="area_entered" from="Area3D" to="Area3D" method="_on_area_entered"]
-[connection signal="area_exited" from="Area3D" to="Area3D" method="_on_area_exited"]
-[connection signal="body_entered" from="Area3D" to="CharacterBody3D" method="_on_area_3d_body_entered"]
