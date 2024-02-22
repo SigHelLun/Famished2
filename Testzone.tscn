@@ -20,7 +20,7 @@ ambient_light_energy = 16.0
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(4.25963, 0, 0, 0, 1, 0, 0, 0, 2.40947, 0, 0, 0)
+transform = Transform3D(16.9781, 0, 0, 0, 1, 0, 0, 0, 21.902, 0, 0, 0)
 mesh = SubResource("PlaneMesh_heru7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
