@@ -1,0 +1,115 @@
+[gd_scene load_steps=24 format=3 uid="uid://4pxlfl2mshw6"]
+
+[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/NiceGoodLookingGrassTexture.jpg" id="1_sa4bd"]
+[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/sidewalkTexture.jpg" id="2_p2jtr"]
+[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/HouseTextureWalls.jpg" id="3_luwmd"]
+[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/doorTexture.png" id="4_pjeuw"]
+[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/HouseTextureRoof.jpg" id="5_rtpri"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig5v7"]
+albedo_texture = ExtResource("1_sa4bd")
+uv1_scale = Vector3(-3.29, -4.515, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uyeow"]
+material = SubResource("StandardMaterial3D_ig5v7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co7ie"]
+albedo_texture = ExtResource("2_p2jtr")
+uv1_scale = Vector3(3.06, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_g5ljr"]
+material = SubResource("StandardMaterial3D_co7ie")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74773"]
+albedo_texture = ExtResource("2_p2jtr")
+uv1_scale = Vector3(3.06, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_w22ev"]
+material = SubResource("StandardMaterial3D_74773")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4r7b"]
+albedo_texture = ExtResource("2_p2jtr")
+uv1_scale = Vector3(3.06, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_y2xqa"]
+material = SubResource("StandardMaterial3D_y4r7b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0amw7"]
+albedo_texture = ExtResource("3_luwmd")
+uv1_scale = Vector3(2.54, 5.405, 1)
+uv1_offset = Vector3(-0.96, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ii6lj"]
+material = SubResource("StandardMaterial3D_0amw7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctfdf"]
+albedo_texture = ExtResource("4_pjeuw")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_nkvme"]
+material = SubResource("StandardMaterial3D_ctfdf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac4il"]
+albedo_texture = ExtResource("3_luwmd")
+
+[sub_resource type="PrismMesh" id="PrismMesh_h0kaf"]
+material = SubResource("StandardMaterial3D_ac4il")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a72a2"]
+albedo_texture = ExtResource("5_rtpri")
+uv1_scale = Vector3(8, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_f5uvy"]
+material = SubResource("StandardMaterial3D_a72a2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y52rn"]
+albedo_texture = ExtResource("5_rtpri")
+uv1_scale = Vector3(8, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_oxp4k"]
+material = SubResource("StandardMaterial3D_y52rn")
+
+[node name="House" type="Node3D"]
+
+[node name="Floors (Mostly)" type="Node3D" parent="."]
+
+[node name="GrassFloor" type="MeshInstance3D" parent="Floors (Mostly)"]
+transform = Transform3D(15, 0, 0, 0, 1, 0, 0, 0, 15, 0, 0, 0)
+mesh = SubResource("PlaneMesh_uyeow")
+skeleton = NodePath("../..")
+
+[node name="Path" type="MeshInstance3D" parent="Floors (Mostly)"]
+transform = Transform3D(7, 0, 0, 0, 0.1, 0, 0, 0, 1.5, -11.5671, 0.0153351, 4.96251)
+mesh = SubResource("BoxMesh_g5ljr")
+skeleton = NodePath("../..")
+
+[node name="Pathpart2" type="MeshInstance3D" parent="Floors (Mostly)"]
+transform = Transform3D(-2.62268e-07, 0, 1.5, 0, 0.1, 0, -6, 0, -6.55671e-08, -7.33423, 0.0153351, 2.70362)
+mesh = SubResource("BoxMesh_w22ev")
+skeleton = NodePath("../Path")
+
+[node name="Tiny Path meow" type="MeshInstance3D" parent="Floors (Mostly)"]
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, -5.59143, 0.0157449, -0.984881)
+mesh = SubResource("BoxMesh_y2xqa")
+
+[node name="House😂😂" type="Node3D" parent="."]
+
+[node name="Walls of house teehee" type="MeshInstance3D" parent="House😂😂"]
+transform = Transform3D(14, 0, 0, 0, 10, 0, 0, 0, 15, 3.75339, 4.96891, -1.02777)
+mesh = SubResource("BoxMesh_ii6lj")
+skeleton = NodePath("../..")
+
+[node name="Door" type="MeshInstance3D" parent="House😂😂"]
+transform = Transform3D(-3.0598e-08, -0.1, 6.55671e-08, 0, -4.37114e-09, -1.5, 0.7, -4.37114e-09, 2.86603e-15, -3.25858, 1.56151, -0.955737)
+mesh = SubResource("PlaneMesh_nkvme")
+
+[node name="Roof" type="MeshInstance3D" parent="House😂😂"]
+transform = Transform3D(-6.55671e-07, 0, -14, 0, 2, 0, 15, 0, -6.11959e-07, 3.76405, 10.9656, -1.0159)
+mesh = SubResource("PrismMesh_h0kaf")
+
+[node name="RoofLeft" type="MeshInstance3D" parent="House😂😂"]
+transform = Transform3D(18, 0, 0, 0, 0.193185, 2.32937, 0, -0.0517638, 8.69333, 4.03, 10.817, -5.302)
+mesh = SubResource("BoxMesh_f5uvy")
+
+[node name="RoofRight" type="MeshInstance3D" parent="House😂😂"]
+transform = Transform3D(18, 0, 0, 0, 0.193185, -2.32937, 0, 0.0517638, 8.69333, 4.03176, 10.8235, 3.34287)
+mesh = SubResource("BoxMesh_oxp4k")
