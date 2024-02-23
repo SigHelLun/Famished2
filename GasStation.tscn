@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=29 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dmysufgu6sbrl" path="res://GasStationTextures/4423811.62fe8f8932b27.jpeg" id="4_12e8o"]
 [ext_resource type="Texture2D" uid="uid://dl0p3i0d4fi4m" path="res://GasStationTextures/istockphoto-1148892236-612x612.jpg" id="5_5x017"]
 [ext_resource type="Texture2D" uid="uid://cqy463pgfi5il" path="res://GasStationTextures/Freezer2.png" id="6_wtvbs"]
+[ext_resource type="Texture2D" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
 albedo_texture = ExtResource("1_4kvxd")
@@ -71,7 +72,14 @@ material = SubResource("StandardMaterial3D_1redh")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sil4p"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_pxu8t"]
+albedo_texture = ExtResource("7_5q123")
+uv1_scale = Vector3(3, 3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_5o5tt"]
+material = SubResource("StandardMaterial3D_pxu8t")
+
+[node name="Node3D2" type="Node3D"]
 
 [node name="Wall" type="MeshInstance3D" parent="."]
 transform = Transform3D(8.74228e-08, -1.44, -1.96295e-06, -2, -6.29444e-08, -1.10114e-20, -1.32005e-14, 2.17434e-07, -13, 9, 2, 0)
@@ -154,39 +162,85 @@ mesh = SubResource("PlaneMesh_lf7ag")
 transform = Transform3D(-1.96701e-08, 0.5, 0, -0.45, -2.18557e-08, 0, 0, 0, 0.5, 0.500374, 0.0551815, -0.00355291)
 mesh = SubResource("PlaneMesh_lf7ag")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+[node name="Coolers" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 2.5, 0, 0, 0, 4, 8.72716, 1.25, 0)
 mesh = SubResource("BoxMesh_ruvuv")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Coolers"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000314713, 0, 1.00407)
 mesh = SubResource("BoxMesh_ruvuv")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D5" type="MeshInstance3D" parent="MeshInstance3D"]
+[node name="MeshInstance3D5" type="MeshInstance3D" parent="Coolers"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000314713, 0, 2.01998)
 mesh = SubResource("BoxMesh_ruvuv")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Coolers"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.00796)
 mesh = SubResource("BoxMesh_ruvuv")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D4" type="MeshInstance3D" parent="MeshInstance3D"]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Coolers"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000314713, 0, -1.00435)
 mesh = SubResource("BoxMesh_ruvuv")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
-transform = Transform3D(4, 0, 0, 0, 1, 0, 0, 0, 1.545, 0, 0.504169, -5.36328)
+[node name="Freezers" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1.74846e-07, 0, 1.545, 0, 1, 0, -4, 0, -6.75341e-08, 4.507, 0.449375, -1.88708)
 mesh = SubResource("BoxMesh_kqsbs")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Freezers"]
 transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.503317, 0)
 mesh = SubResource("PlaneMesh_b7moe")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Freezers"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Freezers/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sil4p")
+
+[node name="Freezers2" type="MeshInstance3D" parent="Freezers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.00676, 0.00996673, 0.0177412)
+mesh = SubResource("BoxMesh_kqsbs")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Freezers/Freezers2"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.503317, 0)
+mesh = SubResource("PlaneMesh_b7moe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Freezers/Freezers2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Freezers/Freezers2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_sil4p")
+
+[node name="Freezers3" type="MeshInstance3D" parent="Freezers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.02078, 0, -2.38419e-07)
+mesh = SubResource("BoxMesh_kqsbs")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Freezers/Freezers3"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.503317, 0)
+mesh = SubResource("PlaneMesh_b7moe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Freezers/Freezers3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Freezers/Freezers3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_sil4p")
+
+[node name="Freezers4" type="MeshInstance3D" parent="Freezers"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.01402, 0.00996673, 0.017741)
+mesh = SubResource("BoxMesh_kqsbs")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Freezers/Freezers4"]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 0.5, 0, 0.503317, 0)
+mesh = SubResource("PlaneMesh_b7moe")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Freezers/Freezers4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Freezers/Freezers4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_sil4p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.3, 0, 0, 0, 2.5, 0, 0, 0, 4, 3.39176, 1.25, 0)
+mesh = SubResource("BoxMesh_5o5tt")
