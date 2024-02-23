@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_2rqko"]
 [ext_resource type="Script" path="res://teleport.gd" id="1_nvra2"]
+[ext_resource type="Script" path="res://door.gd" id="3_cpx1p"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
 
@@ -20,8 +21,6 @@ ambient_light_energy = 16.0
 
 [sub_resource type="BoxMesh" id="BoxMesh_2iyjl"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_jxi5x"]
-
 [node name="Node3D" type="Node3D"]
 script = ExtResource("1_nvra2")
 
@@ -34,7 +33,7 @@ mesh = SubResource("PlaneMesh_heru7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_2rqko")]
+[node name="CharacterBody3D" parent="." groups=["player"] instance=ExtResource("1_2rqko")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22945, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -47,12 +46,10 @@ transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249
 transform = Transform3D(0.269051, 0, 0, 0, 3.01339, 0, 0, 0, 2.71149, -12.8315, 1.40715, -0.010994)
 mesh = SubResource("BoxMesh_2iyjl")
 
-[node name="Area3D" type="Area3D" parent="."]
-transform = Transform3D(0.269051, 0, 0, 0, 3.01339, 0, 0, 0, 2.71149, -12.8745, 1.40715, -0.010994)
+[node name="Area3D" type="Area3D" parent="MeshInstance3D" groups=["door"]]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, -0.159821, 0, 0)
+script = ExtResource("3_cpx1p")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(4.51618, 0, 0, 0, 1, 0, 0, 0, 1, 2.0353, 0, 0)
-shape = SubResource("BoxShape3D_jxi5x")
-
+[connection signal="tree_entered" from="CharacterBody3D" to="." method="_on_character_body_3d_tree_entered"]
 [connection signal="tree_entered" from="CharacterBody3D" to="CharacterBody3D" method="_on_tree_entered"]
-[connection signal="tree_entered" from="Area3D/CollisionShape3D" to="." method="_on_collision_shape_3d_tree_entered"]
+[connection signal="area_entered" from="MeshInstance3D/Area3D" to="." method="_on_area_3d_area_entered"]
