@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://cwnfilfqvf5me"]
+[gd_scene load_steps=10 format=3 uid="uid://cwnfilfqvf5me"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_2rqko"]
+[ext_resource type="Script" path="res://teleport.gd" id="1_nvra2"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
 
@@ -17,7 +18,12 @@ background_mode = 2
 sky = SubResource("Sky_aeaw6")
 ambient_light_energy = 16.0
 
+[sub_resource type="BoxMesh" id="BoxMesh_2iyjl"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_jxi5x"]
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_nvra2")
 
 [node name="plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(16.9781, 0, 0, 0, 1, 0, 0, 0, 21.902, 0, 0, 0)
@@ -37,4 +43,16 @@ environment = SubResource("Environment_jlspu")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249, 0.999802, 0.00930072, -0.999761, 0.0198102, -0.0197587, 5.15335, 0.00104618)
 
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.269051, 0, 0, 0, 3.01339, 0, 0, 0, 2.71149, -12.8315, 1.40715, -0.010994)
+mesh = SubResource("BoxMesh_2iyjl")
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(0.269051, 0, 0, 0, 3.01339, 0, 0, 0, 2.71149, -12.8745, 1.40715, -0.010994)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(4.51618, 0, 0, 0, 1, 0, 0, 0, 1, 2.0353, 0, 0)
+shape = SubResource("BoxShape3D_jxi5x")
+
 [connection signal="tree_entered" from="CharacterBody3D" to="CharacterBody3D" method="_on_tree_entered"]
+[connection signal="tree_entered" from="Area3D/CollisionShape3D" to="." method="_on_collision_shape_3d_tree_entered"]
