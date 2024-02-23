@@ -1,13 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjr8wfs2rshj2"]
+[gd_scene load_steps=11 format=3 uid="uid://cwnfilfqvf5me"]
 
-[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_cve71"]
-[ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://annet/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_siiyb"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6vq0"]
-albedo_texture = ExtResource("1_siiyb")
+[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_2rqko"]
+[ext_resource type="Script" path="res://teleport.gd" id="1_nvra2"]
+[ext_resource type="PackedScene" uid="uid://dn3chjdq22kkd" path="res://interaction/interaction.tscn" id="3_4t75w"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
-material = SubResource("StandardMaterial3D_g6vq0")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qvcqs"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
@@ -22,7 +19,12 @@ background_mode = 2
 sky = SubResource("Sky_aeaw6")
 ambient_light_energy = 16.0
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_kv0x5"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cs55u"]
+
 [node name="Node3D" type="Node3D"]
+script = ExtResource("1_nvra2")
 
 [node name="plane" type="MeshInstance3D" parent="."]
 transform = Transform3D(16.9781, 0, 0, 0, 1, 0, 0, 0, 21.902, 0, 0, 0)
@@ -33,7 +35,7 @@ mesh = SubResource("PlaneMesh_heru7")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="plane/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_cve71")]
+[node name="player" parent="." instance=ExtResource("1_2rqko")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22945, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -42,4 +44,17 @@ environment = SubResource("Environment_jlspu")
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249, 0.999802, 0.00930072, -0.999761, 0.0198102, -0.0197587, 5.15335, 0.00104618)
 
-[connection signal="tree_entered" from="CharacterBody3D" to="CharacterBody3D" method="_on_tree_entered"]
+[node name="interaction3darea" parent="." instance=ExtResource("3_4t75w")]
+transform = Transform3D(1.00027, 0, 0, 0, 1.00027, 0, 0, 0, 1.00027, -0.701106, 1.09284, 8.20965)
+action_name = "wow"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="interaction3darea"]
+transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, 0, 0, 0)
+shape = SubResource("SphereShape3D_kv0x5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.545133, 4.76837e-07, 8.75226)
+mesh = SubResource("BoxMesh_cs55u")
+
+[connection signal="tree_entered" from="player" to="." method="_on_character_body_3d_tree_entered"]
+[connection signal="tree_entered" from="player" to="player" method="_on_tree_entered"]
