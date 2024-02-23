@@ -133,6 +133,7 @@ uv1_scale = Vector3(17.5, 1, 1)
 material = SubResource("StandardMaterial3D_30r68")
 
 [node name="House" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0182133, -0.0229492, 0.0468369)
 
 [node name="Floors (Mostly)" type="Node3D" parent="."]
 
