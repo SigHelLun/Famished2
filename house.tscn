@@ -1,41 +1,30 @@
-[gd_scene load_steps=24 format=3 uid="uid://4pxlfl2mshw6"]
-
-[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/NiceGoodLookingGrassTexture.jpg" id="1_sa4bd"]
-[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/sidewalkTexture.jpg" id="2_p2jtr"]
-[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/HouseTextureWalls.jpg" id="3_luwmd"]
-[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/doorTexture.png" id="4_pjeuw"]
-[ext_resource type="Texture2D" path="res://MainMap_or_StreetTextures/HouseTextureRoof.jpg" id="5_rtpri"]
+[gd_scene load_steps=19 format=3 uid="uid://4pxlfl2mshw6"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig5v7"]
-albedo_texture = ExtResource("1_sa4bd")
 uv1_scale = Vector3(-3.29, -4.515, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uyeow"]
 material = SubResource("StandardMaterial3D_ig5v7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co7ie"]
-albedo_texture = ExtResource("2_p2jtr")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_g5ljr"]
 material = SubResource("StandardMaterial3D_co7ie")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74773"]
-albedo_texture = ExtResource("2_p2jtr")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_w22ev"]
 material = SubResource("StandardMaterial3D_74773")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4r7b"]
-albedo_texture = ExtResource("2_p2jtr")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_y2xqa"]
 material = SubResource("StandardMaterial3D_y4r7b")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0amw7"]
-albedo_texture = ExtResource("3_luwmd")
 uv1_scale = Vector3(2.54, 5.405, 1)
 uv1_offset = Vector3(-0.96, 0, 0)
 
@@ -43,26 +32,22 @@ uv1_offset = Vector3(-0.96, 0, 0)
 material = SubResource("StandardMaterial3D_0amw7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctfdf"]
-albedo_texture = ExtResource("4_pjeuw")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nkvme"]
 material = SubResource("StandardMaterial3D_ctfdf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac4il"]
-albedo_texture = ExtResource("3_luwmd")
 
 [sub_resource type="PrismMesh" id="PrismMesh_h0kaf"]
 material = SubResource("StandardMaterial3D_ac4il")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a72a2"]
-albedo_texture = ExtResource("5_rtpri")
 uv1_scale = Vector3(8, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f5uvy"]
 material = SubResource("StandardMaterial3D_a72a2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y52rn"]
-albedo_texture = ExtResource("5_rtpri")
 uv1_scale = Vector3(8, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_oxp4k"]
