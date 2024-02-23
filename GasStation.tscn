@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=34 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -6,7 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dmysufgu6sbrl" path="res://GasStationTextures/4423811.62fe8f8932b27.jpeg" id="4_12e8o"]
 [ext_resource type="Texture2D" uid="uid://dl0p3i0d4fi4m" path="res://GasStationTextures/istockphoto-1148892236-612x612.jpg" id="5_5x017"]
 [ext_resource type="Texture2D" uid="uid://cqy463pgfi5il" path="res://GasStationTextures/Freezer2.png" id="6_wtvbs"]
-[ext_resource type="Texture2D" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
+[ext_resource type="Texture2D" uid="uid://dfvr5eyr7b750" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
+[ext_resource type="Shader" path="res://GasStation.gdshader" id="8_sqh61"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
 albedo_texture = ExtResource("1_4kvxd")
@@ -41,8 +42,8 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2ynf"]
 albedo_texture = ExtResource("4_12e8o")
-uv1_scale = Vector3(0.5, 0.7, 1)
-uv1_offset = Vector3(0.4, 0.5, 1)
+uv1_scale = Vector3(0.915, 0.7, 1)
+uv1_offset = Vector3(0.485, 0.5, 1)
 uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_hrvf1"]
@@ -63,8 +64,8 @@ material = SubResource("StandardMaterial3D_pijto")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1redh"]
 albedo_texture = ExtResource("6_wtvbs")
-uv1_scale = Vector3(1, 0.8, 0.8)
-uv1_offset = Vector3(0, 0.1, 0)
+uv1_scale = Vector3(0.965, 0.57, 0.8)
+uv1_offset = Vector3(0.03, 0.23, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_b7moe"]
 material = SubResource("StandardMaterial3D_1redh")
@@ -78,6 +79,19 @@ uv1_scale = Vector3(3, 3, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_5o5tt"]
 material = SubResource("StandardMaterial3D_pxu8t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_msssl"]
+albedo_color = Color(0.313726, 0.180392, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_x8pv6"]
+material = SubResource("StandardMaterial3D_msssl")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_od7w7"]
+render_priority = 0
+shader = ExtResource("8_sqh61")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4c7uf"]
+material = SubResource("ShaderMaterial_od7w7")
 
 [node name="Node3D2" type="Node3D"]
 
@@ -242,5 +256,31 @@ mesh = SubResource("PlaneMesh_b7moe")
 shape = SubResource("ConcavePolygonShape3D_sil4p")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.3, 0, 0, 0, 2.5, 0, 0, 0, 4, 3.39176, 1.25, 0)
+transform = Transform3D(0.3, 0, 0, 0, 2.5, 0, 0, 0, 4, 3.39176, 1.25, 0.0758671)
 mesh = SubResource("BoxMesh_5o5tt")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
+mesh = SubResource("BoxMesh_x8pv6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.14953)
+mesh = SubResource("BoxMesh_5o5tt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D2"]
+transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
+mesh = SubResource("BoxMesh_x8pv6")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.14122)
+mesh = SubResource("BoxMesh_5o5tt")
+skeleton = NodePath("../..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D3"]
+transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
+mesh = SubResource("BoxMesh_x8pv6")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-1, 8.74228e-08, 6.3163e-08, -4.37114e-08, 1.91069e-15, -1.445, -8.74228e-08, -1, 2.76094e-15, -6.08536, 1.44418, 9.05095)
+mesh = SubResource("PlaneMesh_4c7uf")
