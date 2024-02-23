@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=3 uid="uid://bvam6hybqm4tg"]
+
+[ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://annet/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_wryeh"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1637.0
+offset_top = 669.0
+offset_right = 1682.0
+offset_bottom = 700.0
+scale = Vector2(25.04, 11.9284)
+text = "Play"
+icon = ExtResource("1_wryeh")

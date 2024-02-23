@@ -1,8 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://c8kpielebr334"]
+[gd_scene load_steps=9 format=3 uid="uid://bjr8wfs2rshj2"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_cve71"]
+[ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://annet/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_siiyb"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6vq0"]
+albedo_texture = ExtResource("1_siiyb")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_heru7"]
+material = SubResource("StandardMaterial3D_g6vq0")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qvcqs"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
