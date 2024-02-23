@@ -1,57 +1,136 @@
-[gd_scene load_steps=19 format=3 uid="uid://4pxlfl2mshw6"]
+[gd_scene load_steps=45 format=3 uid="uid://4pxlfl2mshw6"]
+
+[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="1_oe3o3"]
+[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="2_odrau"]
+[ext_resource type="Texture2D" uid="uid://dtvlmcyoo64xn" path="res://Textures/NeighborsHouseWallTexture.jpg" id="3_0h87w"]
+[ext_resource type="Texture2D" uid="uid://cf1ipshrii0ae" path="res://Textures/PlayerHouseDoorTexture.png" id="4_pt3s6"]
+[ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures/RoofTexture.jpg" id="5_570el"]
+[ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures/GlassPaneTexture.jpg" id="6_w2e4p"]
+[ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures/NeighborFence.jpg" id="7_ibvar"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig5v7"]
-uv1_scale = Vector3(-3.29, -4.515, 1)
+albedo_texture = ExtResource("1_oe3o3")
+uv1_scale = Vector3(-5.555, -6.74, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uyeow"]
 material = SubResource("StandardMaterial3D_ig5v7")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co7ie"]
+albedo_texture = ExtResource("2_odrau")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_g5ljr"]
 material = SubResource("StandardMaterial3D_co7ie")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74773"]
+albedo_texture = ExtResource("2_odrau")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_w22ev"]
 material = SubResource("StandardMaterial3D_74773")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4r7b"]
+albedo_texture = ExtResource("2_odrau")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_y2xqa"]
 material = SubResource("StandardMaterial3D_y4r7b")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0amw7"]
-uv1_scale = Vector3(2.54, 5.405, 1)
-uv1_offset = Vector3(-0.96, 0, 0)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afy38"]
+albedo_texture = ExtResource("3_0h87w")
+uv1_scale = Vector3(9, 8.5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ii6lj"]
-material = SubResource("StandardMaterial3D_0amw7")
+material = SubResource("StandardMaterial3D_afy38")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tm2n"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_5qrk0"]
+material = SubResource("StandardMaterial3D_0tm2n")
+text = "69"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctfdf"]
+albedo_texture = ExtResource("4_pt3s6")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nkvme"]
 material = SubResource("StandardMaterial3D_ctfdf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac4il"]
+albedo_texture = ExtResource("3_0h87w")
+uv1_scale = Vector3(9, 1.31, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_h0kaf"]
 material = SubResource("StandardMaterial3D_ac4il")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a72a2"]
-uv1_scale = Vector3(8, 1, 1)
+albedo_texture = ExtResource("5_570el")
+uv1_scale = Vector3(8, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f5uvy"]
 material = SubResource("StandardMaterial3D_a72a2")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y52rn"]
-uv1_scale = Vector3(8, 1, 1)
+albedo_texture = ExtResource("5_570el")
+uv1_scale = Vector3(8, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_oxp4k"]
 material = SubResource("StandardMaterial3D_y52rn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5spnl"]
+albedo_texture = ExtResource("6_w2e4p")
+uv1_scale = Vector3(0.785, 1, 1)
+uv1_offset = Vector3(0.02, 0, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_gy03s"]
+material = SubResource("StandardMaterial3D_5spnl")
+
+[sub_resource type="BoxMesh" id="BoxMesh_f7mqr"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sbf6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1bh5s"]
+material = SubResource("StandardMaterial3D_0sbf6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lny2t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_4028h"]
+material = SubResource("StandardMaterial3D_lny2t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc411"]
+albedo_texture = ExtResource("7_ibvar")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_uf3h3"]
+material = SubResource("StandardMaterial3D_lc411")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6wj7"]
+albedo_texture = ExtResource("7_ibvar")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_2lgw4"]
+material = SubResource("StandardMaterial3D_s6wj7")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a84hr"]
+albedo_texture = ExtResource("7_ibvar")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_3v0w0"]
+material = SubResource("StandardMaterial3D_a84hr")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7x27"]
+albedo_texture = ExtResource("7_ibvar")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_n3dsd"]
+material = SubResource("StandardMaterial3D_u7x27")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30r68"]
+albedo_texture = ExtResource("7_ibvar")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_q486t"]
+material = SubResource("StandardMaterial3D_30r68")
 
 [node name="House" type="Node3D"]
 
@@ -83,6 +162,10 @@ transform = Transform3D(14, 0, 0, 0, 10, 0, 0, 0, 15, 3.75339, 4.96891, -1.02777
 mesh = SubResource("BoxMesh_ii6lj")
 skeleton = NodePath("../..")
 
+[node name="HouseNumber" type="MeshInstance3D" parent="House😂😂"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -3.25121, 3.38688, 0.0139609)
+mesh = SubResource("TextMesh_5qrk0")
+
 [node name="Door" type="MeshInstance3D" parent="House😂😂"]
 transform = Transform3D(-3.0598e-08, -0.1, 6.55671e-08, 0, -4.37114e-09, -1.5, 0.7, -4.37114e-09, 2.86603e-15, -3.25858, 1.56151, -0.955737)
 mesh = SubResource("PlaneMesh_nkvme")
@@ -98,3 +181,228 @@ mesh = SubResource("BoxMesh_f5uvy")
 [node name="RoofRight" type="MeshInstance3D" parent="House😂😂"]
 transform = Transform3D(18, 0, 0, 0, 0.193185, -2.32937, 0, 0.0517638, 8.69333, 4.03176, 10.8235, 3.34287)
 mesh = SubResource("BoxMesh_oxp4k")
+
+[node name="Windows 😝" type="Node3D" parent="House😂😂"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.9163)
+
+[node name="Window1(FrontBottomLeft)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 3, 23)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window4(FrontTopRight)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 8, 23)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window2(FrontBottomRight)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 3, 15)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window3(FrontTopLeft)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2, 8, 15)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window8(LeftTopRight)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.02, 8, 11.4)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window5(RightBottom)Left" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.02, 3, 26.4)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window6(RightBottomRight)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 3, 26.4)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Window7(RightTopRight)" type="Node3D" parent="House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 8, 26.4)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_gy03s")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_f7mqr")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_1bh5s")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_4028h")
+
+[node name="Fence" type="Node3D" parent="."]
+
+[node name="FrontLeft Fence" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(0.01, 0, 0, 0, 2, 0, 0, 0, 18, -15, 1, -6)
+mesh = SubResource("BoxMesh_uf3h3")
+
+[node name="FrontRight Fence" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(0.01, 0, 0, 0, 2, 0, 0, 0, 8, -15.001, 1, 11)
+mesh = SubResource("BoxMesh_2lgw4")
+
+[node name="Right Fence" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-4.37114e-10, 0, 30, 0, 2, 0, -0.01, 0, -1.31134e-06, 0, 1, 15)
+mesh = SubResource("BoxMesh_3v0w0")
+
+[node name="Back Fence" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(0.01, 0, 0, 0, 2, 0, 0, 0, 30, 15, 1, 0)
+mesh = SubResource("BoxMesh_n3dsd")
+
+[node name="Left Fence" type="MeshInstance3D" parent="Fence"]
+transform = Transform3D(-4.37114e-10, 0, -30, 0, 2, 0, 0.01, 0, -1.31134e-06, 0, 1, -15)
+mesh = SubResource("BoxMesh_q486t")
