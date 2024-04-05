@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="Famished2"
-run/main_scene="res://MainMap.tscn"
+run/main_scene="res://select.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Interactionmaneger="*res://interaction/interactionmaneger.tscn"
+Interactionmaneger="res://interaction/interactionmaneger.tscn"
 
 [display]
 
