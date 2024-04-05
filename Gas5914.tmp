@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=38 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqy463pgfi5il" path="res://GasStationTextures/Freezer2.png" id="6_wtvbs"]
 [ext_resource type="Texture2D" uid="uid://dfvr5eyr7b750" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
 [ext_resource type="Texture2D" uid="uid://bgojdrio64wue" path="res://GasStationTextures/360_F_626956301_XbKQ0erohdI9NnrDXmBrN4xW27zLdtyU.jpg" id="8_kurdw"]
-[ext_resource type="AudioStream" uid="uid://cgxw60vmcuxqg" path="res://GasStationTextures/quirky-dog.mp3" id="9_hvffl"]
+[ext_resource type="Script" path="res://Clerk.gd" id="9_cs5fb"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
 albedo_texture = ExtResource("1_4kvxd")
@@ -28,10 +28,8 @@ sky_material = SubResource("ProceduralSkyMaterial_kmchk")
 
 [sub_resource type="Environment" id="Environment_jlspu"]
 background_mode = 2
-background_energy_multiplier = 0.84
 sky = SubResource("Sky_aeaw6")
-ambient_light_sky_contribution = 0.32
-ambient_light_energy = 2.36
+ambient_light_energy = 16.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sahni"]
 albedo_texture = ExtResource("3_a3swj")
@@ -105,15 +103,6 @@ uv1_offset = Vector3(0.37, 0.005, 0)
 [sub_resource type="PlaneMesh" id="PlaneMesh_4c7uf"]
 material = SubResource("StandardMaterial3D_unrm6")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36y3b"]
-albedo_color = Color(1, 0.996078, 0.823529, 1)
-emission_enabled = true
-emission = Color(1, 0.905882, 0.305882, 1)
-emission_energy_multiplier = 59.65
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_iq3qd"]
-material = SubResource("StandardMaterial3D_36y3b")
-
 [node name="Node3D2" type="Node3D"]
 
 [node name="Wall" type="MeshInstance3D" parent="."]
@@ -156,6 +145,9 @@ shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jlspu")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249, 0.999802, 0.00930072, -0.999761, 0.0198102, -0.0197587, 5.15335, 0.00104618)
 
 [node name="Floor" type="MeshInstance3D" parent="."]
 transform = Transform3D(9, 0, 0, 0, 1, 0, 0, 0, 12, 0, 0, 0)
@@ -272,278 +264,46 @@ mesh = SubResource("PlaneMesh_b7moe")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Freezers/Freezers4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sil4p")
 
-[node name="Shelfs" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.3, 0, 0, 0, 2.5, 0, 0, 0, 4, 3.39176, 1.25, 0.0758671)
 mesh = SubResource("BoxMesh_5o5tt")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfs"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
 transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
 
-[node name="MeshInstance3D2" type="MeshInstance3D" parent="Shelfs"]
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.14953)
 mesh = SubResource("BoxMesh_5o5tt")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfs/MeshInstance3D2"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D2"]
 transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
 
-[node name="MeshInstance3D3" type="MeshInstance3D" parent="Shelfs"]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="MeshInstance3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.14122)
 mesh = SubResource("BoxMesh_5o5tt")
 skeleton = NodePath("../..")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfs/MeshInstance3D3"]
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D/MeshInstance3D3"]
 transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
 
-[node name="Door" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, -4.86142, 1.28213, -11.9565)
 mesh = SubResource("BoxMesh_ksg3a")
 
-[node name="Window 1" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 0.285893, 2.00854, -11.9565)
-mesh = SubResource("BoxMesh_ksg3a")
-
-[node name="Window 2" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 6.18589, 2.00854, -11.9565)
-mesh = SubResource("BoxMesh_ksg3a")
-
-[node name="Clerk Stand" type="MeshInstance3D" parent="."]
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.025, 0, 0, 0, 1, 0, 0, 0, 0.585, -7.00965, -0.158475, 8.30201)
 mesh = SubResource("BoxMesh_4e1wc")
 
 [node name="Node3D" type="Node3D" parent="."]
 
-[node name="Clerk" type="MeshInstance3D" parent="Node3D"]
+[node name="RigidBody3D" type="RigidBody3D" parent="Node3D"]
+script = ExtResource("9_cs5fb")
+
+[node name="Clerk" type="MeshInstance3D" parent="Node3D/RigidBody3D"]
 transform = Transform3D(-1, 8.74228e-08, 3.80289e-08, -4.37114e-08, 1.91069e-15, -0.87, -8.74228e-08, -1, 1.6623e-15, -6.97546, 1.22585, 8.24629)
 mesh = SubResource("PlaneMesh_4c7uf")
-skeleton = NodePath("../..")
-
-[node name="Light1" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light1"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light2" type="MeshInstance3D" parent="Light1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15126, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light1/Light2"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light3" type="MeshInstance3D" parent="Light1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2485, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light1/Light3"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light4" type="MeshInstance3D" parent="Light1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2825, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light1/Light4"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light5" type="MeshInstance3D" parent="Light1"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4338, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light1/Light5"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light2" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, -5.01274)
-mesh = SubResource("PlaneMesh_iq3qd")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light2"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light2" type="MeshInstance3D" parent="Light2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15126, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light2/Light2"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light3" type="MeshInstance3D" parent="Light2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2485, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light2/Light3"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light4" type="MeshInstance3D" parent="Light2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2825, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light2/Light4"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light5" type="MeshInstance3D" parent="Light2"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4338, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light2/Light5"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light4" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, 10.0457)
-mesh = SubResource("PlaneMesh_iq3qd")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light4"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light2" type="MeshInstance3D" parent="Light4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15126, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light4/Light2"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light3" type="MeshInstance3D" parent="Light4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2485, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light4/Light3"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light4" type="MeshInstance3D" parent="Light4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2825, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light4/Light4"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light5" type="MeshInstance3D" parent="Light4"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4338, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light4/Light5"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light5" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, 5.03297)
-mesh = SubResource("PlaneMesh_iq3qd")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light5"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light2" type="MeshInstance3D" parent="Light5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15126, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light5/Light2"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light3" type="MeshInstance3D" parent="Light5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2485, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light5/Light3"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light4" type="MeshInstance3D" parent="Light5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2825, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light5/Light4"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light5" type="MeshInstance3D" parent="Light5"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4338, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light5/Light5"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light3" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, -9.99995)
-mesh = SubResource("PlaneMesh_iq3qd")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light3"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light2" type="MeshInstance3D" parent="Light3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.15126, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light3/Light2"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light3" type="MeshInstance3D" parent="Light3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.2485, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light3/Light3"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light4" type="MeshInstance3D" parent="Light3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.2825, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light3/Light4"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Light5" type="MeshInstance3D" parent="Light3"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.4338, 0, 0)
-mesh = SubResource("PlaneMesh_iq3qd")
-skeleton = NodePath("../..")
-
-[node name="SpotLight3D" type="SpotLight3D" parent="Light3/Light5"]
-transform = Transform3D(2.7027, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0)
-spot_range = 15.2459
-
-[node name="Node3D2" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45171, 0)
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node3D2"]
-stream = ExtResource("9_hvffl")
-autoplay = true
+skeleton = NodePath("../../..")
