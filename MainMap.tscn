@@ -1,13 +1,18 @@
-[gd_scene load_steps=43 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=48 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="1_heldy"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures/AsphaltTexture.jpg" id="2_qy6af"]
+[ext_resource type="Texture2D" uid="uid://bvbq8w8t752mu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Color.jpg" id="3_y4wxc"]
+[ext_resource type="Texture2D" uid="uid://b18mubg3l8sto" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Displacement.jpg" id="4_448dj"]
 [ext_resource type="Texture2D" uid="uid://cf1ipshrii0ae" path="res://Textures/PlayerHouseDoorTexture.png" id="4_qtkmm"]
 [ext_resource type="Texture2D" uid="uid://b2kyywfhn4k1x" path="res://Textures/FenceTexture.jpg" id="5_2m0q0"]
+[ext_resource type="Texture2D" uid="uid://dq6q453hpwmwj" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_NormalDX.jpg" id="5_5jn2t"]
 [ext_resource type="Texture2D" uid="uid://bqdu3kc53lqo3" path="res://Textures/PlayerHouseGrass.jpg" id="5_5s2pw"]
-[ext_resource type="Texture2D" uid="uid://deqp7yw3jwaj" path="res://Textures/RustyMetalPlayerHouseTexture.jpg" id="6_phhhi"]
+[ext_resource type="Texture2D" uid="uid://ssxiv3n8esu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Roughness.jpg" id="6_y0g35"]
 [ext_resource type="PackedScene" uid="uid://4pxlfl2mshw6" path="res://house.tscn" id="8_nqnrp"]
+[ext_resource type="PackedScene" uid="uid://dv507nqxclfvr" path="res://out_of_bound_rightHouse.tscn" id="11_qbgb4"]
+[ext_resource type="PackedScene" uid="uid://b02r445l7sp5i" path="res://Textures/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf" id="13_bf7if"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
@@ -30,7 +35,10 @@ albedo_texture = ExtResource("4_qtkmm")
 material = SubResource("StandardMaterial3D_iv3hh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxuqh"]
-albedo_texture = ExtResource("6_phhhi")
+albedo_texture = ExtResource("3_y4wxc")
+roughness_texture = ExtResource("6_y0g35")
+normal_texture = ExtResource("5_5jn2t")
+heightmap_texture = ExtResource("4_448dj")
 uv1_scale = Vector3(-7.71, 36.795, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_xy88l"]
@@ -128,7 +136,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [node name="Main Map 😁" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_xfn1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43263, 20.74)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43263, 33.5989)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="CharacterBody3D"]
 environment = SubResource("Environment_jlspu")
@@ -253,3 +261,9 @@ mesh = SubResource("BoxMesh_0aw03")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierRight/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sdaad")
+
+[node name="OutOfBoundHouse" parent="." instance=ExtResource("11_qbgb4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95.2976, 0, -50.7615)
+
+[node name="metal_trash_can_1k" parent="." instance=ExtResource("13_bf7if")]
+transform = Transform3D(-1.24928, 0, 0.83024, 0, 1.5, 0, -0.83024, 0, -1.24928, -4.09438, 0, 34.2043)

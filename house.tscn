@@ -8,147 +8,147 @@
 [ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures/GlassPaneTexture.jpg" id="6_w2e4p"]
 [ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures/NeighborFence.jpg" id="7_ibvar"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig5v7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w285w"]
 albedo_texture = ExtResource("1_oe3o3")
 uv1_scale = Vector3(-5.555, -6.74, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_uyeow"]
-material = SubResource("StandardMaterial3D_ig5v7")
+material = SubResource("StandardMaterial3D_w285w")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_0oirn"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co7ie"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxnjb"]
 albedo_texture = ExtResource("2_odrau")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_g5ljr"]
-material = SubResource("StandardMaterial3D_co7ie")
+material = SubResource("StandardMaterial3D_fxnjb")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74773"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mtnsd"]
 albedo_texture = ExtResource("2_odrau")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_w22ev"]
-material = SubResource("StandardMaterial3D_74773")
+material = SubResource("StandardMaterial3D_mtnsd")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4r7b"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y3n7v"]
 albedo_texture = ExtResource("2_odrau")
 uv1_scale = Vector3(3.06, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_y2xqa"]
-material = SubResource("StandardMaterial3D_y4r7b")
+material = SubResource("StandardMaterial3D_y3n7v")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afy38"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h87gu"]
 albedo_texture = ExtResource("3_0h87w")
 uv1_scale = Vector3(9, 8.5, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ii6lj"]
-material = SubResource("StandardMaterial3D_afy38")
+material = SubResource("StandardMaterial3D_h87gu")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7unb1"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tm2n"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n8r4r"]
 albedo_color = Color(0, 0, 0, 1)
 
 [sub_resource type="TextMesh" id="TextMesh_5qrk0"]
-material = SubResource("StandardMaterial3D_0tm2n")
+material = SubResource("StandardMaterial3D_n8r4r")
 text = "69"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctfdf"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yj7j1"]
 albedo_texture = ExtResource("4_xtegg")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nkvme"]
-material = SubResource("StandardMaterial3D_ctfdf")
+material = SubResource("StandardMaterial3D_yj7j1")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac4il"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obgtd"]
 albedo_texture = ExtResource("3_0h87w")
 uv1_scale = Vector3(9, 1.31, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_h0kaf"]
-material = SubResource("StandardMaterial3D_ac4il")
+material = SubResource("StandardMaterial3D_obgtd")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a72a2"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_b0v7v"]
 albedo_texture = ExtResource("5_570el")
 uv1_scale = Vector3(8, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_f5uvy"]
-material = SubResource("StandardMaterial3D_a72a2")
+material = SubResource("StandardMaterial3D_b0v7v")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y52rn"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bvu2j"]
 albedo_texture = ExtResource("5_570el")
 uv1_scale = Vector3(8, 2, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_oxp4k"]
-material = SubResource("StandardMaterial3D_y52rn")
+material = SubResource("StandardMaterial3D_bvu2j")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5spnl"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43tcj"]
 albedo_texture = ExtResource("6_w2e4p")
 uv1_scale = Vector3(0.785, 1, 1)
 uv1_offset = Vector3(0.02, 0, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gy03s"]
-material = SubResource("StandardMaterial3D_5spnl")
+material = SubResource("StandardMaterial3D_43tcj")
 
 [sub_resource type="BoxMesh" id="BoxMesh_f7mqr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sbf6"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15e62"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1bh5s"]
-material = SubResource("StandardMaterial3D_0sbf6")
+material = SubResource("StandardMaterial3D_15e62")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lny2t"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi4y0"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4028h"]
-material = SubResource("StandardMaterial3D_lny2t")
+material = SubResource("StandardMaterial3D_fi4y0")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lc411"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xl6bg"]
 albedo_texture = ExtResource("7_ibvar")
 uv1_scale = Vector3(17.5, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_uf3h3"]
-material = SubResource("StandardMaterial3D_lc411")
+material = SubResource("StandardMaterial3D_xl6bg")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8d4wk"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6wj7"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_hikqd"]
 albedo_texture = ExtResource("7_ibvar")
 uv1_scale = Vector3(17.5, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_2lgw4"]
-material = SubResource("StandardMaterial3D_s6wj7")
+material = SubResource("StandardMaterial3D_hikqd")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_g0rnq"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a84hr"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w6ckn"]
 albedo_texture = ExtResource("7_ibvar")
 uv1_scale = Vector3(17.5, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_3v0w0"]
-material = SubResource("StandardMaterial3D_a84hr")
+material = SubResource("StandardMaterial3D_w6ckn")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4r1hg"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30r68"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ppfh8"]
 albedo_texture = ExtResource("7_ibvar")
 uv1_scale = Vector3(17.5, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_q486t"]
-material = SubResource("StandardMaterial3D_30r68")
+material = SubResource("StandardMaterial3D_ppfh8")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_n4wcg"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u7x27"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4vehj"]
 albedo_texture = ExtResource("7_ibvar")
 uv1_scale = Vector3(17.5, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_n3dsd"]
-material = SubResource("StandardMaterial3D_u7x27")
+material = SubResource("StandardMaterial3D_4vehj")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xie3a"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
