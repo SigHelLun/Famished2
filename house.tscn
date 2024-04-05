@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="1_oe3o3"]
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="2_odrau"]
 [ext_resource type="Texture2D" uid="uid://dtvlmcyoo64xn" path="res://Textures/NeighborsHouseWallTexture.jpg" id="3_0h87w"]
-[ext_resource type="Texture2D" uid="uid://cf1ipshrii0ae" path="res://Textures/PlayerHouseDoorTexture.png" id="4_pt3s6"]
+[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures/door.jpg" id="4_xtegg"]
 [ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures/RoofTexture.jpg" id="5_570el"]
 [ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures/GlassPaneTexture.jpg" id="6_w2e4p"]
 [ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures/NeighborFence.jpg" id="7_ibvar"]
@@ -57,7 +57,7 @@ material = SubResource("StandardMaterial3D_0tm2n")
 text = "69"
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctfdf"]
-albedo_texture = ExtResource("4_pt3s6")
+albedo_texture = ExtResource("4_xtegg")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nkvme"]
 material = SubResource("StandardMaterial3D_ctfdf")
@@ -169,17 +169,17 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_0oirn")
 
 [node name="Path" type="MeshInstance3D" parent="Floors (Mostly)"]
-transform = Transform3D(7, 0, 0, 0, 0.1, 0, 0, 0, 1.5, -11.5671, 0.0153351, 4.96251)
+transform = Transform3D(30, 0, 0, 0, 0.1, 0, 0, 0, 3, -20.015, 0.015, 14.126)
 mesh = SubResource("BoxMesh_g5ljr")
 skeleton = NodePath("../..")
 
 [node name="Pathpart2" type="MeshInstance3D" parent="Floors (Mostly)"]
-transform = Transform3D(-2.62268e-07, 0, 1.5, 0, 0.1, 0, -6, 0, -6.55671e-08, -7.33423, 0.0153351, 2.70362)
+transform = Transform3D(-6.99382e-07, 0, 3, 0, 0.1, 0, -16, 0, -1.31134e-07, -6.5, 0.015, 4.623)
 mesh = SubResource("BoxMesh_w22ev")
 skeleton = NodePath("../Path")
 
 [node name="Tiny Path meow" type="MeshInstance3D" parent="Floors (Mostly)"]
-transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 1.5, -5.59143, 0.0157449, -0.984881)
+transform = Transform3D(8.75, 0, 0, 0, 0.1, 0, 0, 0, 3, -0.617589, 0.0157449, -1.87758)
 mesh = SubResource("BoxMesh_y2xqa")
 
 [node name="House😂😂" type="Node3D" parent="."]
@@ -196,11 +196,11 @@ skeleton = NodePath("../..")
 shape = SubResource("ConcavePolygonShape3D_7unb1")
 
 [node name="HouseNumber" type="MeshInstance3D" parent="House😂😂"]
-transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -3.25121, 3.38688, 0.0139609)
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -2.52399, 2.15235, 0.297792)
 mesh = SubResource("TextMesh_5qrk0")
 
 [node name="Door" type="MeshInstance3D" parent="House😂😂"]
-transform = Transform3D(-3.0598e-08, -0.1, 6.55671e-08, 0, -4.37114e-09, -1.5, 0.7, -4.37114e-09, 2.86603e-15, -3.25858, 1.56151, -0.955737)
+transform = Transform3D(-3.0598e-08, -0.1, 4.37114e-08, 0, -4.37114e-09, -1, 0.7, -4.37114e-09, 1.91069e-15, -2.48855, 1.03548, -0.955737)
 mesh = SubResource("PlaneMesh_nkvme")
 
 [node name="Roof" type="MeshInstance3D" parent="House😂😂"]
@@ -219,7 +219,7 @@ mesh = SubResource("BoxMesh_oxp4k")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.9163)
 
 [node name="Window1(FrontBottomLeft)" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 3, 23)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 2.38133, 23)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
@@ -244,7 +244,7 @@ transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
 [node name="Window4(FrontTopRight)" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 8, 23)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 7.38133, 23)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window4(FrontTopRight)"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
@@ -269,7 +269,7 @@ transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
 [node name="Window2(FrontBottomRight)" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 3, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 2.38133, 15)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window2(FrontBottomRight)"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
@@ -294,7 +294,7 @@ transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
 [node name="Window3(FrontTopLeft)" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 8, 15)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 7.38133, 15)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window3(FrontTopLeft)"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
@@ -344,7 +344,7 @@ transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
 [node name="Window5(RightBottom)Left" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0200005, 3, 33.5354)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0200005, 2.31437, 33.5354)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
@@ -369,7 +369,7 @@ transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
 [node name="Window6(RightBottomRight)" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 3, 33.5354)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 2.31437, 33.5354)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window6(RightBottomRight)"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
@@ -394,7 +394,7 @@ transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
 [node name="Window7(RightTopRight)" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 8, 33.5354)
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 7.31437, 33.5354)
 
 [node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window7(RightTopRight)"]
 transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)

@@ -1,0 +1,435 @@
+[gd_scene load_steps=47 format=3 uid="uid://dv507nqxclfvr"]
+
+[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="1_ughxj"]
+[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="2_br3ip"]
+[ext_resource type="Texture2D" uid="uid://dtvlmcyoo64xn" path="res://Textures/NeighborsHouseWallTexture.jpg" id="3_22w67"]
+[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures/door.jpg" id="4_iiiix"]
+[ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures/RoofTexture.jpg" id="5_pk416"]
+[ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures/GlassPaneTexture.jpg" id="6_te7ry"]
+[ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures/NeighborFence.jpg" id="7_xg046"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig5v7"]
+albedo_texture = ExtResource("1_ughxj")
+uv1_scale = Vector3(-5.555, -6.74, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_3bkps"]
+material = SubResource("StandardMaterial3D_ig5v7")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bf0wm"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_co7ie"]
+albedo_texture = ExtResource("2_br3ip")
+uv1_scale = Vector3(3.06, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8qmb7"]
+material = SubResource("StandardMaterial3D_co7ie")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_74773"]
+albedo_texture = ExtResource("2_br3ip")
+uv1_scale = Vector3(3.06, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_sg0px"]
+material = SubResource("StandardMaterial3D_74773")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y4r7b"]
+albedo_texture = ExtResource("2_br3ip")
+uv1_scale = Vector3(3.06, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_okqc0"]
+material = SubResource("StandardMaterial3D_y4r7b")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_afy38"]
+albedo_texture = ExtResource("3_22w67")
+uv1_scale = Vector3(9, 8.5, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_7vtg6"]
+material = SubResource("StandardMaterial3D_afy38")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_xt46t"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0tm2n"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="TextMesh" id="TextMesh_luen0"]
+material = SubResource("StandardMaterial3D_0tm2n")
+text = "69"
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ctfdf"]
+albedo_texture = ExtResource("4_iiiix")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_veigp"]
+material = SubResource("StandardMaterial3D_ctfdf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac4il"]
+albedo_texture = ExtResource("3_22w67")
+uv1_scale = Vector3(9, 1.31, 1)
+
+[sub_resource type="PrismMesh" id="PrismMesh_y2n6y"]
+material = SubResource("StandardMaterial3D_ac4il")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a72a2"]
+albedo_texture = ExtResource("5_pk416")
+uv1_scale = Vector3(8, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_fgk2c"]
+material = SubResource("StandardMaterial3D_a72a2")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y52rn"]
+albedo_texture = ExtResource("5_pk416")
+uv1_scale = Vector3(8, 2, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_8u54q"]
+material = SubResource("StandardMaterial3D_y52rn")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5spnl"]
+albedo_texture = ExtResource("6_te7ry")
+uv1_scale = Vector3(0.785, 1, 1)
+uv1_offset = Vector3(0.02, 0, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_r5dg8"]
+material = SubResource("StandardMaterial3D_5spnl")
+
+[sub_resource type="BoxMesh" id="BoxMesh_xw000"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0sbf6"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_n7yms"]
+material = SubResource("StandardMaterial3D_0sbf6")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lny2t"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ngcgb"]
+material = SubResource("StandardMaterial3D_lny2t")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_s6wj7"]
+albedo_texture = ExtResource("7_xg046")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ifusb"]
+material = SubResource("StandardMaterial3D_s6wj7")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_16skn"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a84hr"]
+albedo_texture = ExtResource("7_xg046")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_d22c1"]
+material = SubResource("StandardMaterial3D_a84hr")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_uvmeq"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_30r68"]
+albedo_texture = ExtResource("7_xg046")
+uv1_scale = Vector3(17.5, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_50k1q"]
+material = SubResource("StandardMaterial3D_30r68")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_3h03d"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q5af1"]
+
+[node name="OutOfBoundHouse" type="Node3D"]
+
+[node name="RightSidePerspective" type="Node3D" parent="."]
+
+[node name="Floors (Mostly)" type="Node3D" parent="RightSidePerspective"]
+
+[node name="GrassFloor" type="MeshInstance3D" parent="RightSidePerspective/Floors (Mostly)"]
+transform = Transform3D(35, 0, 0, 0, 1, 0, 0, 0, 35, 0, 0, 0)
+mesh = SubResource("PlaneMesh_3bkps")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RightSidePerspective/Floors (Mostly)/GrassFloor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightSidePerspective/Floors (Mostly)/GrassFloor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_bf0wm")
+
+[node name="Path" type="MeshInstance3D" parent="RightSidePerspective/Floors (Mostly)"]
+transform = Transform3D(30, 0, 0, 0, 0.1, 0, 0, 0, 3, -20.015, 0.015, 14.126)
+mesh = SubResource("BoxMesh_8qmb7")
+skeleton = NodePath("../../..")
+
+[node name="Pathpart2" type="MeshInstance3D" parent="RightSidePerspective/Floors (Mostly)"]
+transform = Transform3D(-6.99382e-07, 0, 3, 0, 0.1, 0, -16, 0, -1.31134e-07, -6.5, 0.015, 4.623)
+mesh = SubResource("BoxMesh_sg0px")
+skeleton = NodePath("../Path")
+
+[node name="Tiny Path meow" type="MeshInstance3D" parent="RightSidePerspective/Floors (Mostly)"]
+transform = Transform3D(8.75, 0, 0, 0, 0.1, 0, 0, 0, 3, -0.617589, 0.0157449, -1.87758)
+mesh = SubResource("BoxMesh_okqc0")
+
+[node name="House😂😂" type="Node3D" parent="RightSidePerspective"]
+transform = Transform3D(1.5, 0, 0, 0, 2, 0, 0, 0, 2, 7.45726, 0, 0)
+
+[node name="Walls of house teehee" type="MeshInstance3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(20, 0, 0, 0, 10, 0, 0, 0, 27.5, 7.51972, 4.96891, -0.206966)
+mesh = SubResource("BoxMesh_7vtg6")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RightSidePerspective/House😂😂/Walls of house teehee"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightSidePerspective/House😂😂/Walls of house teehee/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_xt46t")
+
+[node name="HouseNumber" type="MeshInstance3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(-8.74228e-08, 0, -2, 0, 2, 0, 2, 0, -8.74228e-08, -2.52399, 2.15235, 0.297792)
+mesh = SubResource("TextMesh_luen0")
+
+[node name="Door" type="MeshInstance3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(-3.0598e-08, -0.1, 4.37114e-08, 0, -4.37114e-09, -1, 0.7, -4.37114e-09, 1.91069e-15, -2.48855, 1.03548, -0.955737)
+mesh = SubResource("PlaneMesh_veigp")
+
+[node name="Roof" type="MeshInstance3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(-1.20206e-06, 0, -20, 0, 2, 0, 27.5, 0, -8.74228e-07, 7.52, 10.97, -0.22)
+mesh = SubResource("PrismMesh_y2n6y")
+
+[node name="RoofLeft" type="MeshInstance3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(22, 0, 0, 0, 0.241223, 2.25675, 0, -0.0367098, 14.8293, 7, 10.8323, -7.49261)
+mesh = SubResource("BoxMesh_fgk2c")
+
+[node name="RoofRight" type="MeshInstance3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(22, 0, 0, 0, 0.241193, -2.26891, 0, 0.0369076, 14.8274, 7, 10.832, 7.33167)
+mesh = SubResource("BoxMesh_8u54q")
+
+[node name="Windows 😝" type="Node3D" parent="RightSidePerspective/House😂😂"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -19.9163)
+
+[node name="Window1(FrontBottomLeft)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 2.38133, 23)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window1(FrontBottomLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window4(FrontTopRight)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 7.38133, 23)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window4(FrontTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window2(FrontBottomRight)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 2.38133, 15)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window2(FrontBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window3(FrontTopLeft)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.60365, 7.38133, 15)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window3(FrontTopLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window8(LeftTopRight)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.0200005, 8, 5.8801)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window8(LeftTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window5(RightBottom)Left" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0200005, 2.31437, 33.5354)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window5(RightBottom)Left"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window6(RightBottomRight)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 2.31437, 33.5354)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window6(RightBottomRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Window7(RightTopRight)" type="Node3D" parent="RightSidePerspective/House😂😂/Windows 😝"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 7.31437, 33.5354)
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
+mesh = SubResource("PlaneMesh_r5dg8")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_xw000")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_n7yms")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="RightSidePerspective/House😂😂/Windows 😝/Window7(RightTopRight)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_ngcgb")
+
+[node name="Fence" type="Node3D" parent="RightSidePerspective"]
+
+[node name="FrontRight Fence" type="MeshInstance3D" parent="RightSidePerspective/Fence"]
+transform = Transform3D(0.01, 0, 0, 0, 3, 0, 0, 0, 18, -35, 1.5, 26)
+mesh = SubResource("BoxMesh_ifusb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RightSidePerspective/Fence/FrontRight Fence"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightSidePerspective/Fence/FrontRight Fence/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_16skn")
+
+[node name="Right Fence" type="MeshInstance3D" parent="RightSidePerspective/Fence"]
+transform = Transform3D(-4.37114e-10, 0, 70, 0, 3, 0, -0.01, 0, -3.0598e-06, 0, 1.5, 35)
+mesh = SubResource("BoxMesh_d22c1")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RightSidePerspective/Fence/Right Fence"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightSidePerspective/Fence/Right Fence/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_uvmeq")
+
+[node name="Left Fence" type="MeshInstance3D" parent="RightSidePerspective/Fence"]
+transform = Transform3D(-4.37114e-10, 0, -70, 0, 3, 0, 0.01, 0, -3.0598e-06, 0, 1.5, -35)
+mesh = SubResource("BoxMesh_50k1q")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RightSidePerspective/Fence/Left Fence"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RightSidePerspective/Fence/Left Fence/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_3h03d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RightSidePerspective/Fence"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35, 1.5, -11.5)
+mesh = SubResource("PlaneMesh_q5af1")
