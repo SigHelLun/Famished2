@@ -1,13 +1,12 @@
 [gd_scene load_steps=6 format=3 uid="uid://c0x1iwtno5yx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
-[ext_resource type="PackedScene" uid="uid://dn3chjdq22kkd" path="res://interaction/interactionArea.tscn" id="2_t0xfp"]
+[ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
+[ext_resource type="Texture2D" uid="uid://4vh08w8adayu" path="res://annet/crosshair-removebg-preview.png" id="3_8g7vf"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tl56i"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_7sxml"]
 
 [node name="player" type="CharacterBody3D" groups=["player"]]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22945, 0)
@@ -24,10 +23,39 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619092, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 
-[node name="interactionArea3d" parent="." instance=ExtResource("2_t0xfp")]
+[node name="Playerinteract" type="RayCast3D" parent="Neck"]
+target_position = Vector3(0, 0, -4)
+script = ExtResource("2_g2q78")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="interactionArea3d"]
-transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0)
-shape = SubResource("SphereShape3D_7sxml")
+[node name="Prompt" type="Label" parent="Neck/Playerinteract"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -85.0
+offset_top = -128.0
+offset_right = 85.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Message [Key]"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -54.0
+offset_right = 51.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_8g7vf")
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]

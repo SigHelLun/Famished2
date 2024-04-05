@@ -43,7 +43,7 @@ transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00149171, 0.0198249
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.545133, 4.76837e-07, 8.75226)
 mesh = SubResource("BoxMesh_cs55u")
 
-[node name="player" parent="." instance=ExtResource("1_2rqko")]
-
 [node name="fridge" parent="." instance=ExtResource("3_6f5ks")]
 transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, 0, -0.0988489, 0.973517, 0.420862, -0.165915, 1.383, -10.5472)
+
+[node name="player" parent="." instance=ExtResource("1_2rqko")]

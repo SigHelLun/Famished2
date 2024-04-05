@@ -72,17 +72,17 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [node name="Node3D" type="Node3D"]
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_5isct")]
+[node name="player" parent="." instance=ExtResource("1_5isct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38478, 57.7051, 105.926)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D"]
+[node name="SpotLight3D" type="SpotLight3D" parent="player"]
 transform = Transform3D(1, 0, 0, 0, 0.0339227, 0.999424, 0, -0.999424, 0.0339227, 0, 2.64011, 0)
 light_color = Color(0.729412, 0.729412, 0.729412, 1)
 light_energy = 12.149
 light_indirect_energy = 1.485
 light_volumetric_fog_energy = 3.424
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="CharacterBody3D"]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="player"]
 environment = SubResource("Environment_cgj36")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
