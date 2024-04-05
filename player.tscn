@@ -25,7 +25,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619092, 0)
 [node name="Camera3D" type="Camera3D" parent="Neck"]
 
 [node name="interactionArea3d" parent="." instance=ExtResource("2_t0xfp")]
-action_name = "wow"
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="interactionArea3d"]
 transform = Transform3D(4, 0, 0, 0, 3, 0, 0, 0, 5, 0, 0, 0)
