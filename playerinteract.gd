@@ -11,5 +11,5 @@ func _physics_process(_delta):
 		if detected is Interactable:
 			$Prompt.text = detected.get_prompt()
 			
-			if Input.is_action_just_pressed(detected.prompt_action):
+			if Input.is_action_just_pressed(detected.promptAction):
 				detected.interact(owner)
