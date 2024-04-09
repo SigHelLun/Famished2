@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=3 uid="uid://iawxjjddydis"]
+
+[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://annet/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="1_m4wpg"]
+[ext_resource type="Script" path="res://Items/Interactable.gd" id="1_vyivs"]
+[ext_resource type="Texture2D" uid="uid://gr2o5uka2bwd" path="res://annet/Skjermbilde 2024-02-22 145320.png" id="2_828q1"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6jgc"]
+albedo_texture = ExtResource("1_m4wpg")
+
+[sub_resource type="BoxMesh" id="BoxMesh_3qv1a"]
+material = SubResource("StandardMaterial3D_g6jgc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8yixp"]
+albedo_texture = ExtResource("2_828q1")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_34vl0"]
+material = SubResource("StandardMaterial3D_8yixp")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aocdg"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Item1" type="StaticBody3D"]
+script = ExtResource("1_vyivs")
+promptMessege = null
+promptAction = null
+
+[node name="fridge" type="MeshInstance3D" parent="."]
+transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, 0, -0.0988489, 0.973517, 0.420862, -0.286889, 1.383, 0.241476)
+mesh = SubResource("BoxMesh_3qv1a")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="fridge"]
+transform = Transform3D(1, 1.86265e-09, 2.32831e-10, 0, 1, 1.19209e-07, 0, -1.49012e-08, 1, 0, 0, 0)
+
+[node name="fridgeDoor" type="MeshInstance3D" parent="fridge"]
+transform = Transform3D(5.55309e-05, -0.000486449, 0.4399, -0.0060335, 0.945185, 0.00250062, -0.388854, -0.00425449, 0.000189765, -0.0312535, 0.51738, -0.00538874)
+mesh = SubResource("PlaneMesh_34vl0")
+skeleton = NodePath("../..")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, -1.14253e-08, -0.0988489, 0.973517, 0.420862, -0.286889, 1.383, 0.344722)
+shape = SubResource("ConcavePolygonShape3D_aocdg")

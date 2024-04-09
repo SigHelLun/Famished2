@@ -7,5 +7,6 @@ func _ready():
 func _physics_process(delta):
 	$Prompt.text = ""
 	if is_colliding():
-		$Prompt.text = "HMMMMMMM..."
-		#print("wass upp")
+		var detected = get_collider()
+		if detected is Interactable:
+			$Prompt.text = detected.name
