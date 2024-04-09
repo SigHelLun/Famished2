@@ -21,6 +21,8 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [node name="Item1" type="StaticBody3D"]
 script = ExtResource("1_vyivs")
+promptMessege = null
+promptAction = null
 
 [node name="fridge" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, 0, -0.0988489, 0.973517, 0.420862, -0.286889, 1.383, 0.241476)
