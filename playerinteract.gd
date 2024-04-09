@@ -4,9 +4,12 @@ func _ready():
 	add_exception(owner)
 
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	$Prompt.text = ""
 	if is_colliding():
 		var detected = get_collider()
 		if detected is Interactable:
-			$Prompt.text = detected.name
+			$Prompt.text = detected.get_prompt()
+			
+			if Input.is_action_just_pressed(detected.prompt_action):
+				detected.interact(owner)

@@ -1574,10 +1574,10 @@ shape = SubResource("ConcavePolygonShape3D_e257n")
 
 [node name="Item1" parent="." instance=ExtResource("5_v7ehx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666096, 2.39635e-07, -31.9674)
-promptMessege = null
-promptAction = null
+promptMessege = "Interact"
+promptAction = "interact"
 
 [node name="Fridge" parent="." instance=ExtResource("5_v7ehx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.554219, 56.094, 101.34)
-promptMessege = null
-promptAction = null
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.573008, 56.1427, 101.231)
+promptMessege = "This is a fridge"
+promptAction = "interact"
