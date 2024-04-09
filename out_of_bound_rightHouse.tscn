@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="1_ughxj"]
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="2_br3ip"]
-[ext_resource type="Texture2D" uid="uid://dtvlmcyoo64xn" path="res://Textures/NeighborsHouseWallTexture.jpg" id="3_22w67"]
+[ext_resource type="Texture2D" uid="uid://htcf0vwn7vjr" path="res://Textures/Planks023A_1K-JPG/Planks023A_1K-JPG_Color.jpg" id="4_1sb4p"]
 [ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures/door.jpg" id="4_iiiix"]
 [ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures/RoofTexture.jpg" id="5_pk416"]
 [ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures/GlassPaneTexture.jpg" id="6_te7ry"]
@@ -46,8 +46,8 @@ albedo_texture = ExtResource("4_iiiix")
 material = SubResource("StandardMaterial3D_ctfdf")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ac4il"]
-albedo_texture = ExtResource("3_22w67")
-uv1_scale = Vector3(9, 1.31, 1)
+albedo_texture = ExtResource("4_1sb4p")
+uv1_scale = Vector3(10, 4.5, 1)
 
 [sub_resource type="PrismMesh" id="PrismMesh_y2n6y"]
 material = SubResource("StandardMaterial3D_ac4il")
@@ -87,15 +87,15 @@ material = SubResource("StandardMaterial3D_0sbf6")
 material = SubResource("StandardMaterial3D_lny2t")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_17rle"]
-albedo_texture = ExtResource("3_22w67")
-uv1_scale = Vector3(3.23, 2.05, 1)
+albedo_texture = ExtResource("4_1sb4p")
+uv1_scale = Vector3(10, 4.5, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_xruv7"]
 material = SubResource("StandardMaterial3D_17rle")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rgtss"]
-albedo_texture = ExtResource("3_22w67")
-uv1_scale = Vector3(2.46, 2.03, 1)
+albedo_texture = ExtResource("4_1sb4p")
+uv1_scale = Vector3(10, 4.5, 1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_y2xws"]
 material = SubResource("StandardMaterial3D_rgtss")
