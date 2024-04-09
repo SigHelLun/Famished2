@@ -1,6 +1,6 @@
 [gd_scene load_steps=49 format=3 uid="uid://vr7nuhlgeb28"]
 
-[ext_resource type="MeshLibrary" uid="uid://cfh7rg4xq2xf1" path="res://GridMapTiles.tres" id="1_chi5y"]
+[ext_resource type="MeshLibrary" uid="uid://h3d2e5epuo2l" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="1_heldy"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures/AsphaltTexture.jpg" id="2_qy6af"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://bqdu3kc53lqo3" path="res://Textures/PlayerHouseGrass.jpg" id="5_5s2pw"]
 [ext_resource type="Texture2D" uid="uid://ssxiv3n8esu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Roughness.jpg" id="6_y0g35"]
 [ext_resource type="PackedScene" uid="uid://4pxlfl2mshw6" path="res://house.tscn" id="8_nqnrp"]
-[ext_resource type="PackedScene" uid="uid://dv507nqxclfvr" path="res://out_of_bound_rightHouse.tscn" id="11_qbgb4"]
+[ext_resource type="PackedScene" path="res://out_of_bound_rightHouse.tscn" id="11_qbgb4"]
 [ext_resource type="PackedScene" uid="uid://b02r445l7sp5i" path="res://Textures/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf" id="13_bf7if"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
