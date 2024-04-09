@@ -1,14 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://8oibrdbtobbt"]
+[gd_scene load_steps=4 format=3 uid="uid://8oibrdbtobbt"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tgr0p"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj64m"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_0wtq0"]
-material = SubResource("StandardMaterial3D_tgr0p")
+[sub_resource type="PlaneMesh" id="PlaneMesh_dt6r3"]
+material = SubResource("StandardMaterial3D_tj64m")
+
+[sub_resource type="BoxMesh" id="BoxMesh_laj4h"]
 
 [node name="GridMpaTiles" type="Node3D"]
 
-[node name="testline" type="Node3D" parent="."]
+[node name="LineforStreet" type="MeshInstance3D" parent="."]
+transform = Transform3D(-7.43094e-09, 0, -1.175, 0, 1, 0, 0.17, 0, -5.13609e-08, 0, 0, -3)
+mesh = SubResource("PlaneMesh_dt6r3")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="testline"]
-transform = Transform3D(0.175, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
-mesh = SubResource("PlaneMesh_0wtq0")
+[node name="Curb" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+mesh = SubResource("BoxMesh_laj4h")
