@@ -1,6 +1,7 @@
-[gd_scene load_steps=48 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=49 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="1_heldy"]
+[ext_resource type="MeshLibrary" uid="uid://bpoivkadjgeqq" path="res://GridMapTiles.tres" id="1_noqcy"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures/AsphaltTexture.jpg" id="2_qy6af"]
 [ext_resource type="Texture2D" uid="uid://bvbq8w8t752mu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Color.jpg" id="3_y4wxc"]
@@ -135,6 +136,11 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [node name="Main Map 😁" type="Node3D"]
 
+[node name="GridMap" type="GridMap" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.005, 0)
+mesh_library = ExtResource("1_noqcy")
+metadata/_editor_floor_ = Vector3(0, -1, 0)
+
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_xfn1s")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43263, 33.5989)
 
@@ -202,6 +208,9 @@ mesh = SubResource("BoxMesh_ca4fd")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="PlayerHouse/Fence 😼/RightFence/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_gaakb")
 
+[node name="metal_trash_can_1k" parent="PlayerHouse" instance=ExtResource("13_bf7if")]
+transform = Transform3D(-1.24928, 0, 0.83024, 0, 1.5, 0, -0.83024, 0, -1.24928, -4.09438, 0, 34.2043)
+
 [node name="Street" type="Node3D" parent="."]
 
 [node name="StreetAsphalt" type="MeshInstance3D" parent="Street"]
@@ -234,10 +243,15 @@ skeleton = NodePath("../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Street/StreetCurb2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_2d382")
 
+[node name="street signs_lines" type="Node3D" parent="Street"]
+
+[node name="OutOfBoundHouse" parent="Street" instance=ExtResource("11_qbgb4")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95.2976, 0, -50.7615)
+
+[node name="StreetLamps (WIP)" type="Node3D" parent="Street"]
+
 [node name="House" parent="." instance=ExtResource("8_nqnrp")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.015, 0, -50.7)
-
-[node name="StreetLamps (WIP)" type="Node3D" parent="."]
 
 [node name="Barriers" type="Node3D" parent="."]
 
@@ -261,9 +275,3 @@ mesh = SubResource("BoxMesh_0aw03")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierRight/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_sdaad")
-
-[node name="OutOfBoundHouse" parent="." instance=ExtResource("11_qbgb4")]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -95.2976, 0, -50.7615)
-
-[node name="metal_trash_can_1k" parent="." instance=ExtResource("13_bf7if")]
-transform = Transform3D(-1.24928, 0, 0.83024, 0, 1.5, 0, -0.83024, 0, -1.24928, -4.09438, 0, 34.2043)
