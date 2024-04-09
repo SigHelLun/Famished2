@@ -1,6 +1,8 @@
 class_name Interactable
 extends StaticBody3D
 
+signal interacted(body)
+
 @export var promptMessege = 'Interact'
 @export var promptAction = 'interact'
 
@@ -12,4 +14,5 @@ func get_prompt():
 	return promptMessege + "\n["+ key_name +"]"
 
 func interact(body):
+	emit_signal("interacted", body)
 	print(body.name, " Interacted!")
