@@ -28,9 +28,6 @@ promptAction = null
 transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, 0, -0.0988489, 0.973517, 0.420862, -0.286889, 1.383, 0.241476)
 mesh = SubResource("BoxMesh_3qv1a")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="fridge"]
-transform = Transform3D(1, 1.86265e-09, 2.32831e-10, 0, 1, 1.19209e-07, 0, -1.49012e-08, 1, 0, 0, 0)
-
 [node name="fridgeDoor" type="MeshInstance3D" parent="fridge"]
 transform = Transform3D(5.55309e-05, -0.000486449, 0.4399, -0.0060335, 0.945185, 0.00250062, -0.388854, -0.00425449, 0.000189765, -0.0312535, 0.51738, -0.00538874)
 mesh = SubResource("PlaneMesh_34vl0")
