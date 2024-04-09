@@ -33,12 +33,12 @@ sky = SubResource("Sky_aeaw6")
 ambient_light_sky_contribution = 0.32
 ambient_light_energy = 2.36
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqm6f"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_akqpa"]
 albedo_texture = ExtResource("3_a3swj")
 uv1_scale = Vector3(6, 6, 6)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fivpw"]
-material = SubResource("StandardMaterial3D_qqm6f")
+material = SubResource("StandardMaterial3D_akqpa")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a1jve"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
