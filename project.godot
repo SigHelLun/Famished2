@@ -15,10 +15,6 @@ run/main_scene="res://select.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-Interactionmaneger="res://interaction/interactionmaneger.tscn"
-
 [display]
 
 window/size/viewport_width=640

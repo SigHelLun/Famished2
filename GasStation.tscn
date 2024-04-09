@@ -33,12 +33,12 @@ sky = SubResource("Sky_aeaw6")
 ambient_light_sky_contribution = 0.32
 ambient_light_energy = 2.36
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sahni"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqm6f"]
 albedo_texture = ExtResource("3_a3swj")
 uv1_scale = Vector3(6, 6, 6)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_fivpw"]
-material = SubResource("StandardMaterial3D_sahni")
+material = SubResource("StandardMaterial3D_qqm6f")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a1jve"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
@@ -153,6 +153,7 @@ mesh = SubResource("PlaneMesh_heru7")
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_w2owo")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.45292, 1.22945, -10.6364)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jlspu")

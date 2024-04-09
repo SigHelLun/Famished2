@@ -7,22 +7,12 @@
 script = ExtResource("1_8s1x4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-scale = Vector2(2.66182, 1.59533)
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 3141.0
+offset_bottom = 1778.0
+scale = Vector2(0.34266, 0.306846)
 texture = ExtResource("1_ei2l1")
-
-[node name="Label" type="Label" parent="."]
-offset_left = 129.0
-offset_top = -80.0
-offset_right = 223.0
-offset_bottom = -57.0
-scale = Vector2(17.508, 25.3092)
-text = "Famished 2"
-horizontal_alignment = 1
-vertical_alignment = 1
-uppercase = true
-max_lines_visible = 8
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = 7
@@ -30,14 +20,14 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 876.0
-offset_top = 603.0
-offset_right = 923.0
-offset_bottom = 634.0
+offset_left = 262.0
+offset_top = 255.0
+offset_right = 309.0
+offset_bottom = 286.0
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(7.16, 6.88)
-size_flags_horizontal = 4
+scale = Vector2(2.48, 1.76)
+size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "PLAY"
 
