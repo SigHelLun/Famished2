@@ -1,7 +1,7 @@
 [gd_scene load_steps=49 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="1_heldy"]
-[ext_resource type="MeshLibrary" uid="uid://bpoivkadjgeqq" path="res://GridMapTiles.tres" id="1_noqcy"]
+[ext_resource type="MeshLibrary" uid="uid://h3d2e5epuo2l" path="res://GridMapTiles.tres" id="1_noqcy"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures/AsphaltTexture.jpg" id="2_qy6af"]
 [ext_resource type="Texture2D" uid="uid://bvbq8w8t752mu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Color.jpg" id="3_y4wxc"]
