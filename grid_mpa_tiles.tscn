@@ -1,11 +1,32 @@
-[gd_scene load_steps=4 format=3 uid="uid://8oibrdbtobbt"]
+[gd_scene load_steps=11 format=3 uid="uid://8oibrdbtobbt"]
+
+[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="1_t78tp"]
+[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="2_bx3t4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj64m"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_dt6r3"]
 material = SubResource("StandardMaterial3D_tj64m")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3dvsh"]
+albedo_texture = ExtResource("1_t78tp")
+uv1_scale = Vector3(2.405, 5.04, 1)
+
 [sub_resource type="BoxMesh" id="BoxMesh_laj4h"]
+material = SubResource("StandardMaterial3D_3dvsh")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8p1se"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_84pk5"]
+albedo_texture = ExtResource("2_bx3t4")
+uv1_scale = Vector3(1.3, 3.47, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_m83s6"]
+material = SubResource("StandardMaterial3D_84pk5")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ev3y7"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [node name="GridMpaTiles" type="Node3D"]
 
@@ -14,5 +35,19 @@ transform = Transform3D(-7.43094e-09, 0, -1.175, 0, 1, 0, 0.17, 0, -5.13609e-08,
 mesh = SubResource("PlaneMesh_dt6r3")
 
 [node name="Curb" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 4)
+transform = Transform3D(2, 0, 0, 0, 0.2, 0, 0, 0, 2, 0, 0, 0)
+visible = false
 mesh = SubResource("BoxMesh_laj4h")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Curb"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Curb/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8p1se")
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_m83s6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Grass"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Grass/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ev3y7")
