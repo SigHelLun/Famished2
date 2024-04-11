@@ -23,13 +23,13 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
-[sub_resource type="Sky" id="Sky_aeaw6"]
+[sub_resource type="Sky" id="Sky_x5ajn"]
 sky_material = SubResource("ProceduralSkyMaterial_kmchk")
 
 [sub_resource type="Environment" id="Environment_jlspu"]
 background_mode = 2
 background_energy_multiplier = 0.84
-sky = SubResource("Sky_aeaw6")
+sky = SubResource("Sky_x5ajn")
 ambient_light_sky_contribution = 0.32
 ambient_light_energy = 2.36
 
