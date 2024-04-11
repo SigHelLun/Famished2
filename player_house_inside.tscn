@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvrp6hlxij50r"]
+
+[ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
+[ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
+[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="3_37igx"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8favl"]
+albedo_texture = ExtResource("1_wm1ya")
+roughness_texture = ExtResource("2_fl8vj")
+normal_enabled = true
+uv1_scale = Vector3(2.255, 2.69, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fuypv"]
+material = SubResource("StandardMaterial3D_8favl")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bmg0u"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[node name="PlayerHouseINSIDE" type="Node3D"]
+
+[node name="Floor" type="Node3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(128, 0, 0, 0, 1, 0, 0, 0, 128, 0, 0, 0)
+mesh = SubResource("PlaneMesh_fuypv")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_bmg0u")
+
+[node name="player" parent="." instance=ExtResource("3_37igx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.42438, 0)
