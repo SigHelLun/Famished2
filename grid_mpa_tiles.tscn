@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://8oibrdbtobbt"]
 
-[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="1_t78tp"]
-[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="2_bx3t4"]
+[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures (MARTEN)/sidewalkTexture.jpg" id="1_t78tp"]
+[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures (MARTEN)/NeighborArtificialGrass.jpg" id="2_bx3t4"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tj64m"]
 

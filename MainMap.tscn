@@ -1,20 +1,21 @@
-[gd_scene load_steps=47 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=49 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
-[ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures/AsphaltTexture.jpg" id="2_qy6af"]
-[ext_resource type="Texture2D" uid="uid://bvbq8w8t752mu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Color.jpg" id="3_y4wxc"]
-[ext_resource type="Texture2D" uid="uid://b18mubg3l8sto" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Displacement.jpg" id="4_448dj"]
-[ext_resource type="Texture2D" uid="uid://cf1ipshrii0ae" path="res://Textures/PlayerHouseDoorTexture.png" id="4_qtkmm"]
-[ext_resource type="Texture2D" uid="uid://b2kyywfhn4k1x" path="res://Textures/FenceTexture.jpg" id="5_2m0q0"]
-[ext_resource type="Texture2D" uid="uid://dq6q453hpwmwj" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_NormalDX.jpg" id="5_5jn2t"]
-[ext_resource type="Texture2D" uid="uid://bqdu3kc53lqo3" path="res://Textures/PlayerHouseGrass.jpg" id="5_5s2pw"]
-[ext_resource type="Texture2D" uid="uid://ssxiv3n8esu" path="res://Textures/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Roughness.jpg" id="6_y0g35"]
+[ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures (MARTEN)/AsphaltTexture.jpg" id="2_qy6af"]
+[ext_resource type="Texture2D" uid="uid://b18mubg3l8sto" path="res://Textures (MARTEN)/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Displacement.jpg" id="4_448dj"]
+[ext_resource type="Texture2D" uid="uid://d08daplto3po6" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Color.jpg" id="4_kdksl"]
+[ext_resource type="Texture2D" uid="uid://cf1ipshrii0ae" path="res://Textures (MARTEN)/PlayerHouseDoorTexture.png" id="4_qtkmm"]
+[ext_resource type="Texture2D" uid="uid://b2kyywfhn4k1x" path="res://Textures (MARTEN)/FenceTexture.jpg" id="5_2m0q0"]
+[ext_resource type="Texture2D" uid="uid://dq6q453hpwmwj" path="res://Textures (MARTEN)/Concrete042C_1K-JPG/Concrete042C_1K-JPG_NormalDX.jpg" id="5_5jn2t"]
+[ext_resource type="Texture2D" uid="uid://bqdu3kc53lqo3" path="res://Textures (MARTEN)/PlayerHouseGrass.jpg" id="5_5s2pw"]
+[ext_resource type="Texture2D" uid="uid://d1mptas6q3prh" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Metalness.jpg" id="6_eny6v"]
+[ext_resource type="Texture2D" uid="uid://cvus2gur4u2gc" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Roughness.jpg" id="8_2n05s"]
 [ext_resource type="PackedScene" uid="uid://4pxlfl2mshw6" path="res://house.tscn" id="8_nqnrp"]
 [ext_resource type="PackedScene" uid="uid://dv507nqxclfvr" path="res://out_of_bound_rightHouse.tscn" id="11_qbgb4"]
-[ext_resource type="PackedScene" uid="uid://b02r445l7sp5i" path="res://Textures/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf" id="13_bf7if"]
+[ext_resource type="PackedScene" uid="uid://b02r445l7sp5i" path="res://Textures (MARTEN)/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf" id="13_bf7if"]
 [ext_resource type="PackedScene" uid="uid://d2gthcbbhnod2" path="res://out_of_bound_houseLEFTSIDE.tscn" id="14_dabea"]
-[ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures/ashpahlttexturepLAYER.jpg" id="14_yci72"]
+[ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures (MARTEN)/ashpahlttexturepLAYER.jpg" id="14_yci72"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
@@ -26,9 +27,15 @@ background_mode = 2
 sky = SubResource("Sky_aeaw6")
 ambient_light_energy = 16.0
 glow_enabled = true
-fog_light_color = Color(0, 0, 0, 1)
-fog_density = 0.142
+fog_enabled = true
+fog_light_color = Color(0.160784, 0.160784, 0.160784, 1)
+fog_density = 0.0434
 fog_height = 1024.0
+adjustment_enabled = true
+adjustment_brightness = 0.66
+adjustment_saturation = 0.4
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_l35lx"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_iv3hh"]
 albedo_texture = ExtResource("4_qtkmm")
@@ -37,8 +44,10 @@ albedo_texture = ExtResource("4_qtkmm")
 material = SubResource("StandardMaterial3D_iv3hh")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fxuqh"]
-albedo_texture = ExtResource("3_y4wxc")
-roughness_texture = ExtResource("6_y0g35")
+albedo_texture = ExtResource("4_kdksl")
+metallic = 1.0
+metallic_texture = ExtResource("6_eny6v")
+roughness_texture = ExtResource("8_2n05s")
 normal_texture = ExtResource("5_5jn2t")
 heightmap_texture = ExtResource("4_448dj")
 uv1_scale = Vector3(-7.71, 36.795, 1)
@@ -144,6 +153,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43263, 57.5111)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="CharacterBody3D"]
 environment = SubResource("Environment_jlspu")
+camera_attributes = SubResource("CameraAttributesPractical_l35lx")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00874454, -0.847354, 0.530956, 0.00350166, -0.530947, -0.847398, -0.0197587, 5.15335, 0.00104618)

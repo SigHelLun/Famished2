@@ -1,12 +1,12 @@
 [gd_scene load_steps=41 format=3 uid="uid://d2gthcbbhnod2"]
 
-[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures/NeighborArtificialGrass.jpg" id="1_wokhv"]
-[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures/sidewalkTexture.jpg" id="2_cc2lb"]
-[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures/door.jpg" id="3_66a5g"]
-[ext_resource type="Texture2D" uid="uid://htcf0vwn7vjr" path="res://Textures/Planks023A_1K-JPG/Planks023A_1K-JPG_Color.jpg" id="4_vy8fq"]
-[ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures/RoofTexture.jpg" id="5_hgf3t"]
-[ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures/GlassPaneTexture.jpg" id="6_307vs"]
-[ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures/NeighborFence.jpg" id="7_6b360"]
+[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures (MARTEN)/NeighborArtificialGrass.jpg" id="1_wokhv"]
+[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures (MARTEN)/sidewalkTexture.jpg" id="2_cc2lb"]
+[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures (MARTEN)/door.jpg" id="3_66a5g"]
+[ext_resource type="Texture2D" uid="uid://htcf0vwn7vjr" path="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_Color.jpg" id="4_vy8fq"]
+[ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures (MARTEN)/RoofTexture.jpg" id="5_hgf3t"]
+[ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures (MARTEN)/GlassPaneTexture.jpg" id="6_307vs"]
+[ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures (MARTEN)/NeighborFence.jpg" id="7_6b360"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ig5v7"]
 albedo_texture = ExtResource("1_wokhv")
