@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://Items/doorInteractable.gd" id="1_xhkwb"]
 [ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://Textures(Sigurd)/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="2_7sl25"]
-[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures (MARTEN)/door.jpg" id="3_r0txh"]
+[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures (MARTEN)/other/door.jpg" id="3_r0txh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6jgc"]
 albedo_texture = ExtResource("2_7sl25")

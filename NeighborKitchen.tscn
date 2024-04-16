@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dcgid2onkfes0"]
+[gd_scene load_steps=10 format=3 uid="uid://uvqmyb2sf665"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5ol37"]
 [ext_resource type="Texture2D" uid="uid://c574xvna2ya41" path="res://Textures (MARTEN)/other/kitchenfloor.jpg" id="1_bc1er"]

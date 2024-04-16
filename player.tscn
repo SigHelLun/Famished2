@@ -23,6 +23,7 @@ shape = SubResource("CapsuleShape3D_tl56i")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.619092, 0)
 
 [node name="Camera3D" type="Camera3D" parent="Neck"]
+current = true
 
 [node name="Playerinteract" type="RayCast3D" parent="Neck"]
 target_position = Vector3(0, 0, -4)
@@ -43,7 +44,7 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "Message [Key]"
 
-[node name="Root Scene" parent="." instance=ExtResource("3_qvjtd")]
-transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -0.999511, 0)
+[node name="Root Scene" parent="Neck" instance=ExtResource("3_qvjtd")]
+transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.6186, 0)
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
