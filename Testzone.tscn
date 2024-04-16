@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=3 uid="uid://0yml7oig55p5"]
+[gd_scene load_steps=35 format=3 uid="uid://0yml7oig55p5"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
 [ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bgojdrio64wue" path="res://GasStationTextures/360_F_626956301_XbKQ0erohdI9NnrDXmBrN4xW27zLdtyU.jpg" id="8_yi0od"]
 [ext_resource type="AudioStream" uid="uid://cgxw60vmcuxqg" path="res://GasStationTextures/quirky-dog.mp3" id="9_edfyi"]
 [ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="9_fbowx"]
+[ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="10_qsn38"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
@@ -249,7 +250,8 @@ autoplay = true
 
 [node name="player" parent="." instance=ExtResource("2_txwbf")]
 
-[node name="Item1" parent="." instance=ExtResource("9_fbowx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.38085, 0, 1.36795)
-promptMessege = "Interact"
-promptAction = "interact"
+[node name="Item2" parent="." instance=ExtResource("10_qsn38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69455, 9.53674e-07, -7.3599)
+
+[node name="Item3" parent="." instance=ExtResource("9_fbowx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04599, 0, -6.82337)

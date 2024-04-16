@@ -1,11 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://iawxjjddydis"]
+[gd_scene load_steps=9 format=3 uid="uid://bwktif585r5gs"]
 
-[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://annet/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="1_m4wpg"]
-[ext_resource type="Script" path="res://Items/Interactable.gd" id="1_vyivs"]
-[ext_resource type="Texture2D" uid="uid://gr2o5uka2bwd" path="res://annet/Skjermbilde 2024-02-22 145320.png" id="2_828q1"]
+[ext_resource type="Script" path="res://Items/doorInteractable.gd" id="1_xhkwb"]
+[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://annet/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="2_kr3sv"]
+[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures (MARTEN)/door.jpg" id="3_r0txh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6jgc"]
-albedo_texture = ExtResource("1_m4wpg")
+albedo_texture = ExtResource("2_kr3sv")
 
 [sub_resource type="BoxMesh" id="BoxMesh_3qv1a"]
 material = SubResource("StandardMaterial3D_g6jgc")
@@ -13,13 +13,15 @@ material = SubResource("StandardMaterial3D_g6jgc")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_aocdg"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qatoj"]
-albedo_texture = ExtResource("2_828q1")
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yj7j1"]
+albedo_texture = ExtResource("3_r0txh")
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_237hb"]
+[sub_resource type="PlaneMesh" id="PlaneMesh_xdhyv"]
+material = SubResource("StandardMaterial3D_yj7j1")
 
 [node name="Item1" type="StaticBody3D"]
-script = ExtResource("1_vyivs")
+script = ExtResource("1_xhkwb")
+promptMessege = "door"
 
 [node name="fridge" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.000918955, -0.00873287, -1.85667, -3.44481, -0.030591, -1.62602e-09, -0.105304, 1.00064, -0.0162043, -0.286889, 1.383, 0.241476)
@@ -29,7 +31,6 @@ mesh = SubResource("BoxMesh_3qv1a")
 transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, -1.14253e-08, -0.0988489, 0.973517, 0.420862, -0.286889, 1.383, 0.344722)
 shape = SubResource("ConcavePolygonShape3D_aocdg")
 
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.912064, -0.00831744, 0.000257872, 3.16447e-18, -0.0193217, -1.64272, 0.0074978, 1.01177, -0.0313687, -0.281998, 1.36964, 0.761647)
-material_override = SubResource("StandardMaterial3D_qatoj")
-mesh = SubResource("PlaneMesh_237hb")
+[node name="Door" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.99008, 0.000453311, 0.00107247, 0.000728944, -0.00237856, -1.70499, -0.00446689, 0.100088, -0.0405236, -0.302773, 1.36642, 0.787136)
+mesh = SubResource("PlaneMesh_xdhyv")

@@ -833,12 +833,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.3903, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.446219, 0)
 shape = SubResource("ConcavePolygonShape3D_e257n")
 
-[node name="Item1" parent="." instance=ExtResource("5_v7ehx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.666096, 2.39635e-07, -31.9674)
-
 [node name="Fridge" parent="." instance=ExtResource("5_v7ehx")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.72805, 37.9233, 66.9918)
-promptMessege = "This is a fridge"
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787068, 0.276172, -32.0996)
 
 [node name="Pillers" type="Node3D" parent="."]
 

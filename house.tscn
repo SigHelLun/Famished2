@@ -92,11 +92,11 @@ albedo_color = Color(0, 0, 0, 1)
 material = SubResource("StandardMaterial3D_n8r4r")
 text = "69"
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yj7j1"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rbxph"]
 albedo_texture = ExtResource("4_xtegg")
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_nkvme"]
-material = SubResource("StandardMaterial3D_yj7j1")
+material = SubResource("StandardMaterial3D_rbxph")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_obgtd"]
 albedo_texture = ExtResource("3_7ksql")

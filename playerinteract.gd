@@ -13,3 +13,7 @@ func _physics_process(_delta):
 			
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.interact(owner)
+		if detected is doorInteractable:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+				detected.teleport(owner)
