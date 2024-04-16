@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://wyquq4wifg3k"
-path="res://.godot/imported/Monster3D.fbx-d1da62bbd6e25ca680cb2c320d731183.scn"
+uid="uid://dqcwr2n717caf"
+path="res://.godot/imported/animationplayerfamished2.glb-c3a2d567a9516e5e262f4752e74a2de8.scn"
 
 [deps]
 
-source_file="res://Animations/Monster3D.fbx"
-dest_files=["res://.godot/imported/Monster3D.fbx-d1da62bbd6e25ca680cb2c320d731183.scn"]
+source_file="res://Animations/animationplayerfamished2.glb"
+dest_files=["res://.godot/imported/animationplayerfamished2.glb-c3a2d567a9516e5e262f4752e74a2de8.scn"]
 
 [params]
 

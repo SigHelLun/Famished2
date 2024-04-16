@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
-[ext_resource type="PackedScene" path="res://PlayerModel.tscn" id="3_qvjtd"]
+[ext_resource type="PackedScene" uid="uid://cajb3byndart1" path="res://Animations/aniPlayerGLB.tscn" id="3_mm0kv"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
@@ -45,7 +45,7 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "Message [Key]"
 
-[node name="Root Scene" parent="Neck" instance=ExtResource("3_qvjtd")]
-transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.6186, 0)
+[node name="animationplayerfamished2" parent="Neck" instance=ExtResource("3_mm0kv")]
+transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.64097, 0.289769)
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
