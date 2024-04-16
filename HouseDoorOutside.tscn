@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=3 uid="uid://dud64ogm67n4i"]
+
+[ext_resource type="Texture2D" uid="uid://c8updlu6dr0qh" path="res://Textures (MARTEN)/METALDOOR.png" id="1_e6nkn"]
+[ext_resource type="Script" path="res://HouseInsideTeleport.gd" id="1_gqfjg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wo55c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n26bj"]
+albedo_texture = ExtResource("1_e6nkn")
+uv1_scale = Vector3(1.85, 1.85, 1.85)
+uv1_offset = Vector3(0.03, 0, 0)
+
+[sub_resource type="BoxMesh" id="BoxMesh_yy548"]
+material = SubResource("StandardMaterial3D_n26bj")
+
+[node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_gqfjg")
+promptMessege = "Go Inside"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+shape = SubResource("BoxShape3D_wo55c")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+mesh = SubResource("BoxMesh_yy548")
