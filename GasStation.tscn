@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=35 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://dl0p3i0d4fi4m" path="res://GasStationTextures/istockphoto-1148892236-612x612.jpg" id="5_5x017"]
 [ext_resource type="Texture2D" uid="uid://cqy463pgfi5il" path="res://GasStationTextures/Freezer2.png" id="6_wtvbs"]
 [ext_resource type="Texture2D" uid="uid://dfvr5eyr7b750" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
-[ext_resource type="Texture2D" uid="uid://bgojdrio64wue" path="res://GasStationTextures/360_F_626956301_XbKQ0erohdI9NnrDXmBrN4xW27zLdtyU.jpg" id="8_kurdw"]
 [ext_resource type="AudioStream" uid="uid://cgxw60vmcuxqg" path="res://GasStationTextures/quirky-dog.mp3" id="9_hvffl"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
@@ -91,20 +90,6 @@ material = SubResource("StandardMaterial3D_msssl")
 
 [sub_resource type="BoxMesh" id="BoxMesh_ksg3a"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o4l3h"]
-albedo_color = Color(0.290196, 0.145098, 0, 1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_4e1wc"]
-material = SubResource("StandardMaterial3D_o4l3h")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_unrm6"]
-albedo_texture = ExtResource("8_kurdw")
-uv1_scale = Vector3(0.255, 0.975, 1)
-uv1_offset = Vector3(0.37, 0.005, 0)
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_4c7uf"]
-material = SubResource("StandardMaterial3D_unrm6")
-
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36y3b"]
 albedo_color = Color(1, 0.996078, 0.823529, 1)
 emission_enabled = true
@@ -177,7 +162,7 @@ mesh = SubResource("PlaneMesh_fivpw")
 shape = SubResource("ConcavePolygonShape3D_a1jve")
 
 [node name="Counter" type="MeshInstance3D" parent="."]
-transform = Transform3D(5, 0, 0, 0, 1.5, 0, 0, 0, 1, -6.50054, 0.475931, 7.48446)
+transform = Transform3D(5, 0, 0, 0, 1.5, 0, 0, 0, 1, -6.50054, 0.475931, -7.77097)
 material_override = SubResource("StandardMaterial3D_n2ynf")
 mesh = SubResource("BoxMesh_hrvf1")
 
@@ -300,27 +285,16 @@ transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
 
 [node name="Door" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, -4.86142, 1.28213, -11.9565)
+transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, -4.85584, 1.28213, 11.9717)
 mesh = SubResource("BoxMesh_ksg3a")
 
 [node name="Window 1" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 0.285893, 2.00854, -11.9565)
+transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 0.285893, 2.00854, 11.9816)
 mesh = SubResource("BoxMesh_ksg3a")
 
 [node name="Window 2" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 6.18589, 2.00854, -11.9565)
+transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 6.18589, 2.00854, 11.9816)
 mesh = SubResource("BoxMesh_ksg3a")
-
-[node name="Clerk Stand" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.025, 0, 0, 0, 1, 0, 0, 0, 0.585, -7.00965, -0.158475, 8.30201)
-mesh = SubResource("BoxMesh_4e1wc")
-
-[node name="Node3D" type="Node3D" parent="."]
-
-[node name="Clerk" type="MeshInstance3D" parent="Node3D"]
-transform = Transform3D(-1, 8.74228e-08, 3.80289e-08, -4.37114e-08, 1.91069e-15, -0.87, -8.74228e-08, -1, 1.6623e-15, -6.97546, 1.22585, 8.24629)
-mesh = SubResource("PlaneMesh_4c7uf")
-skeleton = NodePath("../..")
 
 [node name="Light1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, 0)
