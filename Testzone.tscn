@@ -255,5 +255,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.69455, 9.53674e-07, -7.359
 
 [node name="Item3" parent="." instance=ExtResource("9_fbowx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.04599, 0, -6.82337)
-promptMessege = null
-promptAction = null
+promptMessege = "Fridge"
