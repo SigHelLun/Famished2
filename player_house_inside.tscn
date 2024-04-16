@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=3 uid="uid://cvrp6hlxij50r"]
+[gd_scene load_steps=50 format=3 uid="uid://cvrp6hlxij50r"]
 
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
@@ -29,6 +29,9 @@ dof_blur_near_distance = 5.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ooc7s"]
 albedo_texture = ExtResource("4_42mie")
+uv1_scale = Vector3(0.415, 0.415, 0.415)
+uv1_offset = Vector3(0.23, -0.3, 0.03)
+uv1_triplanar = true
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tguq"]
 albedo_color = Color(0.0901961, 1, 1, 1)
@@ -148,6 +151,13 @@ albedo_texture = ExtResource("12_bdi36")
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xscyo"]
 material = SubResource("StandardMaterial3D_r5b85")
 
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7p5n"]
+albedo_texture = ExtResource("4_42mie")
+uv1_offset = Vector3(0, -0.14, 0)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qaefa"]
+material = SubResource("StandardMaterial3D_y7p5n")
+
 [node name="PlayerHouseINSIDE" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -262,3 +272,7 @@ shape = SubResource("ConcavePolygonShape3D_ificf")
 [node name="pillow" type="MeshInstance3D" parent="bed"]
 transform = Transform3D(3.15263e-16, -1.59547e-08, 1.085, -0.165, -1.59547e-08, 0, 7.21238e-09, -0.365, -4.74269e-08, 0, 0.489251, -1.238)
 mesh = SubResource("CapsuleMesh_xscyo")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="bed"]
+transform = Transform3D(5.89658e-09, 0.299774, -0.95401, 0.45, -4.37114e-08, 2.11758e-22, -1.87655e-08, -0.95401, -0.299774, 0.319826, 0.389607, 0.2323)
+mesh = SubResource("CapsuleMesh_qaefa")
