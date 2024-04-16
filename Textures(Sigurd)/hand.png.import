@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d0mnyfygxrtl8"
-path.s3tc="res://.godot/imported/GlassPaneTexture.jpg-6cd0db69d68f985afb88bcd3ddb9ad1e.s3tc.ctex"
+uid="uid://mhtww4klop26"
+path.s3tc="res://.godot/imported/hand.png-a4eae029b5835293eefe6fb178590a64.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/GlassPaneTexture.jpg"
-dest_files=["res://.godot/imported/GlassPaneTexture.jpg-6cd0db69d68f985afb88bcd3ddb9ad1e.s3tc.ctex"]
+source_file="res://Textures(Sigurd)/hand.png"
+dest_files=["res://.godot/imported/hand.png-a4eae029b5835293eefe6fb178590a64.s3tc.ctex"]
 
 [params]
 

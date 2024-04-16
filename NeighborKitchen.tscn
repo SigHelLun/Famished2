@@ -1,0 +1,54 @@
+[gd_scene load_steps=10 format=3 uid="uid://dcgid2onkfes0"]
+
+[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5ol37"]
+[ext_resource type="Texture2D" uid="uid://c574xvna2ya41" path="res://Textures (MARTEN)/other/kitchenfloor.jpg" id="1_bc1er"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ctt3"]
+albedo_texture = ExtResource("1_bc1er")
+uv1_scale = Vector3(16.06, 16.06, 16.06)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_4wv0t"]
+material = SubResource("StandardMaterial3D_8ctt3")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_8v2ul"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_vsjja"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_bntek"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_rif20"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wdkeo"]
+
+[node name="NeighborKitchen" type="Node3D"]
+
+[node name="player" parent="." instance=ExtResource("1_5ol37")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.69009, 1.22945, 8.1071)
+
+[node name="floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(10, 0, 0, 0, 1, 0, 0, 0, 10, 0, 0, 0)
+mesh = SubResource("PlaneMesh_4wv0t")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_8v2ul")
+
+[node name="walls" type="Node3D" parent="."]
+
+[node name="wall1" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(-1.31134e-07, 1, 0, -3, -4.37114e-08, 0, 0, 0, 10, -10, 3, 0)
+mesh = SubResource("PlaneMesh_vsjja")
+
+[node name="wall2" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-08, -3, 0, 1, -1.31134e-07, 0, 3, -10)
+mesh = SubResource("PlaneMesh_bntek")
+
+[node name="wall3" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(-1.31134e-07, -1, 0, 3, -4.37114e-08, 0, 0, 0, 10, 10, 3, 0)
+mesh = SubResource("PlaneMesh_rif20")
+
+[node name="wall4" type="MeshInstance3D" parent="walls"]
+transform = Transform3D(10, 0, 0, 0, -4.37114e-08, 3, 0, -1, -1.31134e-07, 0, 3, 10)
+mesh = SubResource("PlaneMesh_wdkeo")
