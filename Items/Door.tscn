@@ -24,7 +24,7 @@ script = ExtResource("1_xhkwb")
 promptMessege = "door"
 
 [node name="fridge" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.000918955, -0.00873287, -1.85667, -3.44481, -0.030591, -1.62602e-09, -0.105304, 1.00064, -0.0162043, -0.286889, 1.383, 0.241476)
+transform = Transform3D(7.01413e-15, 4.37551e-08, 2.297, 3.671, -4.37551e-08, 0, 1.60465e-07, 1.001, -1.00405e-07, -0.286889, 1.383, 0.241476)
 mesh = SubResource("BoxMesh_3qv1a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -32,5 +32,5 @@ transform = Transform3D(-0.00170398, 0.0167811, -1.85647, -3.31992, -0.0305559, 
 shape = SubResource("ConcavePolygonShape3D_aocdg")
 
 [node name="Door" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.99008, 0.000453311, 0.00107247, 0.000728944, -0.00237856, -1.70499, -0.00446689, 0.100088, -0.0405236, -0.302773, 1.36642, 0.787136)
+transform = Transform3D(0.99009, 0, 0, 0, -4.37627e-09, -1.70547, 0, 0.100117, -7.45486e-08, -0.302773, 1.36642, 0.744479)
 mesh = SubResource("PlaneMesh_xdhyv")
