@@ -13,7 +13,6 @@ var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 
 #func _on_interact():
 #	get_tree().change_scene_to_file("res://basement.tscn")
-
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)

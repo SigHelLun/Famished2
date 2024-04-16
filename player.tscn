@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
-[ext_resource type="PackedScene" uid="uid://ck362q8v1iqku" path="res://PlayerModel.tscn" id="3_qvjtd"]
+[ext_resource type="Texture2D" uid="uid://mhtww4klop26" path="res://Textures(Sigurd)/hand.png" id="3_1luol"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
@@ -13,7 +13,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.22945, 0)
 script = ExtResource("1_3kkml")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-visible = false
 mesh = SubResource("CapsuleMesh_vaeuf")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
