@@ -42,7 +42,7 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "Message [Key]"
 
-[node name="Sprite3D" type="Sprite3D" parent="Neck"]
+[node name="hand" type="Sprite3D" parent="Neck"]
 transform = Transform3D(0.0320908, 0, 0, 0, 0.0253639, 0, 0, 0, 1.06307, 0.806657, -0.164487, -0.73073)
 texture = ExtResource("3_1luol")
 
