@@ -1,6 +1,6 @@
 [gd_scene load_steps=13 format=3 uid="uid://ctnpi1jvn51f6"]
 
-[ext_resource type="Script" path="res://NeighborWindow.gd" id="1_q4q58"]
+[ext_resource type="Script" path="res://Items/NeighborWindow.gd" id="1_tkavt"]
 [ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures (MARTEN)/other/GlassPaneTexture.jpg" id="2_jhjk7"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43tcj"]
@@ -32,7 +32,7 @@ material = SubResource("StandardMaterial3D_xww8k")
 [sub_resource type="BoxShape3D" id="BoxShape3D_3n21e"]
 
 [node name="Window" type="StaticBody3D"]
-script = ExtResource("1_q4q58")
+script = ExtResource("1_tkavt")
 
 [node name="Window1(FrontBottomLeft)" type="Node3D" parent="."]
 
