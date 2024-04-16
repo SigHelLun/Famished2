@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://0bqxt4b1ifjf"]
 
 [ext_resource type="Script" path="res://select.gd" id="1_8s1x4"]
-[ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://annet/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_ei2l1"]
+[ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_ei2l1"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8s1x4")
