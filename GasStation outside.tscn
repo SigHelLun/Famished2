@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://xv818tg7gyof"]
+[gd_scene load_steps=24 format=3 uid="uid://xv818tg7gyof"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_23dc3"]
 [ext_resource type="Texture2D" uid="uid://d3l4sgkptxubw" path="res://GSOutside Textures/Ground062S_1K-JPG/Ground062S_1K-JPG_Color.jpg" id="1_62qww"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://c4xxmwq5xfv28" path="res://GSOutside Textures/Ground068_1K-JPG/Ground068_1K-JPG_Displacement.jpg" id="9_ka7n7"]
 [ext_resource type="Texture2D" uid="uid://cep467pf1iwoa" path="res://GSOutside Textures/Ground068_1K-JPG/Ground068_1K-JPG_NormalGL.jpg" id="10_isruc"]
 [ext_resource type="Texture2D" uid="uid://dx6hblu0wscp8" path="res://GSOutside Textures/Ground068_1K-JPG/Ground068_1K-JPG_Roughness.jpg" id="11_337xm"]
+[ext_resource type="Material" uid="uid://cub7yuxtk4wk3" path="res://OliverTextures/Reflective.tres" id="12_28w34"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbk6"]
 albedo_texture = ExtResource("1_62qww")
@@ -66,6 +67,9 @@ points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_871ht"]
 
+[sub_resource type="BoxMesh" id="BoxMesh_rwanu"]
+material = ExtResource("12_28w34")
+
 [node name="Node3D" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
@@ -78,7 +82,7 @@ mesh = SubResource("PlaneMesh_ekmfc")
 shape = SubResource("ConvexPolygonShape3D_sjqf6")
 
 [node name="player" parent="." instance=ExtResource("1_23dc3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113299, 1.22945, 34.4384)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113299, 1.22945, 0.108181)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_q80ky")
@@ -118,3 +122,11 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 22.025
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
 transform = Transform3D(59.92, 0, 0, 0, 15.965, 0, 0, 0, 0.27, 0, 6.70324, -5.28767)
 shape = SubResource("BoxShape3D_871ht")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.035, 0, 0, 0, 1.34, 0, 0, 0, 0.015, 0, 1.73935, -2.51428)
+mesh = SubResource("BoxMesh_rwanu")
+
+[node name="ReflectionProbe" type="ReflectionProbe" parent="MeshInstance3D3"]
+transform = Transform3D(0.329489, 0, 0, 0, 0.746269, 0, 0, 0, 66.6667, 0, -0.0324302, 0)
+update_mode = 1
