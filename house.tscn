@@ -1,16 +1,17 @@
-[gd_scene load_steps=62 format=3 uid="uid://4pxlfl2mshw6"]
+[gd_scene load_steps=63 format=3 uid="uid://4pxlfl2mshw6"]
 
-[ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures (MARTEN)/NeighborArtificialGrass.jpg" id="1_oe3o3"]
-[ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures (MARTEN)/sidewalkTexture.jpg" id="2_odrau"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/NeighborArtificialGrass.jpg" id="1_oe3o3"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/sidewalkTexture.jpg" id="2_odrau"]
 [ext_resource type="Texture2D" uid="uid://htcf0vwn7vjr" path="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_Color.jpg" id="3_7ksql"]
 [ext_resource type="Texture2D" uid="uid://djey8dsnmab2" path="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_AmbientOcclusion.jpg" id="4_1plg7"]
-[ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures (MARTEN)/door.jpg" id="4_xtegg"]
-[ext_resource type="Texture2D" uid="uid://bldke7ywryi24" path="res://Textures (MARTEN)/RoofTexture.jpg" id="5_570el"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/door.jpg" id="4_xtegg"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/RoofTexture.jpg" id="5_570el"]
 [ext_resource type="Texture2D" uid="uid://bm1se6tu01245" path="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_Metalness.jpg" id="5_ds2r8"]
 [ext_resource type="Texture2D" uid="uid://b33q1tie40cmt" path="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_Roughness.jpg" id="6_1kmyt"]
-[ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures (MARTEN)/GlassPaneTexture.jpg" id="6_w2e4p"]
-[ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures (MARTEN)/NeighborFence.jpg" id="7_ibvar"]
-[ext_resource type="Texture2D" uid="uid://608y3bv0mm7n" path="res://Textures (MARTEN)/garagedoor.jpg" id="7_n7x88"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/GlassPaneTexture.jpg" id="6_w2e4p"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/NeighborFence.jpg" id="7_ibvar"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/garagedoor.jpg" id="7_n7x88"]
+[ext_resource type="PackedScene" uid="uid://ctnpi1jvn51f6" path="res://Items/WindowTeleport.tscn" id="12_mgtee"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w285w"]
 albedo_texture = ExtResource("1_oe3o3")
@@ -124,25 +125,25 @@ uv1_scale = Vector3(8, 2, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_oxp4k"]
 material = SubResource("StandardMaterial3D_bvu2j")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43tcj"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eqocn"]
 albedo_texture = ExtResource("6_w2e4p")
 uv1_scale = Vector3(0.785, 1, 1)
 uv1_offset = Vector3(0.02, 0, 0)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_gy03s"]
-material = SubResource("StandardMaterial3D_43tcj")
+material = SubResource("StandardMaterial3D_eqocn")
 
 [sub_resource type="BoxMesh" id="BoxMesh_f7mqr"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_15e62"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4v1dx"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_1bh5s"]
-material = SubResource("StandardMaterial3D_15e62")
+material = SubResource("StandardMaterial3D_4v1dx")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi4y0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0i6p4"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_4028h"]
-material = SubResource("StandardMaterial3D_fi4y0")
+material = SubResource("StandardMaterial3D_0i6p4")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xl6bg"]
 albedo_texture = ExtResource("7_ibvar")
@@ -396,31 +397,6 @@ mesh = SubResource("BoxMesh_4028h")
 transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
 mesh = SubResource("BoxMesh_4028h")
 
-[node name="Window5(RightBottom)Left" type="Node3D" parent="House😂😂/Windows 😝"]
-transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.0200005, 2.31437, 33.5354)
-
-[node name="PaneButTheTexture" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
-transform = Transform3D(-4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0, 0.575, -0.103472, 0, 0)
-mesh = SubResource("PlaneMesh_gy03s")
-
-[node name="TheActualPane" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
-transform = Transform3D(-8.74228e-08, -0.04, 0, 2, -1.74846e-09, 0, 0, 0, 1.2, -0.152558, 0, 0)
-transparency = 0.74
-mesh = SubResource("BoxMesh_f7mqr")
-skeleton = NodePath("../PaneButTheTexture")
-
-[node name="BackgroundBorder" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
-transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
-mesh = SubResource("BoxMesh_1bh5s")
-
-[node name="TopLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
-transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
-mesh = SubResource("BoxMesh_4028h")
-
-[node name="BottomLip 👄" type="MeshInstance3D" parent="House😂😂/Windows 😝/Window5(RightBottom)Left"]
-transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
-mesh = SubResource("BoxMesh_4028h")
-
 [node name="Window6(RightBottomRight)" type="Node3D" parent="House😂😂/Windows 😝"]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 7, 2.31437, 33.5354)
 
@@ -538,3 +514,6 @@ mesh = SubResource("BoxMesh_uf3h3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/FrontLeft Fence2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8d4wk")
+
+[node name="Window" parent="." instance=ExtResource("12_mgtee")]
+transform = Transform3D(1.51751e-07, 0, 2.075, 0, 2.215, 0, -2.01, 0, 1.56658e-07, 8.27513, 3.48632, 27.1907)

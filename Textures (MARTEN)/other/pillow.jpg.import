@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhrk24t64bqj1"
-path.s3tc="res://.godot/imported/mattress.jpg-c8cc1dfd74ea48abdc400b005a0d0391.s3tc.ctex"
+uid="uid://bm76q5md2mp6p"
+path.s3tc="res://.godot/imported/pillow.jpg-fd38c3dffd35b48697bb01773225f45e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/mattress.jpg"
-dest_files=["res://.godot/imported/mattress.jpg-c8cc1dfd74ea48abdc400b005a0d0391.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/pillow.jpg"
+dest_files=["res://.godot/imported/pillow.jpg-fd38c3dffd35b48697bb01773225f45e.s3tc.ctex"]
 
 [params]
 

@@ -1,0 +1,67 @@
+[gd_scene load_steps=13 format=3 uid="uid://ctnpi1jvn51f6"]
+
+[ext_resource type="Script" path="res://NeighborWindow.gd" id="1_q4q58"]
+[ext_resource type="Texture2D" path="res://Textures (MARTEN)/GlassPaneTexture.jpg" id="2_jhjk7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_43tcj"]
+albedo_texture = ExtResource("2_jhjk7")
+uv1_scale = Vector3(0.785, 1, 1)
+uv1_offset = Vector3(0.02, 0, 0)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_wtcu0"]
+material = SubResource("StandardMaterial3D_43tcj")
+
+[sub_resource type="BoxMesh" id="BoxMesh_fk1vs"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1xovj"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_044r1"]
+material = SubResource("StandardMaterial3D_1xovj")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fi4y0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_kv6uw"]
+material = SubResource("StandardMaterial3D_fi4y0")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xww8k"]
+albedo_color = Color(0, 0, 0, 1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_la46v"]
+material = SubResource("StandardMaterial3D_xww8k")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_3n21e"]
+
+[node name="Window" type="StaticBody3D"]
+script = ExtResource("1_q4q58")
+
+[node name="Window1(FrontBottomLeft)" type="Node3D" parent="."]
+
+[node name="PaneButTheTexture" type="MeshInstance3D" parent="Window1(FrontBottomLeft)"]
+transform = Transform3D(0.581371, -0.813639, 0, 0.813639, 0.581371, 0, 0, 0, 0.575, -0.265023, 0.520351, 0)
+mesh = SubResource("PlaneMesh_wtcu0")
+
+[node name="TheActualPane" type="MeshInstance3D" parent="Window1(FrontBottomLeft)"]
+transform = Transform3D(1.16274, -0.0325456, 0, 1.62728, 0.0232548, 0, 0, 0, 1.2, -0.304961, 0.548889, 0)
+transparency = 0.74
+mesh = SubResource("BoxMesh_fk1vs")
+skeleton = NodePath("../PaneButTheTexture")
+
+[node name="BackgroundBorder" type="MeshInstance3D" parent="Window1(FrontBottomLeft)"]
+transform = Transform3D(0.2, 0, 0, 0, 2.4, 0, 0, 0, 1.75, 0, 0, 0)
+mesh = SubResource("BoxMesh_044r1")
+
+[node name="TopLip 👄" type="MeshInstance3D" parent="Window1(FrontBottomLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, 1.171, 0)
+mesh = SubResource("BoxMesh_kv6uw")
+
+[node name="BottomLip 👄" type="MeshInstance3D" parent="Window1(FrontBottomLeft)"]
+transform = Transform3D(0.065, 0, 0, 0, 0.06, 0, 0, 0, 1.75, -0.11, -1.17082, 0)
+mesh = SubResource("BoxMesh_kv6uw")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Window1(FrontBottomLeft)"]
+transform = Transform3D(-3.67176e-08, -1, 0, 0.84, -4.37114e-08, 0, 0, 0, 0.54, -0.100154, -0.145182, 0)
+mesh = SubResource("PlaneMesh_la46v")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.84, 0, 0, 0, 2.91, 0, 0, 0, 1.25, 0, 0, 0)
+shape = SubResource("BoxShape3D_3n21e")

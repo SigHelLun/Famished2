@@ -138,7 +138,7 @@ mesh = SubResource("PlaneMesh_heru7")
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_w2owo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45292, 1.22945, -10.4945)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77636, 1.22945, 10.4852)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jlspu")

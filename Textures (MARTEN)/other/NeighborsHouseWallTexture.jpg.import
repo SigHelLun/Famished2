@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dtvlmcyoo64xn"
-path.s3tc="res://.godot/imported/NeighborsHouseWallTexture.jpg-8de7e2b352d4c86308377b8a563d2514.s3tc.ctex"
+path.s3tc="res://.godot/imported/NeighborsHouseWallTexture.jpg-067ae633e9724e8b43b23540bc622498.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/NeighborsHouseWallTexture.jpg"
-dest_files=["res://.godot/imported/NeighborsHouseWallTexture.jpg-8de7e2b352d4c86308377b8a563d2514.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/NeighborsHouseWallTexture.jpg"
+dest_files=["res://.godot/imported/NeighborsHouseWallTexture.jpg-067ae633e9724e8b43b23540bc622498.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ciqf2fplwkq7r"
-path.s3tc="res://.godot/imported/NeighborFence.jpg-cea3f6b814cdabd6ad78ad6ada9a0bc2.s3tc.ctex"
+uid="uid://d34myjv63dn1c"
+path.s3tc="res://.godot/imported/ashpahlttexturepLAYER.jpg-04be3dc69d6a7825ba6b85c6a0516fa6.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/NeighborFence.jpg"
-dest_files=["res://.godot/imported/NeighborFence.jpg-cea3f6b814cdabd6ad78ad6ada9a0bc2.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/ashpahlttexturepLAYER.jpg"
+dest_files=["res://.godot/imported/ashpahlttexturepLAYER.jpg-04be3dc69d6a7825ba6b85c6a0516fa6.s3tc.ctex"]
 
 [params]
 

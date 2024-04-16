@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://deqp7yw3jwaj"
-path.s3tc="res://.godot/imported/RustyMetalPlayerHouseTexture.jpg-0970369ae41ab1b3b553a51a92a160a7.s3tc.ctex"
+uid="uid://608y3bv0mm7n"
+path.s3tc="res://.godot/imported/garagedoor.jpg-fc0b4bbe0140bba575f8cbd9145f3e19.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/RustyMetalPlayerHouseTexture.jpg"
-dest_files=["res://.godot/imported/RustyMetalPlayerHouseTexture.jpg-0970369ae41ab1b3b553a51a92a160a7.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/garagedoor.jpg"
+dest_files=["res://.godot/imported/garagedoor.jpg-fc0b4bbe0140bba575f8cbd9145f3e19.s3tc.ctex"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br2o28urbgnmo"
-path.s3tc="res://.godot/imported/sidewalkTexture.jpg-2f409c912a65a6948c7aba9b47d1dbbb.s3tc.ctex"
+uid="uid://chy2ngf8uq3ln"
+path.s3tc="res://.godot/imported/Tiles010_1K-JPG_NormalDX.jpg-90f1b74ad76e4fb384aa92ab838a6ae9.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/sidewalkTexture.jpg"
-dest_files=["res://.godot/imported/sidewalkTexture.jpg-2f409c912a65a6948c7aba9b47d1dbbb.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/kitchenWalls/Tiles010_1K-JPG_NormalDX.jpg"
+dest_files=["res://.godot/imported/Tiles010_1K-JPG_NormalDX.jpg-90f1b74ad76e4fb384aa92ab838a6ae9.s3tc.ctex"]
 
 [params]
 
@@ -20,12 +20,12 @@ compress/mode=2
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
-compress/normal_map=0
+compress/normal_map=1
 compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
-roughness/mode=0
-roughness/src_normal=""
+roughness/mode=1
+roughness/src_normal="res://Textures (MARTEN)/kitchenWalls/Tiles010_1K-JPG_NormalDX.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

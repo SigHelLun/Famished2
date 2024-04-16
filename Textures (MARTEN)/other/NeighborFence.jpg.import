@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cf1ipshrii0ae"
-path.s3tc="res://.godot/imported/PlayerHouseDoorTexture.png-e23ad3109c53c659a499f924f68caba1.s3tc.ctex"
+uid="uid://ciqf2fplwkq7r"
+path.s3tc="res://.godot/imported/NeighborFence.jpg-ab3fb40d89e0aa287ccbb38f694539d4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/PlayerHouseDoorTexture.png"
-dest_files=["res://.godot/imported/PlayerHouseDoorTexture.png-e23ad3109c53c659a499f924f68caba1.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/NeighborFence.jpg"
+dest_files=["res://.godot/imported/NeighborFence.jpg-ab3fb40d89e0aa287ccbb38f694539d4.s3tc.ctex"]
 
 [params]
 
