@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cvrp6hlxij50r"]
+[gd_scene load_steps=45 format=3 uid="uid://cvrp6hlxij50r"]
 
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
@@ -7,11 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://dpg5rvbd2r0pw" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Color.jpg" id="4_cb7qq"]
 [ext_resource type="Texture2D" uid="uid://cdx3b48un7u8c" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_NormalDX.jpg" id="5_tkpd8"]
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="6_wbhld"]
-[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://Textures(Sigurd)/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="8_0is06"]
 [ext_resource type="Texture2D" uid="uid://c8updlu6dr0qh" path="res://Textures (MARTEN)/METALDOOR.png" id="9_xitx7"]
 [ext_resource type="Texture2D" uid="uid://d08daplto3po6" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Color.jpg" id="10_5iorh"]
 [ext_resource type="Texture2D" uid="uid://dhrk24t64bqj1" path="res://Textures (MARTEN)/mattress.jpg" id="11_f1vbj"]
 [ext_resource type="Texture2D" uid="uid://bm76q5md2mp6p" path="res://Textures (MARTEN)/pillow.jpg" id="12_bdi36"]
+[ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_rp81o"]
 
 [sub_resource type="Environment" id="Environment_0jk37"]
 fog_enabled = true
@@ -104,20 +104,6 @@ material = SubResource("StandardMaterial3D_t23wa")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_eaxed"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8n4av"]
-albedo_texture = ExtResource("8_0is06")
-
-[sub_resource type="BoxMesh" id="BoxMesh_7x8c1"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vxwwn"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5jai"]
-albedo_texture = ExtResource("9_xitx7")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_lbv1p"]
-material = SubResource("StandardMaterial3D_d5jai")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_71d2s"]
 albedo_texture = ExtResource("10_5iorh")
@@ -222,23 +208,6 @@ mesh = SubResource("PlaneMesh_4vwxm")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Walls/wall4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_eaxed")
 
-[node name="Door" type="Node3D" parent="."]
-
-[node name="frame" type="MeshInstance3D" parent="Door"]
-transform = Transform3D(1.5, 0, 0, 0, 2.5, 0, 0, 0, 1, 0, 1.25, 8.588)
-material_override = SubResource("StandardMaterial3D_8n4av")
-mesh = SubResource("BoxMesh_7x8c1")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="Door/frame"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Door/frame/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_vxwwn")
-
-[node name="dahr" type="MeshInstance3D" parent="Door/frame"]
-transform = Transform3D(-0.333333, -2.54758e-15, 6.20702e-08, -1.74846e-08, 1.74846e-08, -0.426, 0, -1, -4.65526e-08, -0.0116751, -0.0710619, -0.501611)
-mesh = SubResource("PlaneMesh_lbv1p")
-skeleton = NodePath("../..")
-
 [node name="Basement" type="Node3D" parent="."]
 
 [node name="door" type="MeshInstance3D" parent="Basement"]
@@ -274,3 +243,6 @@ mesh = SubResource("CapsuleMesh_xscyo")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="bed"]
 transform = Transform3D(5.89658e-09, 0.299774, -0.95401, 0.45, -4.37114e-08, 2.11758e-22, -1.87655e-08, -0.95401, -0.299774, 0.319826, 0.389607, 0.2323)
 mesh = SubResource("CapsuleMesh_qaefa")
+
+[node name="Item1" parent="." instance=ExtResource("12_rp81o")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.10549, 0, 9.63662)
