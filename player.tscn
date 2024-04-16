@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://c0x1iwtno5yx1"]
+[gd_scene load_steps=6 format=3 uid="uid://c0x1iwtno5yx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
+[ext_resource type="Texture2D" uid="uid://mhtww4klop26" path="res://Textures(Sigurd)/hand.png" id="3_1luol"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
@@ -40,5 +41,9 @@ grow_vertical = 0
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 25
 text = "Message [Key]"
+
+[node name="Sprite3D" type="Sprite3D" parent="Neck"]
+transform = Transform3D(0.0320908, 0, 0, 0, 0.0253639, 0, 0, 0, 1.06307, 0.806657, -0.164487, -0.73073)
+texture = ExtResource("3_1luol")
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
