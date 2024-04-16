@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures (MARTEN)/other/GlassPaneTexture.jpg" id="6_w2e4p"]
 [ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures (MARTEN)/other/NeighborFence.jpg" id="7_ibvar"]
 [ext_resource type="Texture2D" uid="uid://608y3bv0mm7n" path="res://Textures (MARTEN)/other/garagedoor.jpg" id="7_n7x88"]
-[ext_resource type="PackedScene" path="res://Items/WindowTeleport.tscn" id="12_mgtee"]
+[ext_resource type="PackedScene" uid="uid://ctnpi1jvn51f6" path="res://Items/WindowTeleport.tscn" id="12_mgtee"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w285w"]
 albedo_texture = ExtResource("1_oe3o3")

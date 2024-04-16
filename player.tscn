@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
-[ext_resource type="PackedScene" uid="uid://ck362q8v1iqku" path="res://PlayerModel.tscn" id="3_qvjtd"]
+[ext_resource type="PackedScene" path="res://PlayerModel.tscn" id="3_qvjtd"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
