@@ -43,7 +43,7 @@ theme_override_font_sizes/font_size = 25
 text = "Message [Key]"
 
 [node name="Sprite3D" type="Sprite3D" parent="Neck"]
-transform = Transform3D(0.0263736, 0, 0, 0, 0.0253639, 0, 0, 0, 1.06307, 0.678033, -0.164487, -0.819138)
+transform = Transform3D(0.0320908, 0, 0, 0, 0.0253639, 0, 0, 0, 1.06307, 0.806657, -0.164487, -0.73073)
 texture = ExtResource("3_1luol")
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
