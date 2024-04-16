@@ -29,9 +29,7 @@ dof_blur_near_distance = 5.0
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ooc7s"]
 albedo_texture = ExtResource("4_42mie")
-uv1_scale = Vector3(0.415, 0.415, 0.415)
-uv1_offset = Vector3(0.23, -0.3, 0.03)
-uv1_triplanar = true
+uv1_offset = Vector3(1.095, -0.975, 0.03)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5tguq"]
 albedo_color = Color(0.0901961, 1, 1, 1)
@@ -171,7 +169,7 @@ environment = SubResource("Environment_0jk37")
 camera_attributes = SubResource("CameraAttributesPractical_k7j2y")
 
 [node name="testingBOX" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.195, 0, 0, 0, 3.195, 0, 0, 0, 3.195, 0, 1.61095, -8.43153)
+transform = Transform3D(14.845, 0, 0, 0, 26.13, 0, 0, 0, 4.025, 0, 13.0715, -12.9506)
 material_override = SubResource("StandardMaterial3D_ooc7s")
 mesh = SubResource("BoxMesh_1fw2s")
 
