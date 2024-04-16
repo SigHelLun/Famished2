@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://ck362q8v1iqku"]
+
+[ext_resource type="PackedScene" uid="uid://6q0mmm3vuhee" path="res://Monster3D.fbx" id="1_g247j"]
+[ext_resource type="Texture2D" uid="uid://bor2j0fdtu4rm" path="res://images.png" id="2_e5orc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yvyec"]
+albedo_texture = ExtResource("2_e5orc")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jblke"]
+albedo_texture = ExtResource("2_e5orc")
+
+[node name="Root Scene" instance=ExtResource("1_g247j")]
+
+[node name="pCube1" parent="RootNode" index="0"]
+material_override = SubResource("StandardMaterial3D_yvyec")
+
+[node name="pCube2" parent="RootNode" index="1"]
+material_override = SubResource("StandardMaterial3D_jblke")
