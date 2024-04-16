@@ -117,7 +117,7 @@ material = SubResource("StandardMaterial3D_36y3b")
 [node name="Node3D2" type="Node3D"]
 
 [node name="Wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(8.74228e-08, -1.44, -1.96295e-06, -2, -6.29444e-08, -1.10114e-20, -1.32005e-14, 2.17434e-07, -13, 9, 2, 0)
+transform = Transform3D(8.74228e-08, -1.44, -1.96295e-06, -2, -6.29444e-08, 1.47559e-19, -1.32005e-14, 2.17434e-07, -13, 9, 2, 0)
 mesh = SubResource("PlaneMesh_heru7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wall"]
@@ -135,7 +135,7 @@ mesh = SubResource("PlaneMesh_heru7")
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="Wall3" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.82137e-15, -6.29444e-08, 10, -2, -6.29444e-08, 4.23516e-21, 8.74228e-08, -1.44, -4.37114e-07, 0, 2, 12)
+transform = Transform3D(3.82137e-15, -6.29444e-08, 10, -2, -6.29444e-08, -7.73609e-21, 8.74228e-08, -1.44, -4.37114e-07, 0, 2, 12)
 mesh = SubResource("PlaneMesh_heru7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wall3"]
@@ -144,7 +144,7 @@ mesh = SubResource("PlaneMesh_heru7")
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="Wall4" type="MeshInstance3D" parent="."]
-transform = Transform3D(3.82137e-15, -6.29444e-08, -10, -2, -6.29444e-08, -5.64689e-21, -8.74228e-08, 1.44, -4.37114e-07, 0, 2, -12.004)
+transform = Transform3D(3.82137e-15, -6.29444e-08, -10, -2, -6.29444e-08, 8.01842e-21, -8.74228e-08, 1.44, -4.37114e-07, 0, 2, -12.004)
 mesh = SubResource("PlaneMesh_heru7")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Wall4"]
@@ -153,7 +153,7 @@ mesh = SubResource("PlaneMesh_heru7")
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_w2owo")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -4.45292, 1.22945, -10.6364)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.45292, 1.22945, -10.4945)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jlspu")
@@ -168,7 +168,7 @@ mesh = SubResource("PlaneMesh_fivpw")
 shape = SubResource("ConcavePolygonShape3D_a1jve")
 
 [node name="Floor2" type="MeshInstance3D" parent="."]
-transform = Transform3D(9, 0, 0, 0, -1, 1.04907e-06, 0, -8.74228e-08, -12, 0, 3.65618, 0)
+transform = Transform3D(9, 0, 0, 0, -1, 1.81195e-06, 0, -1.50996e-07, -12, 0, 3.65618, 0)
 mesh = SubResource("PlaneMesh_fivpw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor2"]
