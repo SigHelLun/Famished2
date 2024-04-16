@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cxi7v0n53pwfo"
-path.s3tc="res://.godot/imported/dark-stone-surface-2-2548818658.jpg-87d16d3a73e7b88d7e3076e66c802a41.s3tc.ctex"
+uid="uid://beq0sy3jsvfih"
+path.s3tc="res://.godot/imported/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg-2c78b562367f66822160f62c8e302fda.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://annet/dark-stone-surface-2-2548818658.jpg"
-dest_files=["res://.godot/imported/dark-stone-surface-2-2548818658.jpg-87d16d3a73e7b88d7e3076e66c802a41.s3tc.ctex"]
+source_file="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg"
+dest_files=["res://.godot/imported/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg-2c78b562367f66822160f62c8e302fda.s3tc.ctex"]
 
 [params]
 

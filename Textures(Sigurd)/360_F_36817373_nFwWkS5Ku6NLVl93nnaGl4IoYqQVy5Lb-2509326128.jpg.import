@@ -3,7 +3,7 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b7q0vqv2l6kdb"
-path.s3tc="res://.godot/imported/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg-f2d6c217a00612c2abc1f98b74a0ac14.s3tc.ctex"
+path.s3tc="res://.godot/imported/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg-7360c7a0b897cc855af7fcbc30daaa9c.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://annet/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg"
-dest_files=["res://.godot/imported/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg-f2d6c217a00612c2abc1f98b74a0ac14.s3tc.ctex"]
+source_file="res://Textures(Sigurd)/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg"
+dest_files=["res://.godot/imported/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg-7360c7a0b897cc855af7fcbc30daaa9c.s3tc.ctex"]
 
 [params]
 

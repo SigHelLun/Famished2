@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://beq0sy3jsvfih"
-path.s3tc="res://.godot/imported/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg-9fc7465991d2baad42348e96c50daf4b.s3tc.ctex"
+uid="uid://cm7cvx72u7gc3"
+path.s3tc="res://.godot/imported/doortexture.png-60124878c883f5230e3261e56d5d069f.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://annet/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg"
-dest_files=["res://.godot/imported/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg-9fc7465991d2baad42348e96c50daf4b.s3tc.ctex"]
+source_file="res://Textures(Sigurd)/doortexture.png"
+dest_files=["res://.godot/imported/doortexture.png-60124878c883f5230e3261e56d5d069f.s3tc.ctex"]
 
 [params]
 

@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dpg5rvbd2r0pw" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Color.jpg" id="4_cb7qq"]
 [ext_resource type="Texture2D" uid="uid://cdx3b48un7u8c" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_NormalDX.jpg" id="5_tkpd8"]
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="6_wbhld"]
-[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://annet/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="8_0is06"]
+[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://Textures(Sigurd)/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="8_0is06"]
 [ext_resource type="Texture2D" uid="uid://c8updlu6dr0qh" path="res://Textures (MARTEN)/METALDOOR.png" id="9_xitx7"]
 [ext_resource type="Texture2D" uid="uid://d08daplto3po6" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Color.jpg" id="10_5iorh"]
 [ext_resource type="Texture2D" uid="uid://dhrk24t64bqj1" path="res://Textures (MARTEN)/mattress.jpg" id="11_f1vbj"]

@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://bwktif585r5gs"]
 
 [ext_resource type="Script" path="res://Items/doorInteractable.gd" id="1_xhkwb"]
-[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://annet/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="2_kr3sv"]
+[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://Textures(Sigurd)/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="2_7sl25"]
 [ext_resource type="Texture2D" uid="uid://b4qudf8ly5rbq" path="res://Textures (MARTEN)/door.jpg" id="3_r0txh"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6jgc"]
-albedo_texture = ExtResource("2_kr3sv")
+albedo_texture = ExtResource("2_7sl25")
 
 [sub_resource type="BoxMesh" id="BoxMesh_3qv1a"]
 material = SubResource("StandardMaterial3D_g6jgc")
@@ -28,7 +28,7 @@ transform = Transform3D(0.000918955, -0.00873287, -1.85667, -3.44481, -0.030591,
 mesh = SubResource("BoxMesh_3qv1a")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(-0.0230047, 0.226562, -1.80841, -3.31992, -0.0305559, -1.14253e-08, -0.0988489, 0.973517, 0.420862, -0.286889, 1.383, 0.344722)
+transform = Transform3D(-0.00170398, 0.0167811, -1.85647, -3.31992, -0.0305559, -1.29584e-08, -0.101476, 0.999392, 0.0311718, -0.286889, 1.383, 0.247818)
 shape = SubResource("ConcavePolygonShape3D_aocdg")
 
 [node name="Door" type="MeshInstance3D" parent="."]
