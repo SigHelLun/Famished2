@@ -27,7 +27,15 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.NeighborWindow(owner)
-		if detected is clerktest:
+		if detected is Clerktest:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.testdialogue(owner)
+		if detected is Item:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+				detected.pickUp(owner)
+		if detected is Item2:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+				detected.dropItem(owner)

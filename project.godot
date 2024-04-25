@@ -15,6 +15,10 @@ run/main_scene="res://select.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+save="*res://progress.gd"
+
 [display]
 
 window/size/viewport_width=640

@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://cyqph2gs5lfw3"]
+
+[ext_resource type="Script" path="res://Items/Item2.gd" id="1_ohj0b"]
+[ext_resource type="Texture2D" uid="uid://mwsh67tmg4t1" path="res://Textures(Sigurd)/sillydog.jpg" id="2_weyaw"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0n4l0"]
+albedo_texture = ExtResource("2_weyaw")
+
+[sub_resource type="BoxMesh" id="BoxMesh_t3t5d"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qylk6"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Item2" type="StaticBody3D"]
+script = ExtResource("1_ohj0b")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_0n4l0")
+mesh = SubResource("BoxMesh_t3t5d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConcavePolygonShape3D_qylk6")

@@ -1,4 +1,4 @@
-class_name clerktest
+class_name Clerktest
 extends StaticBody3D
 
 signal interacted(body)
@@ -25,10 +25,12 @@ var yesItemD = ['Oh you want that pizza right...','emm y-yeah that will be 20$ d
 #kva dialogue nummer er me på
 var countmsg = 1
 var countmsg2 = 1
-var holdpizza = false
+#var holdItem1 = false
+#const saveProg = preload('res://progress.gd')
+var holdItem1 = save.Item1
 func clerkDialogue():
 		#vist holdpizza er false
-	if !holdpizza:
+	if holdItem1 == false:
 		#message er ein array den første stringen starter på 0.
 		if countmsg == 1:
 			promptMessege = noItemD[0]
@@ -44,7 +46,7 @@ func clerkDialogue():
 		if countmsg == 6:
 			countmsg -= 5
 		countmsg += 1
-	if holdpizza:
+	if holdItem1 == true:
 		if countmsg2 == 1:
 			promptMessege = yesItemD[0]
 		if countmsg2 == 2:

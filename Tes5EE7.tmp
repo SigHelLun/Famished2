@@ -1,10 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://0yml7oig55p5"]
+[gd_scene load_steps=18 format=3 uid="uid://0yml7oig55p5"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
 [ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
 [ext_resource type="Texture2D" uid="uid://dmysufgu6sbrl" path="res://GasStationTextures/4423811.62fe8f8932b27.jpeg" id="4_llgrx"]
 [ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="7_ycv0v"]
-[ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
 [ext_resource type="PackedScene" path="res://Items/clerktest.tscn" id="8_udaqt"]
 [ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="9_fbowx"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="10_qsn38"]
@@ -50,7 +49,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 environment = SubResource("Environment_jlspu")
 
 [node name="Floor" type="MeshInstance3D" parent="."]
-transform = Transform3D(-9.00984, 0, 0.0987562, 0, 1.00113, 0, -0.0740673, 0, -12.0131, 0, 0, 0)
+transform = Transform3D(-8.9997, 0, 0.098645, 0, 1, 0, -0.0739839, 0, -11.9996, 0, 0, 0)
 mesh = SubResource("PlaneMesh_fivpw")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
@@ -92,8 +91,5 @@ mesh = SubResource("PlaneMesh_lf7ag")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19614, 1.11873, -0.152068)
 
 [node name="Item1" parent="." instance=ExtResource("7_ycv0v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271882, 1.70509, -4.48071)
-promptMessege = "Item 1 is interactable"
-
-[node name="Item2" parent="." instance=ExtResource("8_qppgn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56666, 1.61714, -3.61831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271882, 0.501862, -4.48071)
+promptMessege = "Item1test"
