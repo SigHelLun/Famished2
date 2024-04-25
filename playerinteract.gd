@@ -23,10 +23,12 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.HouseInside(owner)
-				
-				
-				#Teleport into Kitchen
+		#Teleport into Kitchen
 		if detected is NeighborWindowTeleport:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.NeighborWindow(owner)
+		if detected is clerktest:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+				detected.testdialogue(owner)
