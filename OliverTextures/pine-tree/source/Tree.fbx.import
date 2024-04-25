@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://gpx3fo6dtgry"
-path="res://.godot/imported/Monster3D.fbx-0cfab2b18c134c48a2d15ec661e2dafb.scn"
+uid="uid://dwse3gecp8te"
+path="res://.godot/imported/Tree.fbx-4a1423e8bc22505a0aae141597cef0e3.scn"
 
 [deps]
 
-source_file="res://Monster3D.fbx"
-dest_files=["res://.godot/imported/Monster3D.fbx-0cfab2b18c134c48a2d15ec661e2dafb.scn"]
+source_file="res://OliverTextures/pine-tree/source/Tree.fbx"
+dest_files=["res://.godot/imported/Tree.fbx-4a1423e8bc22505a0aae141597cef0e3.scn"]
 
 [params]
 

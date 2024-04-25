@@ -12,4 +12,4 @@ func _ready():
 
 
 func _on_button_pressed():
-	get_tree().change_scene_to_file("res://MainMap.tscn")
+	get_tree().change_scene_to_file("res://player_start_house.tscn")

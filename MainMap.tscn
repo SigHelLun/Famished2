@@ -143,7 +143,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, -1, 0)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_xfn1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43263, 68.7374)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.43263, 98.5403)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="CharacterBody3D"]
 environment = SubResource("Environment_jlspu")
