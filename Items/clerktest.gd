@@ -5,8 +5,6 @@ signal interacted(body)
 
 @export var promptMessege = 'Interact'
 @export var promptAction = 'interact'
-var message = ['what can I do for you today','Are you okay','....Emm Hello can you talk']
-var countmsg = 1
 
 func get_prompt():
 	var key_name = ""
@@ -18,12 +16,46 @@ func get_prompt():
 func testdialogue(body):
 	emit_signal("interacted", body)
 	print(body.name, " hello!")
-	if countmsg == 1:
-		promptMessege = message[0]
-		countmsg = 2
-	if countmsg == 2:
-		promptMessege = message[1]
-		countmsg = 3
-	if countmsg == 3:
-		promptMessege = message[2]
-	#dialoguebox()
+	clerkDialogue()
+
+#code for dialogue
+#array noPizzaD for dialogue når du møter
+var noItemD = ['Oh.. he-hello. what can I do for you today s-sir','Are you okay, you dont look okay','....Emm Hello c-can you talk','what even are you man?', 'Are you gonna buy something?']
+var yesItemD = ['Oh you want that pizza right...','emm y-yeah that will be 20$ dollars','You have the money right?','Are you gonna pay for that or?','20$ man']
+#kva dialogue nummer er me på
+var countmsg = 1
+var countmsg2 = 1
+var holdpizza = false
+func clerkDialogue():
+		#vist holdpizza er false
+	if !holdpizza:
+		#message er ein array den første stringen starter på 0.
+		if countmsg == 1:
+			promptMessege = noItemD[0]
+		if countmsg == 2:
+			promptMessege = noItemD[1]
+		if countmsg == 3:
+			promptMessege = noItemD[2]
+		if countmsg == 4:
+			promptMessege = noItemD[3]
+		if countmsg == 5:
+			promptMessege = 'Talk to Clerk'
+		# countmsg minus kor mange settningar du vil gå tilbake
+		if countmsg == 6:
+			countmsg -= 5
+		countmsg += 1
+	if holdpizza:
+		if countmsg2 == 1:
+			promptMessege = yesItemD[0]
+		if countmsg2 == 2:
+			promptMessege = yesItemD[1]
+		if countmsg2 == 3:
+			promptMessege = yesItemD[2]
+		if countmsg2 == 4:
+			promptMessege = yesItemD[3]
+		if countmsg2 == 5:
+			promptMessege = yesItemD[4]
+		if countmsg2 == 6:
+			countmsg2 -= 5
+			promptMessege = 'Talk to Clerk'
+		countmsg2 += 1

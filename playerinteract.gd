@@ -3,7 +3,6 @@ extends RayCast3D
 func _ready():
 	add_exception(owner)
 
-
 func _physics_process(_delta):
 	$Prompt.text = ""
 	if is_colliding():
