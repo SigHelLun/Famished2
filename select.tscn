@@ -1,34 +1,41 @@
 [gd_scene load_steps=3 format=3 uid="uid://0bqxt4b1ifjf"]
 
 [ext_resource type="Script" path="res://select.gd" id="1_8s1x4"]
-[ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_ei2l1"]
+[ext_resource type="Texture2D" uid="uid://dpakd3kosq7rk" path="res://OliverTextures/Screenshot 2024-04-25 111435.png" id="2_4neea"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8s1x4")
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -5.0
-offset_top = -5.0
-offset_right = 3141.0
-offset_bottom = 1778.0
-scale = Vector2(0.34266, 0.306846)
-texture = ExtResource("1_ei2l1")
+offset_right = 642.0
+offset_bottom = 360.0
+scale = Vector2(0.395493, 0.344884)
+texture = ExtResource("2_4neea")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = 262.0
-offset_top = 255.0
-offset_right = 309.0
-offset_bottom = 286.0
+offset_left = -277.46
+offset_top = -271.027
+offset_right = -230.46
+offset_bottom = -240.027
 grow_horizontal = 2
 grow_vertical = 0
-scale = Vector2(2.48, 1.76)
+scale = Vector2(9.02469, 4.47217)
 size_flags_horizontal = 6
 size_flags_vertical = 4
 text = "PLAY"
 
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[node name="Label" type="Label" parent="."]
+offset_left = 62.0
+offset_top = 78.0
+offset_right = 156.0
+offset_bottom = 101.0
+scale = Vector2(5.52322, 1.76343)
+text = "FAMISHED 2"
+
+[connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

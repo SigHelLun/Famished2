@@ -13,9 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://4pxlfl2mshw6" path="res://house.tscn" id="8_nqnrp"]
 [ext_resource type="PackedScene" uid="uid://dv507nqxclfvr" path="res://out_of_bound_rightHouse.tscn" id="11_qbgb4"]
 [ext_resource type="PackedScene" uid="uid://b02r445l7sp5i" path="res://Textures (MARTEN)/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf" id="13_bf7if"]
-[ext_resource type="PackedScene" path="res://out_of_bound_houseLEFTSIDE.tscn" id="14_dabea"]
+[ext_resource type="PackedScene" uid="uid://d2gthcbbhnod2" path="res://out_of_bound_houseLEFTSIDE.tscn" id="14_dabea"]
 [ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures (MARTEN)/other/ashpahlttexturepLAYER.jpg" id="14_yci72"]
-[ext_resource type="PackedScene" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
+[ext_resource type="PackedScene" uid="uid://dud64ogm67n4i" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
