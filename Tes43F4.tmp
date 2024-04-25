@@ -1,0 +1,99 @@
+[gd_scene load_steps=19 format=3 uid="uid://0yml7oig55p5"]
+
+[ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
+[ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
+[ext_resource type="Texture2D" uid="uid://dmysufgu6sbrl" path="res://GasStationTextures/4423811.62fe8f8932b27.jpeg" id="4_llgrx"]
+[ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="7_ycv0v"]
+[ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
+[ext_resource type="PackedScene" path="res://Items/clerktest.tscn" id="8_udaqt"]
+[ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="9_fbowx"]
+[ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="10_qsn38"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
+
+[sub_resource type="Sky" id="Sky_aeaw6"]
+sky_material = SubResource("ProceduralSkyMaterial_kmchk")
+
+[sub_resource type="Environment" id="Environment_jlspu"]
+background_mode = 2
+background_energy_multiplier = 0.84
+sky = SubResource("Sky_aeaw6")
+ambient_light_sky_contribution = 0.32
+ambient_light_energy = 2.36
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qqm6f"]
+albedo_texture = ExtResource("3_pmsjj")
+uv1_scale = Vector3(6, 6, 6)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fivpw"]
+material = SubResource("StandardMaterial3D_qqm6f")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a1jve"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_n2ynf"]
+albedo_texture = ExtResource("4_llgrx")
+uv1_scale = Vector3(0.915, 0.7, 1)
+uv1_offset = Vector3(0.485, 0.5, 1)
+uv1_triplanar = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_hrvf1"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h0mg1"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_lf7ag"]
+
+[node name="Node3D2" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_jlspu")
+
+[node name="Floor" type="MeshInstance3D" parent="."]
+transform = Transform3D(-9.00984, 0, 0.0987562, 0, 1.00113, 0, -0.0740673, 0, -12.0131, 0, 0, 0)
+mesh = SubResource("PlaneMesh_fivpw")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_a1jve")
+
+[node name="Item2" parent="Floor" instance=ExtResource("10_qsn38")]
+transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.299394, 9.53674e-07, -0.613325)
+
+[node name="Item3" parent="Floor" instance=ExtResource("9_fbowx")]
+transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.671777, 0, -0.568614)
+promptMessege = "Fridge"
+
+[node name="Item1" parent="Floor" instance=ExtResource("8_udaqt")]
+transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.698997, 0, 0.67989)
+promptMessege = "Talk to Clerk"
+
+[node name="Counter" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(0.555556, 0, 0, 0, 1.5, 0, 0, 0, 0.0833333, -0.722282, 0.475931, 0.623705)
+material_override = SubResource("StandardMaterial3D_n2ynf")
+mesh = SubResource("BoxMesh_hrvf1")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Floor/Counter"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/Counter/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h0mg1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor/Counter"]
+transform = Transform3D(0.501, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.00283217, 0.504045, -0.00355291)
+mesh = SubResource("PlaneMesh_lf7ag")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Floor/Counter"]
+transform = Transform3D(-1.96701e-08, 0.5, 0, -0.45, -2.18557e-08, 0, 0, 0, 0.5, 0.500374, 0.0551815, -0.00355291)
+mesh = SubResource("PlaneMesh_lf7ag")
+
+[node name="player" parent="." instance=ExtResource("2_txwbf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19614, 1.11873, -0.152068)
+
+[node name="Item1" parent="." instance=ExtResource("7_ycv0v")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271882, 1.70509, -4.48071)
+promptMessege = "Item 1 is interactable"
+
+[node name="Item2" parent="." instance=ExtResource("8_qppgn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56666, 1.61714, -3.61831)

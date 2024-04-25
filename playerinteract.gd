@@ -27,14 +27,17 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.NeighborWindow(owner)
+		#first npc use him for framework when making dialogue npc
 		if detected is Clerktest:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.testdialogue(owner)
+		#made a button that when pressed sets a variable to true with a global variabel/function
 		if detected is Item:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.pickUp(owner)
+		#does the same as Item but instead sets the global variable to false
 		if detected is Item2:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):

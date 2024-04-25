@@ -12,7 +12,7 @@ func get_prompt():
 		if action is InputEventKey:
 			key_name = OS.get_keycode_string(action.physical_keycode)
 	return promptMessege + "\n["+ key_name +"]"
-
+#puts the item at 1
 func pickUp(body):
 	print(body.name, " testitem!")
 	save.item1Pick()

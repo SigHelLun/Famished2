@@ -13,6 +13,8 @@ func get_prompt():
 			key_name = OS.get_keycode_string(action.physical_keycode)
 	return promptMessege + "\n["+ key_name +"]"
 
+
+#this puts the item at 0
 func dropItem(body):
 	print(body.name, " Item2!")
 	save.item1Drop()

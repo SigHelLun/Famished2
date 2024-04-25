@@ -1,10 +1,10 @@
 extends Node
 
 #save alle globale variabler her
-var Item1 = true
+var Item1 = 0
 var item2 = false
 
 func item1Pick():
-	Item1 = true
+	Item1 = 1
 func item1Drop():
-	Item1 = false
+	Item1 = 0
