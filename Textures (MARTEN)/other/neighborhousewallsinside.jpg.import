@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr2bgmuiq1nc"
-path.s3tc="res://.godot/imported/Leavs_Opacity.png-38688199c6289aa175ad53f57a011cd6.s3tc.ctex"
+uid="uid://cto1fk36jqarq"
+path.s3tc="res://.godot/imported/neighborhousewallsinside.jpg-36b3e361f1b5aa0a25a7bdff8cca6449.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://OliverTextures/pine-tree/textures/Leavs_Opacity.png"
-dest_files=["res://.godot/imported/Leavs_Opacity.png-38688199c6289aa175ad53f57a011cd6.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/neighborhousewallsinside.jpg"
+dest_files=["res://.godot/imported/neighborhousewallsinside.jpg-36b3e361f1b5aa0a25a7bdff8cca6449.s3tc.ctex"]
 
 [params]
 

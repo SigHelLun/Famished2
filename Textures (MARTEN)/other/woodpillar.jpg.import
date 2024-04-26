@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://crr2bgmuiq1nc"
-path.s3tc="res://.godot/imported/Leavs_Opacity.png-38688199c6289aa175ad53f57a011cd6.s3tc.ctex"
+uid="uid://w8qasg2uy8l5"
+path.s3tc="res://.godot/imported/woodpillar.jpg-fbc65425613a0924100fc646d65e7b34.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://OliverTextures/pine-tree/textures/Leavs_Opacity.png"
-dest_files=["res://.godot/imported/Leavs_Opacity.png-38688199c6289aa175ad53f57a011cd6.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/woodpillar.jpg"
+dest_files=["res://.godot/imported/woodpillar.jpg-fbc65425613a0924100fc646d65e7b34.s3tc.ctex"]
 
 [params]
 
