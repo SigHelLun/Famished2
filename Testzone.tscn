@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://dmysufgu6sbrl" path="res://GasStationTextures/4423811.62fe8f8932b27.jpeg" id="4_llgrx"]
 [ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="7_ycv0v"]
 [ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
-[ext_resource type="PackedScene" path="res://Items/clerktest.tscn" id="8_udaqt"]
+[ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="8_udaqt"]
 [ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="9_fbowx"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="10_qsn38"]
 
