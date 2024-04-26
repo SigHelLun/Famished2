@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://cep467pf1iwoa" path="res://GSOutside Textures/Ground068_1K-JPG/Ground068_1K-JPG_NormalGL.jpg" id="10_isruc"]
 [ext_resource type="Texture2D" uid="uid://dx6hblu0wscp8" path="res://GSOutside Textures/Ground068_1K-JPG/Ground068_1K-JPG_Roughness.jpg" id="11_337xm"]
 [ext_resource type="PackedScene" uid="uid://dc2kfdk6fhgdo" path="res://TREEEEEEE.tscn" id="12_mtw54"]
-[ext_resource type="PackedScene" uid="uid://cmlxyfqhfe06h" path="res://lamppost.tscn" id="13_7qqe2"]
+[ext_resource type="PackedScene" path="res://lamppost.tscn" id="13_7qqe2"]
 [ext_resource type="AudioStream" uid="uid://i1ve520280mg" path="res://audio/ambientforest.mp3" id="14_2dc4l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbk6"]

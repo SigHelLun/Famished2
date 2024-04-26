@@ -140,23 +140,23 @@ uv1_scale = Vector3(12.94, 1, 8.325)
 [sub_resource type="PlaneMesh" id="PlaneMesh_kt5ed"]
 material = SubResource("StandardMaterial3D_l4itk")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsx4u"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vwato"]
 albedo_color = Color(0.227451, 0.227451, 0.227451, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_ajab3"]
-material = SubResource("StandardMaterial3D_gsx4u")
+material = SubResource("StandardMaterial3D_vwato")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v55ac"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yks5u"]
 albedo_color = Color(0.227451, 0.227451, 0.227451, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xo6n8"]
-material = SubResource("StandardMaterial3D_v55ac")
+material = SubResource("StandardMaterial3D_yks5u")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enkmx"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cpjhq"]
 albedo_color = Color(0.941176, 0.937255, 0, 1)
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_lc3sb"]
-material = SubResource("StandardMaterial3D_enkmx")
+material = SubResource("StandardMaterial3D_cpjhq")
 
 [node name="Main Map 😁" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27655, 0.144928, 0.434326)

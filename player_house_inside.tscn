@@ -1,18 +1,19 @@
-[gd_scene load_steps=48 format=3 uid="uid://cvrp6hlxij50r"]
+[gd_scene load_steps=51 format=3 uid="uid://cvrp6hlxij50r"]
 
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="3_37igx"]
-[ext_resource type="Texture2D" uid="uid://b2pj48s0dbylu" path="res://Textures (MARTEN)/other/playertexture.jpg" id="4_42mie"]
 [ext_resource type="Texture2D" uid="uid://dpg5rvbd2r0pw" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Color.jpg" id="4_cb7qq"]
 [ext_resource type="Texture2D" uid="uid://cdx3b48un7u8c" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_NormalDX.jpg" id="5_tkpd8"]
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="6_wbhld"]
 [ext_resource type="Texture2D" uid="uid://c8updlu6dr0qh" path="res://Textures (MARTEN)/other/METALDOOR.png" id="9_xitx7"]
 [ext_resource type="Texture2D" uid="uid://d08daplto3po6" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Color.jpg" id="10_5iorh"]
+[ext_resource type="Texture2D" uid="uid://bx5cw03p83ivb" path="res://Textures (MARTEN)/other/bodypillowteehee.png" id="11_5k8fm"]
 [ext_resource type="Texture2D" uid="uid://dhrk24t64bqj1" path="res://Textures (MARTEN)/other/mattress.jpg" id="11_f1vbj"]
 [ext_resource type="Texture2D" uid="uid://bm76q5md2mp6p" path="res://Textures (MARTEN)/other/pillow.jpg" id="12_bdi36"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_rp81o"]
 [ext_resource type="Texture2D" uid="uid://cv87q13k84c8u" path="res://Textures (MARTEN)/other/Untitled-2.png" id="13_bf3ey"]
+[ext_resource type="Texture2D" uid="uid://wq0af8o7nb5w" path="res://Textures (MARTEN)/other/fnafposter.png" id="13_pa04g"]
 
 [sub_resource type="Environment" id="Environment_0jk37"]
 fog_enabled = true
@@ -126,12 +127,13 @@ albedo_texture = ExtResource("12_bdi36")
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xscyo"]
 material = SubResource("StandardMaterial3D_r5b85")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y7p5n"]
-albedo_texture = ExtResource("4_42mie")
-uv1_offset = Vector3(0, -0.14, 0)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcyvi"]
+albedo_texture = ExtResource("11_5k8fm")
+uv1_scale = Vector3(2.255, 1, 1)
+uv1_offset = Vector3(-0.225, -0.095, 0)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qaefa"]
-material = SubResource("StandardMaterial3D_y7p5n")
+material = SubResource("StandardMaterial3D_jcyvi")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ot6is"]
 
@@ -140,6 +142,12 @@ material = SubResource("StandardMaterial3D_ot6is")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_402o8"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ydwvp"]
+albedo_texture = ExtResource("13_pa04g")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_t8vkw"]
+material = SubResource("StandardMaterial3D_ydwvp")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_bmwl4"]
 albedo_texture = ExtResource("13_bf3ey")
@@ -257,6 +265,10 @@ mesh = SubResource("BoxMesh_u25x2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="familywall/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_402o8")
+
+[node name="fnafposter" type="MeshInstance3D" parent="familywall"]
+transform = Transform3D(0.2, 0, 0, 0, -0.258819, -0.193185, 0, 0.965926, -0.0517638, 0.274943, 0.11503, 0.55294)
+mesh = SubResource("PlaneMesh_t8vkw")
 
 [node name="familyphoto" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.775302, 2.14422, -12.2208)
