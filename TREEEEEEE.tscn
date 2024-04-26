@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dc2kfdk6fhgdo"]
+[gd_scene load_steps=8 format=3 uid="uid://dc2kfdk6fhgdo"]
 
 [ext_resource type="PackedScene" uid="uid://dwse3gecp8te" path="res://OliverTextures/pine-tree/source/Tree.fbx" id="1_im2lg"]
 [ext_resource type="Texture2D" uid="uid://d0rvv1h1wf6yp" path="res://OliverTextures/pine-tree/textures/Leavs_basecolor_.tga.png" id="2_uk8jw"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cxhp7jxnp13qa" path="res://OliverTextures/pine-tree/textures/Trank_normal.tga.png" id="4_owhsq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5pc34"]
+cull_mode = 2
 albedo_texture = ExtResource("2_uk8jw")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o6klu"]
@@ -15,6 +16,8 @@ normal_texture = ExtResource("4_owhsq")
 uv1_scale = Vector3(150, 150, 150)
 uv1_triplanar = true
 
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_a1rn4"]
+
 [node name="Root Scene" instance=ExtResource("1_im2lg")]
 
 [node name="Leaves_001" parent="RootNode" index="0"]
@@ -22,3 +25,10 @@ material_override = SubResource("StandardMaterial3D_5pc34")
 
 [node name="Trank_001" parent="RootNode" index="1"]
 material_override = SubResource("StandardMaterial3D_o6klu")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="RootNode" index="2"]
+transform = Transform3D(100, 0, 0, 0, -1.19209e-05, 100, 0, -100, -1.19209e-05, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/StaticBody3D2" index="0"]
+transform = Transform3D(0.016, 0, 0, 0, -1.04907e-09, -0.016, 0, 0.024, -6.99382e-10, 0, -8.40947e-10, 0.00705437)
+shape = SubResource("CapsuleShape3D_a1rn4")
