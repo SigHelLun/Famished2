@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c0x1iwtno5yx1"]
+[gd_scene load_steps=8 format=3 uid="uid://c0x1iwtno5yx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
 [ext_resource type="PackedScene" uid="uid://cajb3byndart1" path="res://Animations/aniPlayerGLB.tscn" id="3_mm0kv"]
+[ext_resource type="AudioStream" uid="uid://ikfjyhwoyb5f" path="res://audio/heavybreathing.mp3" id="4_cpt43"]
+[ext_resource type="AudioStream" uid="uid://bmlmnoprrck4q" path="res://audio/concrete-footsteps-6752.mp3" id="5_8k7wy"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
@@ -47,5 +49,14 @@ text = "Message [Key]"
 
 [node name="animationplayerfamished2" parent="Neck" instance=ExtResource("3_mm0kv")]
 transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.64097, 0.289769)
+
+[node name="breath" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_cpt43")
+pitch_scale = 0.75
+
+[node name="walk" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_8k7wy")
+volume_db = -3.748
+pitch_scale = 0.71
 
 [connection signal="tree_entered" from="." to="." method="_on_tree_entered"]
