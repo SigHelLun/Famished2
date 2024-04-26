@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://xv818tg7gyof"]
+[gd_scene load_steps=25 format=3 uid="uid://xv818tg7gyof"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_23dc3"]
 [ext_resource type="Texture2D" uid="uid://d3l4sgkptxubw" path="res://GSOutside Textures/Ground062S_1K-JPG/Ground062S_1K-JPG_Color.jpg" id="1_62qww"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dx6hblu0wscp8" path="res://GSOutside Textures/Ground068_1K-JPG/Ground068_1K-JPG_Roughness.jpg" id="11_337xm"]
 [ext_resource type="PackedScene" uid="uid://dc2kfdk6fhgdo" path="res://TREEEEEEE.tscn" id="12_mtw54"]
 [ext_resource type="PackedScene" uid="uid://cmlxyfqhfe06h" path="res://lamppost.tscn" id="13_7qqe2"]
+[ext_resource type="AudioStream" uid="uid://i1ve520280mg" path="res://audio/ambientforest.mp3" id="14_2dc4l"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbk6"]
 albedo_texture = ExtResource("1_62qww")
@@ -502,7 +503,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.42526, -0.00799907, -12.45
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5959, -0.008, -9.74982)
 
 [node name="Root Scene47" parent="Trees" instance=ExtResource("12_mtw54")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.59911, -0.008, -10.3523)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.28746, -0.008, -10.8806)
 
 [node name="Root Scene48" parent="Trees" instance=ExtResource("12_mtw54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.58955, -0.00799953, -20.9093)
@@ -855,138 +856,145 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.46153, -0.008, 45.3467)
 [node name="Root Scene164" parent="Trees" instance=ExtResource("12_mtw54")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.16532, -0.008, 47.7953)
 
-[node name="Lamppost" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamp" type="Node3D" parent="."]
+
+[node name="Lamppost" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 25.9069)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost2" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost2" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 31.0169)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost2"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost2"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost3" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost3" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 34.7503)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost3"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost3"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost4" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost4" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 39.8603)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost4"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost4"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost17" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost17" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 45.0184)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost17"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost17"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost5" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost5" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 7.85618)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost5"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost5"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost6" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost6" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 12.9661)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost6"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost6"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost7" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost7" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 16.6996)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost7"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost7"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost8" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost8" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 21.8095)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost8"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost8"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost9" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost9" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -10.2153)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost9"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost9"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost10" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost10" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -5.10537)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost10"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost10"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost11" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost11" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -1.37191)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost11"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost11"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost12" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost12" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, 3.73802)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost12"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost12"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost13" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost13" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -29.1794)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost13"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost13"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost14" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost14" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -24.0695)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost14"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost14"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost15" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost15" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -20.3361)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost15"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost15"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
 
-[node name="Lamppost16" parent="." instance=ExtResource("13_7qqe2")]
+[node name="Lamppost16" parent="Lamp" instance=ExtResource("13_7qqe2")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -2.38435, 0.749182, -15.2261)
 
-[node name="SpotLight3D" type="SpotLight3D" parent="Lamppost16"]
+[node name="SpotLight3D" type="SpotLight3D" parent="Lamp/Lamppost16"]
 transform = Transform3D(2, 0, 0, 0, -0.000209419, 2, 0, -2, -0.000209419, 3.61507, 5.46271, 0.0186005)
 light_color = Color(1, 1, 0, 1)
 light_energy = 16.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_2dc4l")
+volume_db = -15.0
+autoplay = true
