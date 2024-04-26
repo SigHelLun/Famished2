@@ -41,4 +41,9 @@ func _physics_process(_delta):
 		if detected is Item2:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
-				detected.dropItem(owner)
+					detected.dropItem(owner)
+		if detected is basementDoor:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+					detected.basement(owner)
+	

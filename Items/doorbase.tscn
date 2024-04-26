@@ -1,0 +1,47 @@
+[gd_scene load_steps=12 format=3 uid="uid://6v4m4c15cyo3"]
+
+[ext_resource type="Script" path="res://Items/doorbase.gd" id="1_jldq4"]
+[ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="1_jxh86"]
+[ext_resource type="Texture2D" uid="uid://b7q0vqv2l6kdb" path="res://Textures(Sigurd)/360_F_36817373_nFwWkS5Ku6NLVl93nnaGl4IoYqQVy5Lb-2509326128.jpg" id="2_2mbqx"]
+[ext_resource type="Texture2D" uid="uid://cm7cvx72u7gc3" path="res://Textures(Sigurd)/doortexture.png" id="3_v2ljc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_eb25m"]
+albedo_texture = ExtResource("1_jxh86")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ws4a"]
+albedo_texture = ExtResource("2_2mbqx")
+
+[sub_resource type="BoxMesh" id="BoxMesh_ikd25"]
+material = SubResource("StandardMaterial3D_7ws4a")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_u117s"]
+albedo_texture = ExtResource("3_v2ljc")
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_qolyt"]
+material = SubResource("StandardMaterial3D_u117s")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_bvqbv"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_k64fm"]
+
+[node name="doorbase" type="StaticBody3D"]
+script = ExtResource("1_jldq4")
+
+[node name="BasementExit(doesnt work)" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.675, 0, 0, 0, 2.5, 0, 0, 0, 0.75, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_eb25m")
+mesh = SubResource("BoxMesh_ikd25")
+
+[node name="door" type="MeshInstance3D" parent="BasementExit(doesnt work)"]
+transform = Transform3D(-0.365, 3.82137e-15, -3.97774e-08, 3.19093e-08, 4.37114e-08, -0.455, 2.45704e-29, -1, -1.98887e-08, 0, -0.0398521, -0.502129)
+mesh = SubResource("PlaneMesh_qolyt")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="BasementExit(doesnt work)"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="BasementExit(doesnt work)/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_bvqbv")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.58535, 0, 0, 0, 2.46211, 0, 0, 0, 0.775049, 0, 0, 0)
+shape = SubResource("BoxShape3D_k64fm")
