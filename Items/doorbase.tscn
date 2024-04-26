@@ -43,5 +43,5 @@ mesh = SubResource("PlaneMesh_qolyt")
 shape = SubResource("ConcavePolygonShape3D_bvqbv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1.58535, 0, 0, 0, 2.46211, 0, 0, 0, 0.775049, 0, 0, 0)
+transform = Transform3D(1.58535, 0, 0, 0, 2.53526, 0, 0, 0, 2.56187, 0, 0, 0)
 shape = SubResource("BoxShape3D_k64fm")

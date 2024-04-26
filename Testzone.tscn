@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://0yml7oig55p5"]
+[gd_scene load_steps=17 format=3 uid="uid://0yml7oig55p5"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
 [ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
@@ -6,8 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="7_ycv0v"]
 [ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
 [ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="8_udaqt"]
-[ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="9_fbowx"]
-[ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="10_qsn38"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
@@ -44,7 +42,7 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_lf7ag"]
 
-[node name="Node3D2" type="Node3D"]
+[node name="Testzone" type="Node3D"]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jlspu")
@@ -57,13 +55,6 @@ mesh = SubResource("PlaneMesh_fivpw")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Floor/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_a1jve")
-
-[node name="Item2" parent="Floor" instance=ExtResource("10_qsn38")]
-transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.299394, 9.53674e-07, -0.613325)
-
-[node name="Item3" parent="Floor" instance=ExtResource("9_fbowx")]
-transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.671777, 0, -0.568614)
-promptMessege = "Fridge"
 
 [node name="Item1" parent="Floor" instance=ExtResource("8_udaqt")]
 transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.698997, 0, 0.67989)

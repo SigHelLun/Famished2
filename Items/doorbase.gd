@@ -18,6 +18,6 @@ func basement(body):
 	print(body.name, " hello!")
 	print(get_tree().current_scene.name)
 	if get_tree().current_scene.name == "basement":
-		get_tree().change_scene_to_file("res://player_house_inside.tscn")
+		get_tree().change_scene_to_file("res://MainMap.tscn")
 	else:
 		get_tree().change_scene_to_file("res://Basement.tscn")

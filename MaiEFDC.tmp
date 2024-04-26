@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=58 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
@@ -18,8 +18,6 @@
 [ext_resource type="PackedScene" uid="uid://dud64ogm67n4i" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
 [ext_resource type="Texture2D" uid="uid://ckft8rx0j5jmn" path="res://Textures (MARTEN)/other/treebackground.png" id="17_su3rx"]
 [ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="18_64x5w"]
-[ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="18_qgxjo"]
-[ext_resource type="Texture2D" uid="uid://mae4iy7pdyq" path="res://Textures(Sigurd)/1461032_l-2912683034-removebg-preview.png" id="20_uu2p8"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -161,15 +159,7 @@ albedo_color = Color(0.941176, 0.937255, 0, 1)
 [sub_resource type="CylinderMesh" id="CylinderMesh_lc3sb"]
 material = SubResource("StandardMaterial3D_cpjhq")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i44po"]
-albedo_texture = ExtResource("18_qgxjo")
-
 [sub_resource type="BoxMesh" id="BoxMesh_36gjg"]
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6msqi"]
-albedo_texture = ExtResource("20_uu2p8")
-
-[sub_resource type="PlaneMesh" id="PlaneMesh_i5kvj"]
 
 [node name="Main Map 😁" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27655, 0.144928, 0.434326)
@@ -504,14 +494,8 @@ light_volumetric_fog_energy = 45.535
 
 [node name="basementdoor" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.53462, -1.22275, 0, 0.952299, 3.25447, 0, 0, 0, 2.02971, 3.61475, -0.770871, 96.637)
-material_override = SubResource("StandardMaterial3D_i44po")
 mesh = SubResource("BoxMesh_36gjg")
 
-[node name="doorbase" parent="basementdoor" instance=ExtResource("18_64x5w")]
-transform = Transform3D(-0.000113718, 0.369072, 0.0137457, 0.0023779, 0.0107057, -0.287429, -0.492664, 1.50861e-10, -0.00407581, -0.0272717, 0.367191, 0.0564041)
-promptMessege = "Basement entrance"
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="basementdoor"]
-transform = Transform3D(0.438404, 5.96046e-08, 0, 2.98023e-08, 1.2549, 0, 0, 0, 0.441041, 0.00470603, 0.500404, 0)
-material_override = SubResource("StandardMaterial3D_6msqi")
-mesh = SubResource("PlaneMesh_i5kvj")
+[node name="doorbase" parent="." instance=ExtResource("18_64x5w")]
+transform = Transform3D(-0.00506624, 0.938842, 0.344311, 0.0138128, 0.344348, -0.93874, -0.999892, 0, -0.0147126, 3.1217, 0.429233, 96.6978)
+promptMessege = "Basement door"
