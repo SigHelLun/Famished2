@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckjmlbjudshe2"
-path.s3tc="res://.godot/imported/Planks023A_1K-JPG_NormalDX.jpg-3fdc6fdf856e6a1fe9a7d3870b7e6747.s3tc.ctex"
+uid="uid://ckqmjm6clpf1l"
+path.s3tc="res://.godot/imported/Planks037A_1K-JPG_NormalDX.jpg-75f6f59886dbe75d8a092c5b867f237a.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_NormalDX.jpg"
-dest_files=["res://.godot/imported/Planks023A_1K-JPG_NormalDX.jpg-3fdc6fdf856e6a1fe9a7d3870b7e6747.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/plankfloor/Planks037A_1K-JPG_NormalDX.jpg"
+dest_files=["res://.godot/imported/Planks037A_1K-JPG_NormalDX.jpg-75f6f59886dbe75d8a092c5b867f237a.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Textures (MARTEN)/Planks023A_1K-JPG/Planks023A_1K-JPG_NormalDX.jpg"
+roughness/src_normal="res://Textures (MARTEN)/plankfloor/Planks037A_1K-JPG_NormalDX.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

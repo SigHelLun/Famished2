@@ -1,4 +1,4 @@
-[gd_scene load_steps=47 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=56 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
@@ -16,8 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://d2gthcbbhnod2" path="res://out_of_bound_houseLEFTSIDE.tscn" id="14_dabea"]
 [ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures (MARTEN)/other/ashpahlttexturepLAYER.jpg" id="14_yci72"]
 [ext_resource type="PackedScene" uid="uid://dud64ogm67n4i" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
+[ext_resource type="Texture2D" uid="uid://ckft8rx0j5jmn" path="res://Textures (MARTEN)/other/treebackground.png" id="17_su3rx"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0, 0, 0, 1)
+sky_cover_modulate = Color(0, 0, 0, 1)
 
 [sub_resource type="Sky" id="Sky_aeaw6"]
 sky_material = SubResource("ProceduralSkyMaterial_kmchk")
@@ -27,7 +31,6 @@ background_mode = 2
 sky = SubResource("Sky_aeaw6")
 ambient_light_energy = 16.0
 glow_enabled = true
-fog_enabled = true
 fog_light_color = Color(0.160784, 0.160784, 0.160784, 1)
 fog_density = 0.0434
 fog_height = 1024.0
@@ -129,6 +132,31 @@ material = SubResource("StandardMaterial3D_ridj0")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4pjfu"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_l4itk"]
+albedo_texture = ExtResource("17_su3rx")
+uv1_scale = Vector3(12.94, 1, 8.325)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kt5ed"]
+material = SubResource("StandardMaterial3D_l4itk")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gsx4u"]
+albedo_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_ajab3"]
+material = SubResource("StandardMaterial3D_gsx4u")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v55ac"]
+albedo_color = Color(0.227451, 0.227451, 0.227451, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_xo6n8"]
+material = SubResource("StandardMaterial3D_v55ac")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_enkmx"]
+albedo_color = Color(0.941176, 0.937255, 0, 1)
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_lc3sb"]
+material = SubResource("StandardMaterial3D_enkmx")
 
 [node name="Main Map 😁" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27655, 0.144928, 0.434326)
@@ -289,10 +317,8 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 295, 0
 
 [node name="street signs_lines" type="Node3D" parent="Street"]
 
-[node name="StreetLamps (WIP)" type="Node3D" parent="Street"]
-
 [node name="Playerhosueroad" type="MeshInstance3D" parent="Street"]
-transform = Transform3D(5.03, 0, 0, 0, 1, 0, 0, 0, 13.07, 1.00939, 0.0376122, 28.3808)
+transform = Transform3D(5.145, 0, 0, 0, 1, 0, 0, 0, 13.185, 1.00939, 0.0376122, 28.3808)
 mesh = SubResource("PlaneMesh_6008c")
 skeleton = NodePath("../..")
 
@@ -303,3 +329,162 @@ shape = SubResource("ConcavePolygonShape3D_4pjfu")
 
 [node name="StaticBody3D" parent="." instance=ExtResource("16_fqyu0")]
 transform = Transform3D(-1.545, 0, -1.35068e-07, 0, 1.545, 0, 1.35068e-07, 0, -1.545, 0.0174382, 1.58543, 99.8976)
+
+[node name="treewall" type="Node3D" parent="."]
+
+[node name="wall1" type="MeshInstance3D" parent="treewall"]
+transform = Transform3D(-100, -2.77077e-07, 1.99987e-14, 0, -8.02104e-08, -3.03, 1.50996e-05, -1.835, 1.32446e-07, 0, 3.31044, 133.379)
+mesh = SubResource("PlaneMesh_kt5ed")
+
+[node name="wall2" type="MeshInstance3D" parent="treewall"]
+
+[node name="streetlamps" type="Node3D" parent="."]
+
+[node name="streetlamp1" type="Node3D" parent="streetlamps"]
+
+[node name="streetlampbody" type="MeshInstance3D" parent="streetlamps/streetlamp1"]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 4, 0, -0.15, 0, -6.55671e-09, -8.037, 2, 16.6182)
+mesh = SubResource("BoxMesh_ajab3")
+skeleton = NodePath("../..")
+
+[node name="top" type="MeshInstance3D" parent="streetlamps/streetlamp1"]
+transform = Transform3D(6.29206e-16, -1.47526e-08, 0.3, -0.3, -2.87891e-06, 0, 1.43946e-08, -0.3375, -1.31134e-08, -8.03732, 3.9846, 16.3583)
+mesh = SubResource("CylinderMesh_xo6n8")
+skeleton = NodePath("../..")
+
+[node name="light" type="MeshInstance3D" parent="streetlamps/streetlamp1"]
+transform = Transform3D(1.00311e-17, -7.73691e-09, 0.15, -0.07, -1.03159e-07, 5.26486e-22, 2.29485e-10, -0.177, -6.55671e-09, -8.03732, 3.83459, 16.2407)
+mesh = SubResource("CylinderMesh_lc3sb")
+skeleton = NodePath("../streetlampbody")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlamps/streetlamp1"]
+transform = Transform3D(-4.37114e-08, -1, -5.82818e-07, 0, -5.82818e-07, 1, -1, 4.37114e-08, 2.54758e-14, -8.03693, 3.97802, 16.2166)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 16.0
+light_indirect_energy = 500.0
+light_volumetric_fog_energy = 45.535
+
+[node name="streetlamp2" type="Node3D" parent="streetlamps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0)
+
+[node name="streetlampbody" type="MeshInstance3D" parent="streetlamps/streetlamp2"]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 4, 0, -0.15, 0, -6.55671e-09, -8.037, 2, 16.6182)
+mesh = SubResource("BoxMesh_ajab3")
+skeleton = NodePath("../..")
+
+[node name="top" type="MeshInstance3D" parent="streetlamps/streetlamp2"]
+transform = Transform3D(6.29206e-16, -1.47526e-08, 0.3, -0.3, -2.87891e-06, 0, 1.43946e-08, -0.3375, -1.31134e-08, -8.03732, 3.9846, 16.3583)
+mesh = SubResource("CylinderMesh_xo6n8")
+skeleton = NodePath("../..")
+
+[node name="light" type="MeshInstance3D" parent="streetlamps/streetlamp2"]
+transform = Transform3D(1.00311e-17, -7.73691e-09, 0.15, -0.07, -1.03159e-07, 5.26486e-22, 2.29485e-10, -0.177, -6.55671e-09, -8.03732, 3.83459, 16.2407)
+mesh = SubResource("CylinderMesh_lc3sb")
+skeleton = NodePath("../streetlampbody")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlamps/streetlamp2"]
+transform = Transform3D(-4.37114e-08, -1, -5.82818e-07, 0, -5.82818e-07, 1, -1, 4.37114e-08, 2.54758e-14, -8.03693, 3.97802, 16.2166)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 16.0
+light_indirect_energy = 500.0
+light_volumetric_fog_energy = 45.535
+
+[node name="streetlamp3" type="Node3D" parent="streetlamps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0)
+
+[node name="streetlampbody" type="MeshInstance3D" parent="streetlamps/streetlamp3"]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 4, 0, -0.15, 0, -6.55671e-09, -8.037, 2, 16.6182)
+mesh = SubResource("BoxMesh_ajab3")
+skeleton = NodePath("../..")
+
+[node name="top" type="MeshInstance3D" parent="streetlamps/streetlamp3"]
+transform = Transform3D(6.29206e-16, -1.47526e-08, 0.3, -0.3, -2.87891e-06, 0, 1.43946e-08, -0.3375, -1.31134e-08, -8.03732, 3.9846, 16.3583)
+mesh = SubResource("CylinderMesh_xo6n8")
+skeleton = NodePath("../..")
+
+[node name="light" type="MeshInstance3D" parent="streetlamps/streetlamp3"]
+transform = Transform3D(1.00311e-17, -7.73691e-09, 0.15, -0.07, -1.03159e-07, 5.26486e-22, 2.29485e-10, -0.177, -6.55671e-09, -8.03732, 3.83459, 16.2407)
+mesh = SubResource("CylinderMesh_lc3sb")
+skeleton = NodePath("../streetlampbody")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlamps/streetlamp3"]
+transform = Transform3D(-4.37114e-08, -1, -5.82818e-07, 0, -5.82818e-07, 1, -1, 4.37114e-08, 2.54758e-14, -8.03693, 3.97802, 16.2166)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 16.0
+light_indirect_energy = 500.0
+light_volumetric_fog_energy = 45.535
+
+[node name="streetlamp4" type="Node3D" parent="streetlamps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0)
+
+[node name="streetlampbody" type="MeshInstance3D" parent="streetlamps/streetlamp4"]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 4, 0, -0.15, 0, -6.55671e-09, -8.037, 2, 16.6182)
+mesh = SubResource("BoxMesh_ajab3")
+skeleton = NodePath("../..")
+
+[node name="top" type="MeshInstance3D" parent="streetlamps/streetlamp4"]
+transform = Transform3D(6.29206e-16, -1.47526e-08, 0.3, -0.3, -2.87891e-06, 0, 1.43946e-08, -0.3375, -1.31134e-08, -8.03732, 3.9846, 16.3583)
+mesh = SubResource("CylinderMesh_xo6n8")
+skeleton = NodePath("../..")
+
+[node name="light" type="MeshInstance3D" parent="streetlamps/streetlamp4"]
+transform = Transform3D(1.00311e-17, -7.73691e-09, 0.15, -0.07, -1.03159e-07, 5.26486e-22, 2.29485e-10, -0.177, -6.55671e-09, -8.03732, 3.83459, 16.2407)
+mesh = SubResource("CylinderMesh_lc3sb")
+skeleton = NodePath("../streetlampbody")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlamps/streetlamp4"]
+transform = Transform3D(-4.37114e-08, -1, -5.82818e-07, 0, -5.82818e-07, 1, -1, 4.37114e-08, 2.54758e-14, -8.03693, 3.97802, 16.2166)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 16.0
+light_indirect_energy = 500.0
+light_volumetric_fog_energy = 45.535
+
+[node name="streetlamp5" type="Node3D" parent="streetlamps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, 0)
+
+[node name="streetlampbody" type="MeshInstance3D" parent="streetlamps/streetlamp5"]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 4, 0, -0.15, 0, -6.55671e-09, -8.037, 2, 16.6182)
+mesh = SubResource("BoxMesh_ajab3")
+skeleton = NodePath("../..")
+
+[node name="top" type="MeshInstance3D" parent="streetlamps/streetlamp5"]
+transform = Transform3D(6.29206e-16, -1.47526e-08, 0.3, -0.3, -2.87891e-06, 0, 1.43946e-08, -0.3375, -1.31134e-08, -8.03732, 3.9846, 16.3583)
+mesh = SubResource("CylinderMesh_xo6n8")
+skeleton = NodePath("../..")
+
+[node name="light" type="MeshInstance3D" parent="streetlamps/streetlamp5"]
+transform = Transform3D(1.00311e-17, -7.73691e-09, 0.15, -0.07, -1.03159e-07, 5.26486e-22, 2.29485e-10, -0.177, -6.55671e-09, -8.03732, 3.83459, 16.2407)
+mesh = SubResource("CylinderMesh_lc3sb")
+skeleton = NodePath("../streetlampbody")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlamps/streetlamp5"]
+transform = Transform3D(-4.37114e-08, -1, -5.82818e-07, 0, -5.82818e-07, 1, -1, 4.37114e-08, 2.54758e-14, -8.03693, 3.97802, 16.2166)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 16.0
+light_indirect_energy = 500.0
+light_volumetric_fog_energy = 45.535
+
+[node name="streetlamp6" type="Node3D" parent="streetlamps"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, 0)
+
+[node name="streetlampbody" type="MeshInstance3D" parent="streetlamps/streetlamp6"]
+transform = Transform3D(-6.55671e-09, 0, 0.15, 0, 4, 0, -0.15, 0, -6.55671e-09, -8.037, 2, 16.6182)
+mesh = SubResource("BoxMesh_ajab3")
+skeleton = NodePath("../..")
+
+[node name="top" type="MeshInstance3D" parent="streetlamps/streetlamp6"]
+transform = Transform3D(6.29206e-16, -1.47526e-08, 0.3, -0.3, -2.87891e-06, 0, 1.43946e-08, -0.3375, -1.31134e-08, -8.03732, 3.9846, 16.3583)
+mesh = SubResource("CylinderMesh_xo6n8")
+skeleton = NodePath("../..")
+
+[node name="light" type="MeshInstance3D" parent="streetlamps/streetlamp6"]
+transform = Transform3D(1.00311e-17, -7.73691e-09, 0.15, -0.07, -1.03159e-07, 5.26486e-22, 2.29485e-10, -0.177, -6.55671e-09, -8.03732, 3.83459, 16.2407)
+mesh = SubResource("CylinderMesh_lc3sb")
+skeleton = NodePath("../streetlampbody")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="streetlamps/streetlamp6"]
+transform = Transform3D(-4.37114e-08, -1, -5.82818e-07, 0, -5.82818e-07, 1, -1, 4.37114e-08, 2.54758e-14, -8.03693, 3.97802, 16.2166)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 16.0
+light_indirect_energy = 500.0
+light_volumetric_fog_energy = 45.535
