@@ -1,0 +1,15 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbu65p13wvqfo"]
+
+[ext_resource type="PackedScene" uid="uid://d3xsm7aiipibf" path="res://OliverTextures/low-poly-light-bulb/source/Low_Poly_Light_Bulb.fbx" id="1_aev3t"]
+[ext_resource type="Texture2D" uid="uid://crhkm155wswql" path="res://OliverTextures/low-poly-light-bulb/textures/#LMP0003_Textures_COL_2k.png" id="2_nwe0f"]
+[ext_resource type="Texture2D" uid="uid://ccw7yl2gcd48j" path="res://OliverTextures/low-poly-light-bulb/textures/#LMP0003_Textures_EMIS_2k.png" id="3_2stgj"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uuiql"]
+albedo_texture = ExtResource("2_nwe0f")
+emission_enabled = true
+emission_texture = ExtResource("3_2stgj")
+
+[node name="Root Scene" instance=ExtResource("1_aev3t")]
+
+[node name="#LMP0003_Light_Bulb_Low_Poly" parent="RootNode" index="0"]
+material_override = SubResource("StandardMaterial3D_uuiql")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://xv818tg7gyof"]
+[gd_scene load_steps=29 format=3 uid="uid://xv818tg7gyof"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_23dc3"]
 [ext_resource type="Texture2D" uid="uid://d3l4sgkptxubw" path="res://GSOutside Textures/Ground062S_1K-JPG/Ground062S_1K-JPG_Color.jpg" id="1_62qww"]
@@ -71,7 +71,14 @@ points = PackedVector3Array(-1, 0, -1, -1, 0, 1, 1, 0, -1, 1, 0, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_871ht"]
 
-[node name="Node3D" type="Node3D"]
+[sub_resource type="BoxMesh" id="BoxMesh_kekt8"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_26nx3"]
+emission_enabled = true
+emission = Color(0.843137, 0.843137, 0.490196, 1)
+emission_energy_multiplier = 4.9
+
+[node name="gasoutside" type="Node3D"]
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(6.41732e-06, -8.74228e-08, 2, -7.43094e-06, 1, 1.74846e-07, 85, 8.74228e-08, -1.50996e-07, 0, 0, 0)
@@ -83,7 +90,7 @@ mesh = SubResource("PlaneMesh_ekmfc")
 shape = SubResource("ConvexPolygonShape3D_sjqf6")
 
 [node name="player" parent="." instance=ExtResource("1_23dc3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113299, 1.22945, -37.0577)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.113299, 1.22945, 34.5703)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_q80ky")
@@ -1160,3 +1167,54 @@ shape = SubResource("BoxShape3D_871ht")
 [node name="StaticBody3D" parent="." instance=ExtResource("16_vemvo")]
 transform = Transform3D(-5.46392e-08, 0, -1.25, 0, 1.25, 0, 1.25, 0, -5.46392e-08, -2.64744, 1.22605, -44.8778)
 promptMessege = "Go Inside"
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.969501, 0.245088, 0, -0.245088, 0.969501, -4.701, 3.66896, -40.0626)
+
+[node name="Ligt1" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 0.1, 0, 0, 0, 0.75, 0, 2.98802, -42.9739)
+mesh = SubResource("BoxMesh_kekt8")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ligt1"]
+transform = Transform3D(0.933333, 0, 0, 0, 1, 0, 0, 0, 0.933333, 0, -0.184591, 0)
+material_override = SubResource("StandardMaterial3D_26nx3")
+mesh = SubResource("BoxMesh_kekt8")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Ligt1/MeshInstance3D4"]
+transform = Transform3D(1.42857, 0, 0, 0, -7.1876e-08, 9.96679, 0, -1.64433, -4.35662e-07, 0, 0, 0)
+light_color = Color(1, 1, 0.768627, 1)
+light_energy = 2.0
+light_size = 0.138
+
+[node name="Ligt2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 0.1, 0, 0, 0, 0.75, 0, 2.98802, -46.471)
+mesh = SubResource("BoxMesh_kekt8")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ligt2"]
+transform = Transform3D(0.933333, 0, 0, 0, 1, 0, 0, 0, 0.933333, 0, -0.184591, 0)
+material_override = SubResource("StandardMaterial3D_26nx3")
+mesh = SubResource("BoxMesh_kekt8")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Ligt2/MeshInstance3D4"]
+transform = Transform3D(1.42857, 0, 0, 0, -7.1876e-08, 9.96679, 0, -1.64433, -4.35662e-07, 0, 0, 0)
+light_color = Color(1, 1, 0.768627, 1)
+light_energy = 2.0
+light_size = 0.138
+
+[node name="Ligt3" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 0.1, 0, 0, 0, 0.75, 0, 2.98802, -50.0385)
+mesh = SubResource("BoxMesh_kekt8")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="Ligt3"]
+transform = Transform3D(0.933333, 0, 0, 0, 1, 0, 0, 0, 0.933333, 0, -0.184591, 0)
+material_override = SubResource("StandardMaterial3D_26nx3")
+mesh = SubResource("BoxMesh_kekt8")
+skeleton = NodePath("../..")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Ligt3/MeshInstance3D4"]
+transform = Transform3D(1.42857, 0, 0, 0, -7.1876e-08, 9.96679, 0, -1.64433, -4.35662e-07, 0, 0, 0)
+light_color = Color(1, 1, 0.768627, 1)
+light_energy = 2.0
+light_size = 0.138
