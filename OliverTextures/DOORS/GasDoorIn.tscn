@@ -1,6 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://deqqh6svsbljw"]
+[gd_scene load_steps=6 format=3 uid="uid://deqqh6svsbljw"]
 
 [ext_resource type="Script" path="res://OliverTextures/DOORS/GasDoorOutTel.gd" id="1_uclcy"]
+[ext_resource type="Texture2D" uid="uid://exja0w8ud3s0" path="res://OliverTextures/DOORS/doorin.png" id="2_yc73a"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g6kkl"]
+albedo_texture = ExtResource("2_yc73a")
+uv1_offset = Vector3(0.525, 0.505, 0)
+uv1_triplanar = true
 
 [sub_resource type="BoxMesh" id="BoxMesh_dps63"]
 
@@ -12,6 +18,7 @@ script = ExtResource("1_uclcy")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_g6kkl")
 mesh = SubResource("BoxMesh_dps63")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

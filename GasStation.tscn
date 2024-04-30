@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=35 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -90,8 +90,6 @@ albedo_color = Color(0.313726, 0.180392, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_x8pv6"]
 material = SubResource("StandardMaterial3D_msssl")
-
-[sub_resource type="BoxMesh" id="BoxMesh_ksg3a"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36y3b"]
 albedo_color = Color(1, 0.996078, 0.823529, 1)
@@ -286,14 +284,6 @@ skeleton = NodePath("../..")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfs/MeshInstance3D3"]
 transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
-
-[node name="Window 1" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 0.285893, 2.00854, 11.9816)
-mesh = SubResource("BoxMesh_ksg3a")
-
-[node name="Window 2" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 6.18589, 2.00854, 11.9816)
-mesh = SubResource("BoxMesh_ksg3a")
 
 [node name="Light1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, 0)

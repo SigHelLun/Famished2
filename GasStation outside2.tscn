@@ -89,9 +89,6 @@ mesh = SubResource("PlaneMesh_ekmfc")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConvexPolygonShape3D_sjqf6")
 
-[node name="player" parent="." instance=ExtResource("6_xfgkc")]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -1.66963, 1.22945, -44.8924)
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_q80ky")
 
@@ -1218,3 +1215,6 @@ transform = Transform3D(1.42857, 0, 0, 0, -7.1876e-08, 9.96679, 0, -1.64433, -4.
 light_color = Color(1, 1, 0.768627, 1)
 light_energy = 2.0
 light_size = 0.138
+
+[node name="player" parent="." instance=ExtResource("6_xfgkc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.76604, 1.11373, -44.9324)
