@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=37 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dfvr5eyr7b750" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
 [ext_resource type="AudioStream" uid="uid://cgxw60vmcuxqg" path="res://GasStationTextures/quirky-dog.mp3" id="9_hvffl"]
 [ext_resource type="PackedScene" uid="uid://deqqh6svsbljw" path="res://OliverTextures/DOORS/GasDoorIn.tscn" id="9_mki8u"]
+[ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="10_jfvgk"]
+[ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="11_e0cvq"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
 albedo_texture = ExtResource("1_4kvxd")
@@ -514,3 +516,11 @@ autoplay = true
 
 [node name="StaticBody3D" parent="." instance=ExtResource("9_mki8u")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82909, 1.01086, 12)
+
+[node name="Item1" parent="." instance=ExtResource("10_jfvgk")]
+transform = Transform3D(0.65, 0, 0, 0, 0.65, 0, 0, 0, 0.65, -6.47401, 0, -8.57339)
+promptMessege = "Talk to Clerk"
+
+[node name="Item2" parent="." instance=ExtResource("11_e0cvq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.20329, 1.33139, -1.97368)
+promptMessege = "Take Pizza"

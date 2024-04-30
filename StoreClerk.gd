@@ -1,4 +1,4 @@
-class_name Clerktest
+class_name StoreClerk
 extends StaticBody3D
 
 signal interacted(body)
@@ -20,7 +20,7 @@ func testdialogue(body):
 
 #code for dialogue
 #array noPizzaD for dialogue når du møter
-var noItemD = ['Hey there welcome to the store!', 'Please feel free to look around.', 'Just come to me when you are ready to pay.']
+var noItemD = ['Oh.. he-hello. what can I do for you today s-sir','Are you okay, you dont look okay','....Emm Hello c-can you talk','what even are you man?', 'Are you gonna buy something?']
 var yesItemD = ['Oh you want that pizza right...','emm y-yeah that will be 20$ dollars','You have the money right?','Are you gonna pay for that or?','20$ man']
 #kva dialogue nummer er me på i arrayen noitemD og yesItemD
 var countmsg = 1
@@ -40,11 +40,11 @@ func clerkDialogue():
 			promptMessege = noItemD[2]
 		if countmsg == 4:
 			promptMessege = noItemD[3]
-		
+		if countmsg == 5:
 			promptMessege = 'Talk to Clerk'
 		# countmsg minus kor mange settningar du vil gå tilbake
-		if countmsg == 5:
-			countmsg -= 4
+		if countmsg == 6:
+			countmsg -= 5
 		countmsg += 1
 	if holdItem1 == 1:
 		if countmsg2 == 1:
