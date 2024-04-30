@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://deqqh6svsbljw"]
+
+[ext_resource type="Script" path="res://OliverTextures/DOORS/GasDoorOutTel.gd" id="1_uclcy"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_dps63"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6g8x6"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_uclcy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+mesh = SubResource("BoxMesh_dps63")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_6g8x6")

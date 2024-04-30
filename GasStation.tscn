@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=36 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cqy463pgfi5il" path="res://GasStationTextures/Freezer2.png" id="6_wtvbs"]
 [ext_resource type="Texture2D" uid="uid://dfvr5eyr7b750" path="res://GasStationTextures/istockphoto-476464756-612x612.jpg" id="7_5q123"]
 [ext_resource type="AudioStream" uid="uid://cgxw60vmcuxqg" path="res://GasStationTextures/quirky-dog.mp3" id="9_hvffl"]
+[ext_resource type="PackedScene" uid="uid://deqqh6svsbljw" path="res://OliverTextures/DOORS/GasDoorIn.tscn" id="9_mki8u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
 albedo_texture = ExtResource("1_4kvxd")
@@ -140,7 +141,7 @@ mesh = SubResource("PlaneMesh_heru7")
 shape = SubResource("ConcavePolygonShape3D_qvcqs")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_w2owo")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.77636, 1.22945, 10.4852)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.81178, 1.22945, 10.9768)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_jlspu")
@@ -285,10 +286,6 @@ skeleton = NodePath("../..")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfs/MeshInstance3D3"]
 transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
-
-[node name="Door" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, -4.85584, 1.28213, 11.9717)
-mesh = SubResource("BoxMesh_ksg3a")
 
 [node name="Window 1" type="MeshInstance3D" parent="."]
 transform = Transform3D(2.8, 0, 0, 0, 2.565, 0, 0, 0, 0.115, 0.285893, 2.00854, 11.9816)
@@ -524,3 +521,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.45171, 0)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Node3D2"]
 stream = ExtResource("9_hvffl")
 autoplay = true
+
+[node name="StaticBody3D" parent="." instance=ExtResource("9_mki8u")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.82909, 1.01086, 12)
