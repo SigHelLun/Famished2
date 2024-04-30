@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dprvk55qcdxg4"
-path.s3tc="res://.godot/imported/Concrete042C_1K-JPG_AmbientOcclusion.jpg-e9e22ae119c22c0797ddb8e5d359928e.s3tc.ctex"
+uid="uid://dw1pjgxgxk07j"
+path.s3tc="res://.godot/imported/coutnertop.jpg-84e673eada8d0afeb383e660c6a9936e.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/Concrete042C_1K-JPG/Concrete042C_1K-JPG_AmbientOcclusion.jpg"
-dest_files=["res://.godot/imported/Concrete042C_1K-JPG_AmbientOcclusion.jpg-e9e22ae119c22c0797ddb8e5d359928e.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/other/coutnertop.jpg"
+dest_files=["res://.godot/imported/coutnertop.jpg-84e673eada8d0afeb383e660c6a9936e.s3tc.ctex"]
 
 [params]
 
