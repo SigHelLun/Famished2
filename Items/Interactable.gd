@@ -6,7 +6,6 @@ signal interacted(body)
 #var hand = true
 @export var promptMessege = 'Interact'
 @export var promptAction = 'interact'
-
 func get_prompt():
 	var key_name = ""
 	for action in InputMap.action_get_events(promptAction):
@@ -15,7 +14,15 @@ func get_prompt():
 	return promptMessege + "\n["+ key_name +"]"
 
 func interact(body):
-	emit_signal("interacted", body)
-	print(body.name, " Interacted!")
-	
-
+	if save.Rat == false:
+		save.showR()
+		print(save.Rat)
+	else:
+		save.hideR()
+		print(save.Rat)
+#	if save.pizza == false:
+#		save.showP()
+#		print(save.pizza)
+#	else:
+#		save.hideP()
+#		print(save.pizza)

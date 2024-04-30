@@ -3,8 +3,8 @@
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
 [ext_resource type="PackedScene" uid="uid://cajb3byndart1" path="res://Animations/aniPlayerGLB.tscn" id="3_mm0kv"]
-[ext_resource type="Script" path="res://hide.gd" id="4_1pylp"]
 [ext_resource type="AudioStream" uid="uid://ikfjyhwoyb5f" path="res://audio/heavybreathing.mp3" id="4_cpt43"]
+[ext_resource type="Script" path="res://hideshow.gd" id="5_0jk20"]
 [ext_resource type="AudioStream" uid="uid://bmlmnoprrck4q" path="res://audio/concrete-footsteps-6752.mp3" id="5_8k7wy"]
 [ext_resource type="Texture2D" uid="uid://b84yvm4pdrcq6" path="res://Textures(Sigurd)/randihand.png" id="6_xb58s"]
 
@@ -34,13 +34,6 @@ current = true
 target_position = Vector3(0, 0, -4)
 script = ExtResource("2_g2q78")
 
-[node name="Sprite2D" type="Sprite2D" parent="Neck/Playerinteract"]
-position = Vector2(69, 338)
-rotation = -0.125664
-scale = Vector2(0.106351, 0.0952917)
-texture = ExtResource("6_xb58s")
-script = ExtResource("4_1pylp")
-
 [node name="Prompt" type="Label" parent="Neck/Playerinteract"]
 anchors_preset = 13
 anchor_left = 0.5
@@ -57,6 +50,14 @@ text = "Message [Key]"
 
 [node name="animationplayerfamished2" parent="Neck" instance=ExtResource("3_mm0kv")]
 transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.64097, 0.289769)
+
+[node name="pizza" type="Sprite2D" parent="Neck"]
+visible = false
+position = Vector2(100, 370)
+rotation = 0.165806
+scale = Vector2(0.154577, 0.132286)
+texture = ExtResource("6_xb58s")
+script = ExtResource("5_0jk20")
 
 [node name="breath" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cpt43")
