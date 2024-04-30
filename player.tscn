@@ -39,6 +39,7 @@ target_position = Vector3(0, 0, -4)
 script = ExtResource("2_g2q78")
 
 [node name="pizza" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
 position = Vector2(99.5077, 364.918)
 rotation = 0.165806
 scale = Vector2(0.154577, 0.122718)
@@ -46,12 +47,14 @@ texture = ExtResource("6_xb58s")
 script = ExtResource("5_0jk20")
 
 [node name="Rat" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
 position = Vector2(347, 299)
 scale = Vector2(0.163757, 0.111359)
 texture = ExtResource("6_u65ac")
 script = ExtResource("6_xl8f3")
 
 [node name="Meat" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
 position = Vector2(561, 255)
 scale = Vector2(0.130688, 0.122884)
 texture = ExtResource("8_jerx3")
