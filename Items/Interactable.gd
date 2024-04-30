@@ -17,7 +17,5 @@ func get_prompt():
 func interact(body):
 	emit_signal("interacted", body)
 	print(body.name, " Interacted!")
-	#hand = false
-	#var hand_node = get_node("res://player.tscn/$Neck/hand")
-#	if hand == false:
+	
 
