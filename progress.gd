@@ -8,9 +8,10 @@ func item1Drop():
 	Item1 = 0
 
 
-var money = false	
+var money = false
 var pizza = false
 var Rat = false
+var Meat = false
 
 
 func hideM():
@@ -26,5 +27,11 @@ func hideR():
 	Rat = false
 func showR():
 	Rat = true
+	money = false
+	pizza = false
+func hideMe():
+	Meat = false
+func showMe():
+	Meat = true
 	money = false
 	pizza = false

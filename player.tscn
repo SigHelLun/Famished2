@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c0x1iwtno5yx1"]
+[gd_scene load_steps=14 format=3 uid="uid://c0x1iwtno5yx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
@@ -6,7 +6,11 @@
 [ext_resource type="AudioStream" uid="uid://ikfjyhwoyb5f" path="res://audio/heavybreathing.mp3" id="4_cpt43"]
 [ext_resource type="Script" path="res://hideshow.gd" id="5_0jk20"]
 [ext_resource type="AudioStream" uid="uid://bmlmnoprrck4q" path="res://audio/concrete-footsteps-6752.mp3" id="5_8k7wy"]
+[ext_resource type="Texture2D" uid="uid://7o5w2p30na88" path="res://Textures(Sigurd)/handRat.png" id="6_u65ac"]
 [ext_resource type="Texture2D" uid="uid://b84yvm4pdrcq6" path="res://Textures(Sigurd)/randihand.png" id="6_xb58s"]
+[ext_resource type="Script" path="res://Items/Rat.gd" id="6_xl8f3"]
+[ext_resource type="Texture2D" uid="uid://cgi11ye71jvi3" path="res://Textures(Sigurd)/nam.png" id="8_jerx3"]
+[ext_resource type="Script" path="res://Items/Meat.gd" id="9_e6nqq"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
@@ -52,12 +56,23 @@ text = "Message [Key]"
 transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.64097, 0.289769)
 
 [node name="pizza" type="Sprite2D" parent="Neck"]
-visible = false
-position = Vector2(100, 370)
+position = Vector2(99.5077, 364.918)
 rotation = 0.165806
-scale = Vector2(0.154577, 0.132286)
+scale = Vector2(0.154577, 0.122718)
 texture = ExtResource("6_xb58s")
 script = ExtResource("5_0jk20")
+
+[node name="Rat" type="Sprite2D" parent="Neck"]
+position = Vector2(347, 299)
+scale = Vector2(0.163757, 0.111359)
+texture = ExtResource("6_u65ac")
+script = ExtResource("6_xl8f3")
+
+[node name="Meat" type="Sprite2D" parent="Neck"]
+position = Vector2(561, 255)
+scale = Vector2(0.130688, 0.122884)
+texture = ExtResource("8_jerx3")
+script = ExtResource("9_e6nqq")
 
 [node name="breath" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cpt43")

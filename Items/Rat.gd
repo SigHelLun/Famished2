@@ -1,8 +1,8 @@
 extends Sprite2D
 
-var pizza = save.pizza
+var Rat = save.Rat
 func _process(_delta):
-	if save.pizza == true:
+	if Rat == true:
 		self.show()
 	else: 
 		self.hide()

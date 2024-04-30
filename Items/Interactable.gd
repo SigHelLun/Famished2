@@ -13,16 +13,16 @@ func get_prompt():
 			key_name = OS.get_keycode_string(action.physical_keycode)
 	return promptMessege + "\n["+ key_name +"]"
 
-func interact(body):
-	if save.Rat == false:
-		save.showR()
-		print(save.Rat)
+func interact(_body):
+	#if save.Meat == false:
+	#	save.showMe()
+	#	print(save.Meat)
+	#else:
+	#	save.hideMe()
+	#	print(save.Meat)
+	if save.pizza == false:
+		save.showP()
+		print(save.pizza)
 	else:
-		save.hideR()
-		print(save.Rat)
-#	if save.pizza == false:
-#		save.showP()
-#		print(save.pizza)
-#	else:
-#		save.hideP()
-#		print(save.pizza)
+		save.hideP()
+		print(save.pizza)
