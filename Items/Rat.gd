@@ -1,8 +1,7 @@
 extends Sprite2D
 
-var Rat = save.Rat
 func _process(_delta):
-	if Rat == true:
+	if save.Rat == true:
 		self.show()
 	else: 
 		self.hide()

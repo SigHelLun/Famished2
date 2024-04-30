@@ -38,6 +38,28 @@ current = true
 target_position = Vector3(0, 0, -4)
 script = ExtResource("2_g2q78")
 
+[node name="pizza" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
+position = Vector2(99.5077, 364.918)
+rotation = 0.165806
+scale = Vector2(0.154577, 0.122718)
+texture = ExtResource("6_xb58s")
+script = ExtResource("5_0jk20")
+
+[node name="Rat" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
+position = Vector2(347, 299)
+scale = Vector2(0.163757, 0.111359)
+texture = ExtResource("6_u65ac")
+script = ExtResource("6_xl8f3")
+
+[node name="Meat" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
+position = Vector2(561, 255)
+scale = Vector2(0.130688, 0.122884)
+texture = ExtResource("8_jerx3")
+script = ExtResource("9_e6nqq")
+
 [node name="Prompt" type="Label" parent="Neck/Playerinteract"]
 anchors_preset = 13
 anchor_left = 0.5
@@ -54,25 +76,6 @@ text = "Message [Key]"
 
 [node name="animationplayerfamished2" parent="Neck" instance=ExtResource("3_mm0kv")]
 transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.64097, 0.289769)
-
-[node name="pizza" type="Sprite2D" parent="Neck"]
-position = Vector2(99.5077, 364.918)
-rotation = 0.165806
-scale = Vector2(0.154577, 0.122718)
-texture = ExtResource("6_xb58s")
-script = ExtResource("5_0jk20")
-
-[node name="Rat" type="Sprite2D" parent="Neck"]
-position = Vector2(347, 299)
-scale = Vector2(0.163757, 0.111359)
-texture = ExtResource("6_u65ac")
-script = ExtResource("6_xl8f3")
-
-[node name="Meat" type="Sprite2D" parent="Neck"]
-position = Vector2(561, 255)
-scale = Vector2(0.130688, 0.122884)
-texture = ExtResource("8_jerx3")
-script = ExtResource("9_e6nqq")
 
 [node name="breath" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cpt43")
