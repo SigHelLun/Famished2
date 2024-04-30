@@ -1,0 +1,7 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://c2o6gfdsqu6e3"]
+
+[ext_resource type="Texture2D" uid="uid://ctwvc3ttqoklp" path="res://OliverTextures/istockphoto-1366122985-612x612.jpg" id="1_5qgc3"]
+
+[resource]
+albedo_texture = ExtResource("1_5qgc3")
+uv1_scale = Vector3(5.265, 6.43, 5.265)

@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="2_1s5e5"]
 [ext_resource type="Texture2D" uid="uid://dtrt04kuhp826" path="res://Textures(Sigurd)/18c8ed6e4b54af6f91bb4575bad1043b-2965597821.jpg" id="3_lnw2c"]
 [ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="5_v7ehx"]
-[ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="6_i27wp"]
+[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="6_i27wp"]
 
 [sub_resource type="Environment" id="Environment_cgj36"]
 fog_enabled = true

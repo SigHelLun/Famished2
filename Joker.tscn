@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=3 uid="uid://g2ds1phc4igu"]
+
+[ext_resource type="PackedScene" uid="uid://m0peu8mercpj" path="res://fdxmodel/Joker.fbx" id="1_bhu05"]
+[ext_resource type="Material" uid="uid://c2o6gfdsqu6e3" path="res://OliverTextures/new_standard_material_3d.tres" id="2_fu5yq"]
+[ext_resource type="Texture2D" uid="uid://3fqlqul8ey05" path="res://OliverTextures/logo_profile.png" id="2_r2ned"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_hqkkv"]
+size = Vector3(0.993652, 0.544067, 1.34912)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_g1307"]
+points = PackedVector3Array(0.005, 0.042072, 0.005, -0.005, -0.00364229, -0.005, -0.005, -0.00364229, 0.00488413, 0.005, -0.00417199, 0.005, 0.00488413, -0.00364229, -0.005, -0.005, 0.0415423, -0.005, -0.005, 0.0415423, 0.00488413, 0.00488413, 0.0415423, -0.005)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_4s2dn"]
+points = PackedVector3Array(0.005, 0.042072, 0.005, -0.005, -0.00364229, -0.005, -0.005, -0.00364229, 0.00488413, 0.005, -0.00417199, 0.005, 0.00488413, -0.00364229, -0.005, -0.005, 0.0415423, -0.005, -0.005, 0.0415423, 0.00488413, 0.00488413, 0.0415423, -0.005)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_u4c8s"]
+points = PackedVector3Array(0.005, 0.042072, 0.005, -0.005, -0.00364229, -0.005, -0.005, -0.00364229, 0.00488413, 0.005, -0.00417199, 0.005, 0.00488413, -0.00364229, -0.005, -0.005, 0.0415423, -0.005, -0.005, 0.0415423, 0.00488413, 0.00488413, 0.0415423, -0.005)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h0xj2"]
+albedo_texture = ExtResource("2_r2ned")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ldxi4"]
+albedo_texture = ExtResource("2_r2ned")
+
+[node name="Root Scene" instance=ExtResource("1_bhu05")]
+
+[node name="pCube1" parent="RootNode" index="0"]
+material_override = ExtResource("2_fu5yq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/pCube1" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/pCube1/StaticBody3D" index="0"]
+transform = Transform3D(-0.0100442, 0, 0, 0, -0.0295073, 0, 0, 0, -0.00737724, 1.28527e-05, 0.00168444, 1.26076e-05)
+shape = SubResource("BoxShape3D_hqkkv")
+
+[node name="pCube2" parent="RootNode" index="1"]
+material_override = ExtResource("2_fu5yq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/pCube2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/pCube2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_g1307")
+
+[node name="pasted__pCube2" parent="RootNode/group" index="0"]
+material_override = ExtResource("2_fu5yq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/group/pasted__pCube2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/group/pasted__pCube2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_4s2dn")
+
+[node name="pasted__pasted__pCube2" parent="RootNode/group1/pasted__group" index="0"]
+material_override = ExtResource("2_fu5yq")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RootNode/group1/pasted__group/pasted__pasted__pCube2" index="0"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RootNode/group1/pasted__group/pasted__pasted__pCube2/StaticBody3D" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_u4c8s")
+
+[node name="pCube3" parent="RootNode" index="4"]
+material_override = ExtResource("2_fu5yq")
+
+[node name="pPlane1" parent="RootNode" index="5"]
+transform = Transform3D(2.8909, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.0293417, 0.0434891, 0.0906169)
+material_override = SubResource("StandardMaterial3D_h0xj2")
+
+[node name="pasted__pPlane1" parent="RootNode/group2" index="0"]
+material_override = SubResource("StandardMaterial3D_ldxi4")

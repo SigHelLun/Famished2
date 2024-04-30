@@ -46,4 +46,8 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 					detected.basement(owner)
+		if detected is GasDoorOut:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+					detected.GasDoorOut(owner)
 	

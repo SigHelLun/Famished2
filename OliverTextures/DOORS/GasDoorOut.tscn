@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://n3w85x87lydd"]
+
+[ext_resource type="Script" path="res://OliverTextures/DOORS/GasDoorOutTel.gd" id="1_0nc5a"]
+[ext_resource type="Texture2D" uid="uid://clj83swvbxb6w" path="res://OliverTextures/GasDoorOut.png" id="1_l2j2d"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xr6yd"]
+albedo_texture = ExtResource("1_l2j2d")
+uv1_scale = Vector3(3.015, 1.98, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dps63"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_6g8x6"]
+points = PackedVector3Array(-0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5)
+
+[node name="StaticBody3D" type="StaticBody3D"]
+script = ExtResource("1_0nc5a")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_xr6yd")
+mesh = SubResource("BoxMesh_dps63")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 2, 0, 0, 0, 0.125, 0, 0, 0)
+shape = SubResource("ConvexPolygonShape3D_6g8x6")

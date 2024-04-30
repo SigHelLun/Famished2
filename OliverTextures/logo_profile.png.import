@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br2npvfhsw84f"
-path.s3tc="res://.godot/imported/baseball bat.png-345d803e8c39ab56bf70b154df76a86f.s3tc.ctex"
+uid="uid://3fqlqul8ey05"
+path.s3tc="res://.godot/imported/logo_profile.png-4f5783e0c4bfb2ea42a71e0ee96db525.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://OliverTextures/baseball bat.png"
-dest_files=["res://.godot/imported/baseball bat.png-345d803e8c39ab56bf70b154df76a86f.s3tc.ctex"]
+source_file="res://OliverTextures/logo_profile.png"
+dest_files=["res://.godot/imported/logo_profile.png-4f5783e0c4bfb2ea42a71e0ee96db525.s3tc.ctex"]
 
 [params]
 
