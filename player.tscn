@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://c0x1iwtno5yx1"]
+[gd_scene load_steps=10 format=3 uid="uid://c0x1iwtno5yx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
 [ext_resource type="PackedScene" uid="uid://cajb3byndart1" path="res://Animations/aniPlayerGLB.tscn" id="3_mm0kv"]
+[ext_resource type="Script" path="res://hide.gd" id="4_1pylp"]
 [ext_resource type="AudioStream" uid="uid://ikfjyhwoyb5f" path="res://audio/heavybreathing.mp3" id="4_cpt43"]
 [ext_resource type="AudioStream" uid="uid://bmlmnoprrck4q" path="res://audio/concrete-footsteps-6752.mp3" id="5_8k7wy"]
 [ext_resource type="Texture2D" uid="uid://b84yvm4pdrcq6" path="res://Textures(Sigurd)/randihand.png" id="6_xb58s"]
@@ -33,13 +34,20 @@ current = true
 target_position = Vector3(0, 0, -4)
 script = ExtResource("2_g2q78")
 
+[node name="Sprite2D" type="Sprite2D" parent="Neck/Playerinteract"]
+position = Vector2(69, 338)
+rotation = -0.125664
+scale = Vector2(0.106351, 0.0952917)
+texture = ExtResource("6_xb58s")
+script = ExtResource("4_1pylp")
+
 [node name="Prompt" type="Label" parent="Neck/Playerinteract"]
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -85.0
-offset_top = 241.0
+offset_top = 198.0
 offset_right = 85.0
 grow_horizontal = 2
 grow_vertical = 2
@@ -49,10 +57,6 @@ text = "Message [Key]"
 
 [node name="animationplayerfamished2" parent="Neck" instance=ExtResource("3_mm0kv")]
 transform = Transform3D(-8.5, 0, -7.43094e-07, 0, 8.5, 0, 7.43094e-07, 0, -8.5, 0, -1.64097, 0.289769)
-
-[node name="Sprite3D" type="Sprite3D" parent="Neck"]
-transform = Transform3D(0.0392512, 0.00770362, -3.04629e-10, -0.00731114, 0.0372514, 0.0126048, 0.00242756, -0.0123688, 0.0379621, -0.600747, -0.616378, -0.361464)
-texture = ExtResource("6_xb58s")
 
 [node name="breath" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_cpt43")
