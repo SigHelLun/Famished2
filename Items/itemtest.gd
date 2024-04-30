@@ -16,3 +16,9 @@ func get_prompt():
 func pickUp(body):
 	print(body.name, " testitem!")
 	save.item1Pick()
+	if save.Meat == false:
+		save.showMe()
+		print(save.pizza)
+	else:
+		save.hideMe()
+		print(save.pizza)

@@ -22,7 +22,8 @@ func hideP():
 	pizza = false
 func showP():
 	pizza = true
-	money = false
+	Rat = false
+	Meat = false
 func hideR():
 	Rat = false
 func showR():
