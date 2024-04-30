@@ -14,15 +14,9 @@ func get_prompt():
 	return promptMessege + "\n["+ key_name +"]"
 
 func interact(_body):
-	#if save.Meat == false:
-	#	save.showMe()
-	#	print(save.Meat)
-	#else:
-	#	save.hideMe()
-	#	print(save.Meat)
-	if save.pizza == false:
-		save.showP()
+	if save.Meat == false:
+		save.showMe()
 		print(save.pizza)
 	else:
-		save.hideP()
+		save.hideMe()
 		print(save.pizza)

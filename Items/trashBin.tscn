@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://bytch16mcmeya"]
+
+[ext_resource type="Texture2D" uid="uid://b8a8lsk02ling" path="res://Textures(Sigurd)/trashcan.png" id="1_ujca5"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_5bvwq"]
+albedo_texture = ExtResource("1_ujca5")
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_orqbx"]
+
+[node name="trashBin" type="StaticBody3D"]
+
+[node name="trash" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_5bvwq")
+mesh = SubResource("CylinderMesh_orqbx")

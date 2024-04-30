@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://d2gbonb0h1utt"]
+[gd_scene load_steps=23 format=3 uid="uid://d2gbonb0h1utt"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5isct"]
 [ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_pv48s"]
@@ -34,13 +34,8 @@ albedo_texture = ExtResource("1_pv48s")
 [sub_resource type="BoxMesh" id="BoxMesh_hiigc"]
 material = SubResource("StandardMaterial3D_r8n2o")
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vkrls"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_k57pn"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_4l5xi"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_xnwlt"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_7ggih"]
 albedo_texture = ExtResource("3_lnw2c")
@@ -67,7 +62,7 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 [node name="basement" type="Node3D"]
 
 [node name="player" parent="." instance=ExtResource("1_5isct")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37465, 16.9322, 41.7226)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.38478, 30.6845, 66.8117)
 
 [node name="SpotLight3D" type="SpotLight3D" parent="player"]
 transform = Transform3D(1, 0, 0, 0, 0.0339227, 0.999424, 0, -0.999424, 0.0339227, 0, 2.64011, 0)
@@ -97,7 +92,7 @@ mesh = SubResource("PlaneMesh_eyhgo")
 shape = SubResource("ConcavePolygonShape3D_ggarg")
 
 [node name="SpotLight3D" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.0339227, 0.999424, 0, -0.999424, 0.0339227, 0.427717, 4.42743, -30.6604)
+transform = Transform3D(1, 0, 0, 0, 0.0339227, 0.999424, 0, -0.999424, 0.0339227, 0.856374, 4.42743, -30.0712)
 light_energy = 19.114
 light_indirect_energy = 1.485
 light_volumetric_fog_energy = 3.424
@@ -106,155 +101,310 @@ light_volumetric_fog_energy = 3.424
 transform = Transform3D(2.67482, 0, 0, 0, 1, 0, 0, 0, 9.63101, 1.25436, 0.0580963, 16.7974)
 mesh = SubResource("BoxMesh_hiigc")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase4" type="MeshInstance3D" parent="staircase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase4/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase5" type="MeshInstance3D" parent="staircase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.88921, 0.569166)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase5/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase4" type="MeshInstance3D" parent="staircase/staircase5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase5/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase5/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase5/staircase4/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase5/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase5/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase6" type="MeshInstance3D" parent="staircase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.91468, 1.15423)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase4" type="MeshInstance3D" parent="staircase/staircase6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase6/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase4/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase5" type="MeshInstance3D" parent="staircase/staircase6"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.88921, 0.569166)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase6/staircase5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase5/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase4" type="MeshInstance3D" parent="staircase/staircase6/staircase5"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase5/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase6/staircase5/staircase4"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase6/staircase5/staircase4/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
@@ -264,38 +414,387 @@ skeleton = NodePath("../../../../../..")
 [node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase6/staircase5/staircase4/staircase3/staircase2"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase6/staircase5/staircase4/staircase3/staircase2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_vkrls")
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase7" type="MeshInstance3D" parent="staircase"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 13.7625, 2.32664)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
 [node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase3"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
 mesh = SubResource("BoxMesh_hiigc")
 skeleton = NodePath("../../../..")
 
-[node name="StaticBody3D2" type="StaticBody3D" parent="staircase/staircase7/staircase3/staircase2"]
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase3/staircase2"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase3/staircase2/StaticBody3D2"]
-shape = SubResource("ConcavePolygonShape3D_4l5xi")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="staircase"]
-transform = Transform3D(0.89267, 0, 0, 0, 0.752613, 19.6782, 0, -0.0567755, 2.81224, 0.00785083, 5.59116, 0.36923)
+[node name="staircase4" type="MeshInstance3D" parent="staircase/staircase7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../..")
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/StaticBody3D"]
-shape = SubResource("BoxShape3D_xnwlt")
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase4/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase5" type="MeshInstance3D" parent="staircase/staircase7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.88921, 0.569166)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase5/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase4" type="MeshInstance3D" parent="staircase/staircase7/staircase5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase5/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase5/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase5/staircase4/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase5/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase5/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase6" type="MeshInstance3D" parent="staircase/staircase7"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 7.91468, 1.15423)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase4" type="MeshInstance3D" parent="staircase/staircase7/staircase6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase4/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase5" type="MeshInstance3D" parent="staircase/staircase7/staircase6"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.88921, 0.569166)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase4" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase7/staircase6/staircase5/staircase4/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase8" type="MeshInstance3D" parent="staircase"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 26.4866, 4.58425)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase8"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase8/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase8/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase8/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase3" type="MeshInstance3D" parent="staircase/staircase8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00181, 0.149696)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase8/staircase3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase8/staircase3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase8/staircase3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase8/staircase3/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase8/staircase3/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase4" type="MeshInstance3D" parent="staircase/staircase8"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.98582, 0.295335)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase8/staircase4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase8/staircase4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
+
+[node name="staircase2" type="MeshInstance3D" parent="staircase/staircase8/staircase4"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.495319, 0.0696038)
+mesh = SubResource("BoxMesh_hiigc")
+skeleton = NodePath("../../../..")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="staircase/staircase8/staircase4/staircase2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="staircase/staircase8/staircase4/staircase2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_k57pn")
 
 [node name="Pillers" type="Node3D" parent="."]
 
@@ -621,7 +1120,6 @@ shape = SubResource("ConcavePolygonShape3D_d0452")
 
 [node name="Fridge" parent="." instance=ExtResource("5_v7ehx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.787068, 0.276172, -32.0996)
-promptMessege = "Look inside fridge"
 
 [node name="Barriers" type="Node3D" parent="."]
 
@@ -652,11 +1150,4 @@ mesh = SubResource("PlaneMesh_bq3ic")
 [node name="barrier4" type="MeshInstance3D" parent="Barriers"]
 
 [node name="doorbase" parent="." instance=ExtResource("6_i27wp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24891, 17.0206, 45.4176)
-promptMessege = "Go outside"
-
-[node name="SpotLight3D2" type="SpotLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, -0.997699, 0.0678064, 0, -0.0678064, -0.997699, 0.855435, -26.0651, -36.1253)
-light_energy = 19.114
-light_indirect_energy = 1.485
-light_volumetric_fog_energy = 3.424
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.19035, 30.7674, 68.8059)

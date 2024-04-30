@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4vh08w8adayu"
-path.s3tc="res://.godot/imported/crosshair-removebg-preview.png-dbad62789fbe5512b1153ccf3dfae8ba.s3tc.ctex"
+uid="uid://b8a8lsk02ling"
+path.s3tc="res://.godot/imported/trashcan.png-0b892f2d0212fad946365590f031dbea.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures(Sigurd)/crosshair-removebg-preview.png"
-dest_files=["res://.godot/imported/crosshair-removebg-preview.png-dbad62789fbe5512b1153ccf3dfae8ba.s3tc.ctex"]
+source_file="res://Textures(Sigurd)/trashcan.png"
+dest_files=["res://.godot/imported/trashcan.png-0b892f2d0212fad946365590f031dbea.s3tc.ctex"]
 
 [params]
 
