@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=3 uid="uid://doq58tttkxe6c"]
+[gd_scene load_steps=45 format=3 uid="uid://doq58tttkxe6c"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_2ke34"]
 [ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_y75ov"]
@@ -12,7 +12,6 @@
 [ext_resource type="Texture2D" uid="uid://bx5cw03p83ivb" path="res://Textures (MARTEN)/other/bodypillowteehee.png" id="11_c72d7"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_j08ev"]
 [ext_resource type="Texture2D" uid="uid://wq0af8o7nb5w" path="res://Textures (MARTEN)/other/fnafposter.png" id="13_a8o2b"]
-[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="13_bnjeo"]
 [ext_resource type="Texture2D" uid="uid://cv87q13k84c8u" path="res://Textures (MARTEN)/other/Untitled-2.png" id="13_v5fdp"]
 
 [sub_resource type="Environment" id="Environment_0jk37"]
@@ -245,6 +244,3 @@ mesh = SubResource("PlaneMesh_ri5mm")
 [node name="familyphoto" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.895415, 2.14422, -12.2208)
 mesh = SubResource("PlaneMesh_8by64")
-
-[node name="doorbase" parent="." instance=ExtResource("13_bnjeo")]
-transform = Transform3D(-0.739415, 0.000154559, -0.673251, 0.00155791, 0.999998, -0.00148142, 0.673249, -0.00214424, -0.739413, -10.7665, 1.32674, -6.08539)
