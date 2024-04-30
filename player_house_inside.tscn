@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://cvrp6hlxij50r"]
+[gd_scene load_steps=47 format=3 uid="uid://cvrp6hlxij50r"]
 
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
@@ -11,7 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bm76q5md2mp6p" path="res://Textures (MARTEN)/other/pillow.jpg" id="12_bdi36"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_rp81o"]
 [ext_resource type="Texture2D" uid="uid://cv87q13k84c8u" path="res://Textures (MARTEN)/other/Untitled-2.png" id="13_bf3ey"]
-[ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="13_p52qk"]
+[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="13_p52qk"]
 [ext_resource type="Texture2D" uid="uid://wq0af8o7nb5w" path="res://Textures (MARTEN)/other/fnafposter.png" id="13_pa04g"]
 
 [sub_resource type="Environment" id="Environment_0jk37"]
@@ -142,6 +142,10 @@ uv1_offset = Vector3(0.195, 0.4, 0)
 [sub_resource type="PlaneMesh" id="PlaneMesh_ya3q2"]
 material = SubResource("StandardMaterial3D_bmwl4")
 
+[sub_resource type="BoxMesh" id="BoxMesh_vbl6v"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_e1wtu"]
+
 [node name="PlayerHouseINSIDE" type="Node3D"]
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
@@ -244,4 +248,27 @@ transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -0.775
 mesh = SubResource("PlaneMesh_ya3q2")
 
 [node name="doorbase" parent="." instance=ExtResource("13_p52qk")]
-transform = Transform3D(-0.0467862, -0.00140692, -0.998904, 0.00155791, 0.999998, -0.00148142, 0.998904, -0.0016255, -0.0467839, -10.7665, 1.32674, -4.50094)
+transform = Transform3D(-0.739415, 0.000154559, -0.673251, 0.00155791, 0.999998, -0.00148142, 0.673249, -0.00214424, -0.739413, -10.7665, 1.32674, -6.08539)
+
+[node name="table" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0976, 0, 4.8526)
+
+[node name="leg1" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_vbl6v")
+
+[node name="leg2" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0.8, 0.5, 0)
+mesh = SubResource("BoxMesh_vbl6v")
+
+[node name="leg3" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0.8, 0.5, 1.8)
+mesh = SubResource("BoxMesh_vbl6v")
+
+[node name="leg4" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0.5, 1.8)
+mesh = SubResource("BoxMesh_vbl6v")
+
+[node name="top" type="MeshInstance3D" parent="table"]
+transform = Transform3D(1, 0, 0, 0, 0.05, 0, 0, 0, 2, 0.4, 0.985, 0.9)
+mesh = SubResource("BoxMesh_e1wtu")
