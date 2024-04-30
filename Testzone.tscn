@@ -1,8 +1,9 @@
-[gd_scene load_steps=17 format=3 uid="uid://0yml7oig55p5"]
+[gd_scene load_steps=18 format=3 uid="uid://0yml7oig55p5"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
 [ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
 [ext_resource type="Texture2D" uid="uid://dmysufgu6sbrl" path="res://GasStationTextures/4423811.62fe8f8932b27.jpeg" id="4_llgrx"]
+[ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="7_2jf07"]
 [ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="7_ycv0v"]
 [ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
 [ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="8_udaqt"]
@@ -83,8 +84,12 @@ mesh = SubResource("PlaneMesh_lf7ag")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.19614, 1.11873, -0.152068)
 
 [node name="Item1" parent="." instance=ExtResource("7_ycv0v")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271882, 1.70509, -4.48071)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.271882, 1.70509, -7.93866)
 promptMessege = "Item 1 is interactable"
 
 [node name="Item2" parent="." instance=ExtResource("8_qppgn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56666, 1.61714, -3.61831)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56666, 1.61714, -7.07626)
+
+[node name="Item3" parent="." instance=ExtResource("7_2jf07")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.26415, 0, -9.32107)
+promptMessege = "Open the fridge"
