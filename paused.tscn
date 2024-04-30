@@ -1,0 +1,83 @@
+[gd_scene load_steps=7 format=3 uid="uid://7yk6drr0irtr"]
+
+[ext_resource type="Script" path="res://paused.gd" id="1_vax4v"]
+[ext_resource type="Texture2D" uid="uid://dep2nl4gvq2mf" path="res://Textures (MARTEN)/other/PlaceHolderSprite.jpg" id="2_g8vcm"]
+[ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="3_yylrv"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iot7t"]
+font = ExtResource("3_yylrv")
+font_size = 145
+
+[sub_resource type="LabelSettings" id="LabelSettings_b6ove"]
+font = ExtResource("3_yylrv")
+font_size = 36
+
+[sub_resource type="LabelSettings" id="LabelSettings_l4t38"]
+font = ExtResource("3_yylrv")
+font_size = 61
+
+[node name="paused" type="Control"]
+process_mode = 3
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vax4v")
+
+[node name="PlaceHolderSprite" type="Sprite2D" parent="."]
+position = Vector2(319.625, 181)
+scale = Vector2(0.714167, 0.397778)
+texture = ExtResource("2_g8vcm")
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "Paused"
+label_settings = SubResource("LabelSettings_iot7t")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="back2game" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+"
+
+[node name="teehee" type="Label" parent="CenterContainer/VBoxContainer/back2game"]
+layout_mode = 0
+offset_left = 131.0
+offset_top = -16.0
+offset_right = 368.0
+offset_bottom = 77.0
+text = "back to game :3"
+label_settings = SubResource("LabelSettings_b6ove")
+
+[node name="quit" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+"
+
+[node name="rahh" type="Label" parent="CenterContainer/VBoxContainer/quit"]
+layout_mode = 0
+offset_left = 187.0
+offset_top = -43.0
+offset_right = 286.0
+offset_bottom = 54.0
+text = "quit"
+label_settings = SubResource("LabelSettings_l4t38")
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/back2game" to="." method="_on_back_2_game_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
