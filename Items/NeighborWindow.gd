@@ -15,5 +15,9 @@ func get_prompt():
 
 func NeighborWindow(body):
 	emit_signal("interacted", body)
-	print(body.name, " foosh!")
-	get_tree().change_scene_to_file("res://NeighborKitchen.tscn")
+	print(body.name, " hello!")
+	print(get_tree().current_scene.name)
+	if get_tree().current_scene.name == "Main Map 😁":
+		get_tree().change_scene_to_file("res://NeighborKitchen.tscn")
+	else:
+		get_tree().change_scene_to_file("res://MainMap.tscn")
