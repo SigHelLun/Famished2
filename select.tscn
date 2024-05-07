@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://0bqxt4b1ifjf"]
+[gd_scene load_steps=5 format=3 uid="uid://0bqxt4b1ifjf"]
 
 [ext_resource type="Script" path="res://select.gd" id="1_8s1x4"]
 [ext_resource type="Texture2D" uid="uid://bnlw1s3ddehy7" path="res://Textures (MARTEN)/other/famsihed2.png" id="2_8ctc5"]
+[ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="3_5utfi"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_k7j1c"]
+font = ExtResource("3_5utfi")
+font_size = 131
+outline_size = 2
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_8s1x4")
@@ -28,6 +34,14 @@ grow_vertical = 0
 scale = Vector2(9.02469, 4.47217)
 size_flags_horizontal = 6
 size_flags_vertical = 4
-text = "PLAY"
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 872.329
+offset_top = 759.676
+offset_right = 1299.33
+offset_bottom = 982.676
+text = "Play"
+label_settings = SubResource("LabelSettings_k7j1c")
 
 [connection signal="pressed" from="TextureRect/Button" to="." method="_on_button_pressed"]

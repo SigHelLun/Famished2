@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ccmye00gdrvj2"]
+
+[ext_resource type="Script" path="res://Items/itemtest.gd" id="1_ou0fq"]
+[ext_resource type="Texture2D" uid="uid://cd6llc2lq1po" path="res://OliverTextures/pizza.png" id="2_7yo8c"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4ogr7"]
+size = Vector3(0.754395, 1.21826, 0.262207)
+
+[node name="Item1" type="StaticBody3D"]
+script = ExtResource("1_ou0fq")
+promptMessege = "Take Pizza"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.59046, 0, 0, 0, 2.61937, 0, 0, 0, 1, 0.0536168, 1.61368, -0.0222168)
+shape = SubResource("BoxShape3D_4ogr7")
+
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(0.75, 0, 0, 0, 0.75, 0, 0, 0, 0.75, 6.91489, 0, -8.17001)
+
+[node name="Sprite3D" type="Sprite3D" parent="Node3D"]
+transform = Transform3D(0.999999, 0, 0, 0, 1, 0, 0, 0, 0.999999, -9.13951, 2.14753, 10.9058)
+texture = ExtResource("2_7yo8c")
