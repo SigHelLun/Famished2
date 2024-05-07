@@ -12,8 +12,12 @@ var money = false
 var pizza = false
 var Rat = false
 var Meat = false
+var cookie = false
 
-
+func hideC():
+	cookie = false
+func showC():
+	cookie = true
 func hideM():
 	money = false
 func showM():

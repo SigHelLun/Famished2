@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0u6be6rrr7qj"]
+
+[ext_resource type="PackedScene" uid="uid://drq7ovl3h5ngn" path="res://Textures (MARTEN)/models/cookies_in_the_jar/scene.gltf" id="1_i4emu"]
+[ext_resource type="Script" path="res://Items/cookieInter.gd" id="1_wqyju"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1fa2a"]
+
+[node name="cookie" type="StaticBody3D"]
+script = ExtResource("1_wqyju")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_i4emu")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.518158, 0)
+shape = SubResource("BoxShape3D_1fa2a")

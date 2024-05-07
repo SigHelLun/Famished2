@@ -42,10 +42,12 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 					detected.dropItem(owner)
+		#door to basement goes both in and out
 		if detected is basementDoor:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 					detected.basement(owner)
+		#gasdoor gastation door
 		if detected is GasDoor:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
@@ -58,9 +60,12 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.GoToGas(owner)
-		
-		
 		if detected is kitchen_neighbor:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.neighbor(owner)
+		if detected is cookie:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+				detected.cookiePick(owner)
+		
