@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://xv818tg7gyof"]
+[gd_scene load_steps=30 format=3 uid="uid://xv818tg7gyof"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_23dc3"]
 [ext_resource type="Texture2D" uid="uid://d3l4sgkptxubw" path="res://GSOutside Textures/Ground062S_1K-JPG/Ground062S_1K-JPG_Color.jpg" id="1_62qww"]
@@ -16,6 +16,7 @@
 [ext_resource type="AudioStream" uid="uid://i1ve520280mg" path="res://audio/ambientforest.mp3" id="14_2dc4l"]
 [ext_resource type="PackedScene" uid="uid://g2ds1phc4igu" path="res://Joker.tscn" id="15_nraoq"]
 [ext_resource type="PackedScene" uid="uid://n3w85x87lydd" path="res://OliverTextures/DOORS/GasDoorOut.tscn" id="16_vemvo"]
+[ext_resource type="PackedScene" path="res://pause_gui.tscn" id="17_bwm3v"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbk6"]
 albedo_texture = ExtResource("1_62qww")
@@ -1218,3 +1219,5 @@ transform = Transform3D(1.42857, 0, 0, 0, -7.1876e-08, 9.96679, 0, -1.64433, -4.
 light_color = Color(1, 1, 0.768627, 1)
 light_energy = 2.0
 light_size = 0.138
+
+[node name="PauseGUI" parent="." instance=ExtResource("17_bwm3v")]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=40 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://deqqh6svsbljw" path="res://OliverTextures/DOORS/GasDoorIn.tscn" id="9_mki8u"]
 [ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="10_jfvgk"]
 [ext_resource type="PackedScene" uid="uid://ccmye00gdrvj2" path="res://Items/Randi.tscn" id="11_i5leo"]
+[ext_resource type="PackedScene" path="res://pause_gui.tscn" id="12_ayu1u"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_whi52"]
 albedo_texture = ExtResource("1_4kvxd")
@@ -542,3 +543,5 @@ promptMessege = "Talk to clerk"
 
 [node name="Item2" parent="." instance=ExtResource("11_i5leo")]
 transform = Transform3D(-8.74228e-09, 0, 0.2, 0, 0.2, 0, -0.2, 0, -8.74228e-09, 5.12129, 1.47309, 0.26389)
+
+[node name="PauseGUI" parent="." instance=ExtResource("12_ayu1u")]

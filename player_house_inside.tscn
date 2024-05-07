@@ -8,8 +8,8 @@
 [ext_resource type="Texture2D" uid="uid://dpg5rvbd2r0pw" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Color.jpg" id="4_cb7qq"]
 [ext_resource type="Texture2D" uid="uid://cdx3b48un7u8c" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_NormalDX.jpg" id="5_tkpd8"]
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="6_wbhld"]
-[ext_resource type="Texture2D" uid="uid://bx5cw03p83ivb" path="res://Textures (MARTEN)/other/bodypillowteehee.png" id="11_5k8fm"]
 [ext_resource type="Texture2D" uid="uid://dhrk24t64bqj1" path="res://Textures (MARTEN)/other/mattress.jpg" id="11_f1vbj"]
+[ext_resource type="Texture2D" uid="uid://b2pj48s0dbylu" path="res://Textures (MARTEN)/other/playertexture.jpg" id="11_ggc3k"]
 [ext_resource type="Texture2D" uid="uid://bm76q5md2mp6p" path="res://Textures (MARTEN)/other/pillow.jpg" id="12_bdi36"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_rp81o"]
 [ext_resource type="Texture2D" uid="uid://cv87q13k84c8u" path="res://Textures (MARTEN)/other/Untitled-2.png" id="13_bf3ey"]
@@ -114,13 +114,12 @@ albedo_texture = ExtResource("12_bdi36")
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_xscyo"]
 material = SubResource("StandardMaterial3D_r5b85")
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_jcyvi"]
-albedo_texture = ExtResource("11_5k8fm")
-uv1_scale = Vector3(2.255, 1, 1)
-uv1_offset = Vector3(-0.225, -0.095, 0)
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_edhod"]
+albedo_texture = ExtResource("11_ggc3k")
+uv1_offset = Vector3(0.015, -0.125, 0)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qaefa"]
-material = SubResource("StandardMaterial3D_jcyvi")
+material = SubResource("StandardMaterial3D_edhod")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ot6is"]
 

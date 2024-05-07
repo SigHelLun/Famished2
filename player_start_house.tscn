@@ -1,7 +1,7 @@
 [gd_scene load_steps=47 format=3 uid="uid://doq58tttkxe6c"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_2ke34"]
-[ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_y75ov"]
+[ext_resource type="PackedScene" path="res://pause_gui.tscn" id="1_y75ov"]
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="2_ey7ep"]
 [ext_resource type="AudioStream" uid="uid://loj0jhoowobx" path="res://Textures (MARTEN)/sound effects/the-grassrooms-3-hour-loop-of-relaxing-music-ambient-backrooms-liminal-space.mp3" id="2_uxnr8"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="3_6fkv5"]
@@ -10,7 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="6_bam1b"]
 [ext_resource type="Texture2D" uid="uid://dhrk24t64bqj1" path="res://Textures (MARTEN)/other/mattress.jpg" id="9_e4uuc"]
 [ext_resource type="Texture2D" uid="uid://bm76q5md2mp6p" path="res://Textures (MARTEN)/other/pillow.jpg" id="10_gwjlg"]
-[ext_resource type="Texture2D" uid="uid://bx5cw03p83ivb" path="res://Textures (MARTEN)/other/bodypillowteehee.png" id="11_c72d7"]
+[ext_resource type="Texture2D" uid="uid://b2pj48s0dbylu" path="res://Textures (MARTEN)/other/playertexture.jpg" id="11_5ra1x"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_j08ev"]
 [ext_resource type="Texture2D" uid="uid://wq0af8o7nb5w" path="res://Textures (MARTEN)/other/fnafposter.png" id="13_a8o2b"]
 [ext_resource type="Texture2D" uid="uid://cv87q13k84c8u" path="res://Textures (MARTEN)/other/Untitled-2.png" id="13_v5fdp"]
@@ -115,9 +115,8 @@ albedo_texture = ExtResource("10_gwjlg")
 material = SubResource("StandardMaterial3D_r5b85")
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4jpu1"]
-albedo_texture = ExtResource("11_c72d7")
-uv1_scale = Vector3(2.25, 1, 1)
-uv1_offset = Vector3(-0.22, -0.09, 0)
+albedo_texture = ExtResource("11_5ra1x")
+uv1_offset = Vector3(0.015, -0.125, 0)
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qaefa"]
 material = SubResource("StandardMaterial3D_4jpu1")
