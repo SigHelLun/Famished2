@@ -1,4 +1,4 @@
-class_name cookie
+class_name cookieInter
 extends StaticBody3D
 
 signal interacted(body)
@@ -13,7 +13,7 @@ func get_prompt():
 			key_name = OS.get_keycode_string(action.physical_keycode)
 	return promptMessege + "\n["+ key_name +"]"
 
-func cookiePick(body):
+func cookiePick(_body):
 	if save.cookie == false:
 		save.showC()
 		print(save.cookie)

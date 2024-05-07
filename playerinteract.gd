@@ -64,7 +64,7 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.neighbor(owner)
-		if detected is cookie:
+		if detected is cookieInter:
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.cookiePick(owner)
