@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://c0x1iwtno5yx1"]
+[gd_scene load_steps=16 format=3 uid="uid://c0x1iwtno5yx1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_3kkml"]
 [ext_resource type="Script" path="res://playerinteract.gd" id="2_g2q78"]
@@ -11,6 +11,8 @@
 [ext_resource type="Script" path="res://Items/Rat.gd" id="6_xl8f3"]
 [ext_resource type="Texture2D" uid="uid://cgi11ye71jvi3" path="res://Textures(Sigurd)/nam.png" id="8_jerx3"]
 [ext_resource type="Script" path="res://Items/Meat.gd" id="9_e6nqq"]
+[ext_resource type="Texture2D" uid="uid://ihqcfoxdwm0x" path="res://Textures(Sigurd)/cookie.png" id="9_ixofm"]
+[ext_resource type="Script" path="res://cookies.gd" id="10_bvp2l"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_vaeuf"]
 
@@ -59,6 +61,13 @@ position = Vector2(561, 255)
 scale = Vector2(0.130688, 0.122884)
 texture = ExtResource("8_jerx3")
 script = ExtResource("9_e6nqq")
+
+[node name="cookies" type="Sprite2D" parent="Neck/Playerinteract"]
+visible = false
+position = Vector2(576, 293)
+scale = Vector2(0.07, 0.07)
+texture = ExtResource("9_ixofm")
+script = ExtResource("10_bvp2l")
 
 [node name="Prompt" type="Label" parent="Neck/Playerinteract"]
 anchors_preset = 13

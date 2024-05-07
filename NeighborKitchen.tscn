@@ -20,8 +20,8 @@
 [ext_resource type="Texture2D" uid="uid://dw1pjgxgxk07j" path="res://Textures (MARTEN)/other/coutnertop.jpg" id="16_fkf60"]
 [ext_resource type="Texture2D" uid="uid://cdx3b48un7u8c" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_NormalDX.jpg" id="17_1a0rn"]
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="18_vhwkh"]
-[ext_resource type="PackedScene" uid="uid://drq7ovl3h5ngn" path="res://Textures (MARTEN)/models/cookies_in_the_jar/scene.gltf" id="20_tpur4"]
 [ext_resource type="Script" path="res://ktichenneighbor.gd" id="21_cjpmr"]
+[ext_resource type="PackedScene" uid="uid://c0u6be6rrr7qj" path="res://Items/cookie.tscn" id="22_vh3ky"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ctt3"]
 albedo_texture = ExtResource("1_bc1er")
@@ -513,12 +513,6 @@ light_energy = 0.49
 light_indirect_energy = 16.0
 light_size = 0.16
 
-[node name="models" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
-
-[node name="Sketchfab_Scene" parent="models" instance=ExtResource("20_tpur4")]
-transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.00735, 1.12957, 5.61515)
-
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.94548, 0, -2.0386)
 script = ExtResource("21_cjpmr")
@@ -526,3 +520,7 @@ script = ExtResource("21_cjpmr")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
 transform = Transform3D(4.43, 0, 0, 0, 3.905, 0, 0, 0, 0.12, 0.142087, 1.95454, 0)
 shape = SubResource("BoxShape3D_oaggj")
+
+[node name="cookie" parent="." instance=ExtResource("22_vh3ky")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.15419, 1.1056, 9.37826)
+promptMessege = "Collect a cookie"
