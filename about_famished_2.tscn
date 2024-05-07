@@ -1,10 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3kipwiot4hew"]
+[gd_scene load_steps=7 format=3 uid="uid://d3kipwiot4hew"]
 
 [ext_resource type="Script" path="res://about_famished_2.gd" id="1_xnltf"]
 [ext_resource type="Texture2D" uid="uid://bjtwuhcrmonvo" path="res://Textures (MARTEN)/other/aboutbackground.png" id="2_0lv7u"]
 [ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="2_1ij57"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_snjsk"]
+font = ExtResource("2_1ij57")
+font_size = 18
+outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_08550"]
 font = ExtResource("2_1ij57")
 outline_size = 2
 
@@ -22,6 +27,7 @@ grow_vertical = 2
 script = ExtResource("1_xnltf")
 
 [node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
 offset_right = 1618.0
 offset_bottom = 1047.0
 scale = Vector2(0.395493, 0.344884)
@@ -34,23 +40,25 @@ offset_bottom = 1053.0
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 35.0
-offset_top = 25.0
-offset_right = 349.0
-offset_bottom = 283.0
-text = "You are awoken and famished,
-you decide you want malnourishment.
-
-
-
-
-
-
-
-Mission: Find food."
+offset_left = 11.0
+offset_top = 37.0
+offset_right = 621.0
+offset_bottom = 144.0
+text = "Upon rousing from slumber, thou dost find thyself afflicted with hunger, 
+where upon thou dost resolve to procure sustenance for thy famished frame."
 label_settings = SubResource("LabelSettings_snjsk")
 
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 322.0
+offset_right = 62.0
+offset_bottom = 345.0
+text = "Mission: Find food."
+label_settings = SubResource("LabelSettings_08550")
+
 [node name="Label2" type="Label" parent="."]
+layout_mode = 0
 offset_left = 223.0
 offset_top = 329.0
 offset_right = 449.0
