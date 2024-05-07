@@ -1,7 +1,8 @@
-[gd_scene load_steps=74 format=3 uid="uid://dcgid2onkfes0"]
+[gd_scene load_steps=75 format=3 uid="uid://dcgid2onkfes0"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5ol37"]
 [ext_resource type="Texture2D" uid="uid://c574xvna2ya41" path="res://Textures (MARTEN)/other/kitchenfloor.jpg" id="1_bc1er"]
+[ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_hts3h"]
 [ext_resource type="Texture2D" uid="uid://c3dyvls4hyabh" path="res://Textures (MARTEN)/kitchenWalls/Tiles010_1K-JPG_Color.jpg" id="3_kbqaw"]
 [ext_resource type="Texture2D" uid="uid://c0b06ts0pu3wq" path="res://Textures (MARTEN)/kitchenWalls/Tiles010_1K-JPG_AmbientOcclusion.jpg" id="4_rva36"]
 [ext_resource type="Texture2D" uid="uid://chy2ngf8uq3ln" path="res://Textures (MARTEN)/kitchenWalls/Tiles010_1K-JPG_NormalDX.jpg" id="5_r4cdi"]
@@ -211,6 +212,8 @@ material = SubResource("StandardMaterial3D_fvr0g")
 [sub_resource type="BoxShape3D" id="BoxShape3D_oaggj"]
 
 [node name="NeighborKitchen" type="Node3D"]
+
+[node name="PauseGUI" parent="." instance=ExtResource("1_hts3h")]
 
 [node name="player" parent="." instance=ExtResource("1_5ol37")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.69009, 1.22945, 8.1071)

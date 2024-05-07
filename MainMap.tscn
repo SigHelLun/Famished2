@@ -1,6 +1,7 @@
-[gd_scene load_steps=65 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=66 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
+[ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_dy76k"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures (MARTEN)/other/AsphaltTexture.jpg" id="2_qy6af"]
 [ext_resource type="AudioStream" uid="uid://dxhlis3g0ln8v" path="res://Textures (MARTEN)/sound effects/crickets-night-time-sound-fx.mp3" id="3_42aam"]
@@ -176,6 +177,8 @@ material = SubResource("StandardMaterial3D_t1xkk")
 
 [node name="Main Map 😁" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27655, 0.144928, 0.434326)
+
+[node name="PauseGUI" parent="." instance=ExtResource("1_dy76k")]
 
 [node name="GridMap" type="GridMap" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.035, 0)
