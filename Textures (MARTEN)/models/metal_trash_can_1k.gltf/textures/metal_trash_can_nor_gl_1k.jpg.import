@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fe1c7ciuhrud"
-path.s3tc="res://.godot/imported/metal_trash_can_rust_nor_gl_1k.jpg-f3198b0b9f81f8f3e2b7836de4965451.s3tc.ctex"
+uid="uid://cix10m7yrv3ir"
+path.s3tc="res://.godot/imported/metal_trash_can_nor_gl_1k.jpg-139f083b6230a5d0aa65cd0f45c433e7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/metal_trash_can_1k.gltf/textures/metal_trash_can_rust_nor_gl_1k.jpg"
-dest_files=["res://.godot/imported/metal_trash_can_rust_nor_gl_1k.jpg-f3198b0b9f81f8f3e2b7836de4965451.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/models/metal_trash_can_1k.gltf/textures/metal_trash_can_nor_gl_1k.jpg"
+dest_files=["res://.godot/imported/metal_trash_can_nor_gl_1k.jpg-139f083b6230a5d0aa65cd0f45c433e7.s3tc.ctex"]
 
 [params]
 
@@ -25,7 +25,7 @@ compress/channel_pack=0
 mipmaps/generate=true
 mipmaps/limit=-1
 roughness/mode=1
-roughness/src_normal="res://Textures/metal_trash_can_1k.gltf/textures/metal_trash_can_rust_nor_gl_1k.jpg"
+roughness/src_normal="res://Textures/metal_trash_can_1k.gltf/textures/metal_trash_can_nor_gl_1k.jpg"
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

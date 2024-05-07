@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl74h3ilgcwdi"
-path.s3tc="res://.godot/imported/Material4-material_baseColor.png-a4cfbda61841393598f5a092526d5354.s3tc.ctex"
+uid="uid://dxhc4fyswx4ym"
+path.s3tc="res://.godot/imported/Material3-material_baseColor.png-843b5beb2fe1f88ae8a58cdc1b3427ff.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://marten models/free_3d_model_ashtray/textures/Material4-material_baseColor.png"
-dest_files=["res://.godot/imported/Material4-material_baseColor.png-a4cfbda61841393598f5a092526d5354.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/models/free_3d_model_ashtray/textures/Material3-material_baseColor.png"
+dest_files=["res://.godot/imported/Material3-material_baseColor.png-843b5beb2fe1f88ae8a58cdc1b3427ff.s3tc.ctex"]
 
 [params]
 

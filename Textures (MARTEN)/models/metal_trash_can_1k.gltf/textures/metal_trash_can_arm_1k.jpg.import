@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8kl54u8p4aep"
-path.s3tc="res://.godot/imported/metal_trash_can_diff_1k.jpg-16bd682d3d706150ff2efae499543d90.s3tc.ctex"
+uid="uid://buu5hwrrcmq53"
+path.s3tc="res://.godot/imported/metal_trash_can_arm_1k.jpg-b491f88f9feb2f1ef2ad20a20a24a745.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/metal_trash_can_1k.gltf/textures/metal_trash_can_diff_1k.jpg"
-dest_files=["res://.godot/imported/metal_trash_can_diff_1k.jpg-16bd682d3d706150ff2efae499543d90.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/models/metal_trash_can_1k.gltf/textures/metal_trash_can_arm_1k.jpg"
+dest_files=["res://.godot/imported/metal_trash_can_arm_1k.jpg-b491f88f9feb2f1ef2ad20a20a24a745.s3tc.ctex"]
 
 [params]
 

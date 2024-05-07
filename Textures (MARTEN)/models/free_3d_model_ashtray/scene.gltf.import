@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://cp40guecu2s3u"
-path="res://.godot/imported/scene.gltf-ae10ee6747a58a25ee70bfea9b988832.scn"
+path="res://.godot/imported/scene.gltf-cfd8b9d62e7babf979d739e979d8d33b.scn"
 
 [deps]
 
-source_file="res://marten models/free_3d_model_ashtray/scene.gltf"
-dest_files=["res://.godot/imported/scene.gltf-ae10ee6747a58a25ee70bfea9b988832.scn"]
+source_file="res://Textures (MARTEN)/models/free_3d_model_ashtray/scene.gltf"
+dest_files=["res://.godot/imported/scene.gltf-cfd8b9d62e7babf979d739e979d8d33b.scn"]
 
 [params]
 

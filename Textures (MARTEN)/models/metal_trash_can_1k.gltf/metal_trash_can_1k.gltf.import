@@ -4,12 +4,12 @@ importer="scene"
 importer_version=1
 type="PackedScene"
 uid="uid://b02r445l7sp5i"
-path="res://.godot/imported/metal_trash_can_1k.gltf-8d79c7a8a1e51bea8a7985491e714d74.scn"
+path="res://.godot/imported/metal_trash_can_1k.gltf-d87be5912bf2062034fce29aff909b52.scn"
 
 [deps]
 
-source_file="res://Textures (MARTEN)/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf"
-dest_files=["res://.godot/imported/metal_trash_can_1k.gltf-8d79c7a8a1e51bea8a7985491e714d74.scn"]
+source_file="res://Textures (MARTEN)/models/metal_trash_can_1k.gltf/metal_trash_can_1k.gltf"
+dest_files=["res://.godot/imported/metal_trash_can_1k.gltf-d87be5912bf2062034fce29aff909b52.scn"]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cutxfoct5j6o5"
-path.s3tc="res://.godot/imported/metal_trash_can_rust_diff_1k.jpg-d4b4b5e98379e00688c02bb6037980f4.s3tc.ctex"
+uid="uid://bb7htekm03axc"
+path.s3tc="res://.godot/imported/Material1-material_baseColor.png-2bf080a06a33e23919629f27f5873fc7.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Textures (MARTEN)/metal_trash_can_1k.gltf/textures/metal_trash_can_rust_diff_1k.jpg"
-dest_files=["res://.godot/imported/metal_trash_can_rust_diff_1k.jpg-d4b4b5e98379e00688c02bb6037980f4.s3tc.ctex"]
+source_file="res://Textures (MARTEN)/models/free_3d_model_ashtray/textures/Material1-material_baseColor.png"
+dest_files=["res://.godot/imported/Material1-material_baseColor.png-2bf080a06a33e23919629f27f5873fc7.s3tc.ctex"]
 
 [params]
 
