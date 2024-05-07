@@ -20,4 +20,4 @@ func GasDoor(body):
 	if get_tree().current_scene.name == "gasoutside":
 		get_tree().change_scene_to_file("res://GasStation.tscn")
 	else:
-		get_tree().change_scene_to_file("res://GasStation outside2.tscn")
+		get_tree().change_scene_to_file("res://MainMap.tscn")
