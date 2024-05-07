@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://d2gbonb0h1utt"]
+[gd_scene load_steps=28 format=3 uid="uid://d2gbonb0h1utt"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5isct"]
 [ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_pv48s"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://dtrt04kuhp826" path="res://Textures(Sigurd)/18c8ed6e4b54af6f91bb4575bad1043b-2965597821.jpg" id="3_lnw2c"]
 [ext_resource type="PackedScene" uid="uid://iawxjjddydis" path="res://Items/Fridge.tscn" id="5_v7ehx"]
 [ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="6_i27wp"]
+[ext_resource type="AudioStream" uid="uid://yxcqifwsjldk" path="res://audio/Cave.mp3" id="7_msk62"]
 
 [sub_resource type="Environment" id="Environment_cgj36"]
 fog_enabled = true
@@ -706,3 +707,7 @@ mesh = SubResource("BoxMesh_6ouq7")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="wall4/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_vpkux")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_msk62")
+autoplay = true
