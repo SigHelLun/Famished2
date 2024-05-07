@@ -16,6 +16,7 @@ func get_prompt():
 func endings(_body):
 	if save.Meat == true:
 		print('endindg meat')
+		get_tree().change_scene_to_file("res://endings/MeatEnd.tscn")
 		
 	if save.pizza == true:
 		print('pizza')
