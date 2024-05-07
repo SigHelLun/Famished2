@@ -16,8 +16,10 @@ func get_prompt():
 func endings(_body):
 	if save.Meat == true:
 		print('endindg meat')
+		
 	if save.pizza == true:
 		print('pizza')
+		
 	if save.Meat == false && save.pizza == false:
 		print('no ending req')
 		promptMessege = "Thus require nurishment to use this appliance"
