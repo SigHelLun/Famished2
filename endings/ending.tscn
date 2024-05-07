@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://cl4yjtd10nyv2"]
+
+[ext_resource type="PackedScene" uid="uid://d3aije32xt0xc" path="res://Textures (MARTEN)/models/beretta_92_clean/scene.gltf" id="1_abj8q"]
+[ext_resource type="Script" path="res://endings/endings.gd" id="1_i84by"]
+[ext_resource type="PackedScene" uid="uid://cp40guecu2s3u" path="res://Textures (MARTEN)/models/free_3d_model_ashtray/scene.gltf" id="2_dg1hl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_q4vhh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hypa"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_xskrm"]
+material = SubResource("StandardMaterial3D_2hypa")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_gesta"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fym5d"]
+
+[node name="ending" type="StaticBody3D"]
+script = ExtResource("1_i84by")
+
+[node name="table" type="Node3D" parent="."]
+
+[node name="leg1" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0.5, 0)
+mesh = SubResource("BoxMesh_q4vhh")
+
+[node name="leg2" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0.8, 0.5, 0)
+mesh = SubResource("BoxMesh_q4vhh")
+
+[node name="leg3" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0.8, 0.5, 1.8)
+mesh = SubResource("BoxMesh_q4vhh")
+
+[node name="leg4" type="MeshInstance3D" parent="table"]
+transform = Transform3D(0.1, 0, 0, 0, 1, 0, 0, 0, 0.1, 0, 0.5, 1.8)
+mesh = SubResource("BoxMesh_q4vhh")
+
+[node name="top" type="MeshInstance3D" parent="table"]
+transform = Transform3D(1, 0, 0, 0, 0.05, 0, 0, 0, 2, 0.4, 0.975611, 0.9)
+mesh = SubResource("BoxMesh_xskrm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="table/top"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="table/top/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_gesta")
+
+[node name="Sketchfab_Scene2" parent="table" instance=ExtResource("1_abj8q")]
+transform = Transform3D(3.51513e-08, 1.50782, 1.01048, 1, -8.19589e-08, 1.04712e-16, 2.59821e-08, 1.1145, -1.36709, 0.0856228, 1.01428, 1.41163)
+
+[node name="Sketchfab_Scene3" parent="table" instance=ExtResource("2_dg1hl")]
+transform = Transform3D(2.26021, 0, 0.836391, 0, 2.41, 0, -0.836391, 0, 2.26021, 0.653568, 1.03434, 1.26255)
+
+[node name="Sketchfab_Scene" parent="table" instance=ExtResource("2_dg1hl")]
+transform = Transform3D(1.71893, 0, 1.68919, 0, 2.41, 0, -1.68919, 0, 1.71893, 0.239, 1.048, 0.214)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.5, 0, 0, 0, 2, 0, 0, 0, 3, 0.369086, 0.932137, 0.88427)
+shape = SubResource("BoxShape3D_fym5d")

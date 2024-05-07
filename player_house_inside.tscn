@@ -145,10 +145,10 @@ material = SubResource("StandardMaterial3D_bmwl4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_vbl6v"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2hypa"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_und0r"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_e1wtu"]
-material = SubResource("StandardMaterial3D_2hypa")
+material = SubResource("StandardMaterial3D_und0r")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tn4xo"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)

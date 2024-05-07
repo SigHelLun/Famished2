@@ -23,8 +23,8 @@ func testdialogue(body):
 var noItemD = ['Hey there welcome to the store!', 'Please feel free to look around.', 'Just come to me when you are ready to pay.','Talk to clerk?']
 var yesItemD = ['Oh you want that pizza right...','emm y-yeah that will be 20$ dollars','You have the money right?','Are you gonna pay for that or?','20$ man', 'Talk to clerk']
 #kva dialogue nummer er me på i arrayen noitemD og yesItemD
-var countmsg = 1
-var countmsg2 = 1
+var countmsg = 0
+var countmsg2 = 0
 #var holdItem1 = false
 #const saveProg = preload('res://progress.gd')
 func clerkDialogue():
