@@ -20,8 +20,8 @@ func testdialogue(body):
 
 #code for dialogue
 #array noPizzaD for dialogue når du møter
-var noItemD = ['Hey there welcome to the store!', 'Please feel free to look around.', 'Just come to me when you are ready to pay.']
-var yesItemD = ['Oh you want that pizza right...','emm y-yeah that will be 20$ dollars','You have the money right?','Are you gonna pay for that or?','20$ man']
+var noItemD = ['Hey there welcome to the store!', 'Please feel free to look around.', 'Just come to me when you are ready to pay.','Talk to clerk?']
+var yesItemD = ['Oh you want that pizza right...','emm y-yeah that will be 20$ dollars','You have the money right?','Are you gonna pay for that or?','20$ man', 'Talk to clerk']
 #kva dialogue nummer er me på i arrayen noitemD og yesItemD
 var countmsg = 1
 var countmsg2 = 1
@@ -29,35 +29,15 @@ var countmsg2 = 1
 #const saveProg = preload('res://progress.gd')
 func clerkDialogue():
 	var holdItem1 = save.Item1
-		#vist holdpizza er false
+# Define dialogue arrays
 	if holdItem1 == 0:
-		#message er ein array den første stringen starter på 0.
-		if countmsg == 1:
-			promptMessege = noItemD[0]
-		if countmsg == 2:
-			promptMessege = noItemD[1]
-		if countmsg == 3:
-			promptMessege = noItemD[2]
-		if countmsg == 4:
-			promptMessege = noItemD[3]
-		
-			promptMessege = 'Talk to Clerk'
-		# countmsg minus kor mange settningar du vil gå tilbake
-		if countmsg == 5:
-			countmsg -= 4
+		promptMessege = noItemD[countmsg]
 		countmsg += 1
+		if countmsg >= len(noItemD):
+			countmsg = 0
 	if holdItem1 == 1:
-		if countmsg2 == 1:
-			promptMessege = yesItemD[0]
-		if countmsg2 == 2:
-			promptMessege = yesItemD[1]
-		if countmsg2 == 3:
-			promptMessege = yesItemD[2]
-		if countmsg2 == 4:
-			promptMessege = yesItemD[3]
-		if countmsg2 == 5:
-			promptMessege = yesItemD[4]
-		if countmsg2 == 6:
-			countmsg2 -= 5
-			promptMessege = 'Talk to Clerk'
+		promptMessege = yesItemD[countmsg2]
 		countmsg2 += 1
+		if countmsg2 >= len(yesItemD):
+			countmsg2 = 0
+
