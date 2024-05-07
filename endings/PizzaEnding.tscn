@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://idlfpilkf0l2"]
+
+[ext_resource type="Script" path="res://endings/PizzaEnding.gd" id="1_kqwcw"]
+[ext_resource type="Texture2D" uid="uid://cd6llc2lq1po" path="res://OliverTextures/pizza.png" id="1_l6ny2"]
+[ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="2_mrpjd"]
+
+[sub_resource type="Theme" id="Theme_m06le"]
+default_font = ExtResource("2_mrpjd")
+
+[sub_resource type="LabelSettings" id="LabelSettings_lovjv"]
+outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_reb1c"]
+font = ExtResource("2_mrpjd")
+outline_size = 2
+
+[node name="PizzaEnding" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kqwcw")
+
+[node name="Pizza" type="Sprite2D" parent="."]
+position = Vector2(332.188, 187.938)
+scale = Vector2(1.09089, 0.607512)
+texture = ExtResource("1_l6ny2")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 10.0
+offset_right = 280.0
+offset_bottom = 321.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="ColorRect"]
+layout_mode = 0
+offset_left = 4.0
+offset_right = 273.0
+offset_bottom = 287.0
+theme = SubResource("Theme_m06le")
+text = "In the ivory confines of his chamber, 
+he unwraps a treasure retrieved 
+from the chill embrace of the freezer
+ from the local gas station
+a delectable frozen pizza. 
+Amidst the silence, he relishes each 
+flavorful bite, savoring not only the
+savory treat but also the tranquil
+stillness that envelops him, a fitting end
+to his epic journey."
+label_settings = SubResource("LabelSettings_lovjv")
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="ColorRect"]
+offset_left = 6.0
+offset_top = 284.0
+offset_right = 97.0
+offset_bottom = 310.0
+text = "Ending: Pizza"
+label_settings = SubResource("LabelSettings_reb1c")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -88.0
+offset_top = -31.0
+offset_right = 88.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Return from the dead"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

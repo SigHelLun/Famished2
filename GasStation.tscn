@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=3 uid="uid://d3f0pup8urgpg"]
+[gd_scene load_steps=39 format=3 uid="uid://d3f0pup8urgpg"]
 
 [ext_resource type="Texture2D" uid="uid://bxi4fp35upgmw" path="res://GasStationTextures/new-gas-wall2.jpg" id="1_4kvxd"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_w2owo"]
@@ -67,6 +67,9 @@ uv1_scale = Vector3(2, 2, 1.5)
 [sub_resource type="BoxMesh" id="BoxMesh_ruvuv"]
 material = SubResource("StandardMaterial3D_pijto")
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_xktav"]
+size = Vector3(1, 1, 5.02368)
+
 [sub_resource type="BoxMesh" id="BoxMesh_kqsbs"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1redh"]
@@ -92,6 +95,9 @@ albedo_color = Color(0.313726, 0.180392, 0, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_x8pv6"]
 material = SubResource("StandardMaterial3D_msssl")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cp0uy"]
+size = Vector3(1, 1, 3.27258)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_36y3b"]
 albedo_color = Color(1, 0.996078, 0.823529, 1)
@@ -206,6 +212,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.000314713, 0, -1.00435)
 mesh = SubResource("BoxMesh_ruvuv")
 skeleton = NodePath("../..")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Coolers"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Coolers/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.0032959)
+shape = SubResource("BoxShape3D_xktav")
+
 [node name="Freezers" type="MeshInstance3D" parent="."]
 transform = Transform3D(-1.74846e-07, 0, 1.545, 0, 1, 0, -4, 0, -6.75341e-08, 4.507, 0.449375, -1.88708)
 mesh = SubResource("BoxMesh_kqsbs")
@@ -286,6 +298,12 @@ skeleton = NodePath("../..")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Shelfs/MeshInstance3D3"]
 transform = Transform3D(1.06, 0, 0, 0, 1.015, 0, 0, 0, 1.005, 0.133791, 0, 0)
 mesh = SubResource("BoxMesh_x8pv6")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Shelfs"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Shelfs/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.000427227)
+shape = SubResource("BoxShape3D_cp0uy")
 
 [node name="Light1" type="MeshInstance3D" parent="."]
 transform = Transform3D(0.37, 0, 0, 0, -1, 1.50996e-07, 0, -1.50996e-07, -1, -5.86212, 3.65553, 0)
