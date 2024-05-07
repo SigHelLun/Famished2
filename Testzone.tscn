@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://0yml7oig55p5"]
+[gd_scene load_steps=20 format=3 uid="uid://0yml7oig55p5"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
 [ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
 [ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="8_udaqt"]
 [ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="8_xnbaj"]
+[ext_resource type="PackedScene" uid="uid://cl4yjtd10nyv2" path="res://endings/ending.tscn" id="9_gn80r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
@@ -97,3 +98,7 @@ promptMessege = "Open the fridge"
 
 [node name="doorbase" parent="." instance=ExtResource("8_xnbaj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.12796, 1.7135, 9.93138)
+
+[node name="ending" parent="." instance=ExtResource("9_gn80r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0184, 0, -6.37689)
+promptMessege = "Lay thy food here"

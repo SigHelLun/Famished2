@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beretta 92 (clean)
+* source:	https://sketchfab.com/3d-models/beretta-92-clean-bf58795f626d4251b11c5e23d2922358
+* author:	romunql (https://sketchfab.com/romunql)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beretta 92 (clean)" (https://sketchfab.com/3d-models/beretta-92-clean-bf58795f626d4251b11c5e23d2922358) by romunql (https://sketchfab.com/romunql) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

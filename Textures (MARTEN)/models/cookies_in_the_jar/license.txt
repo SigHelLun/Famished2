@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cookies in the jar
+* source:	https://sketchfab.com/3d-models/cookies-in-the-jar-372cc5bca9e54c579d8399a18e686b24
+* author:	sheana (https://sketchfab.com/sheana)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cookies in the jar" (https://sketchfab.com/3d-models/cookies-in-the-jar-372cc5bca9e54c579d8399a18e686b24) by sheana (https://sketchfab.com/sheana) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

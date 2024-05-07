@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=3 uid="uid://cvrp6hlxij50r"]
+[gd_scene load_steps=50 format=3 uid="uid://cvrp6hlxij50r"]
 
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
@@ -11,8 +11,9 @@
 [ext_resource type="Texture2D" uid="uid://bm76q5md2mp6p" path="res://Textures (MARTEN)/other/pillow.jpg" id="12_bdi36"]
 [ext_resource type="PackedScene" uid="uid://bwktif585r5gs" path="res://Items/Door.tscn" id="12_rp81o"]
 [ext_resource type="Texture2D" uid="uid://cv87q13k84c8u" path="res://Textures (MARTEN)/other/Untitled-2.png" id="13_bf3ey"]
+[ext_resource type="PackedScene" uid="uid://d3aije32xt0xc" path="res://Textures (MARTEN)/models/beretta_92_clean/scene.gltf" id="13_oqstd"]
 [ext_resource type="Texture2D" uid="uid://wq0af8o7nb5w" path="res://Textures (MARTEN)/other/fnafposter.png" id="13_pa04g"]
-[ext_resource type="PackedScene" uid="uid://cp40guecu2s3u" path="res://marten models/free_3d_model_ashtray/scene.gltf" id="13_qa84b"]
+[ext_resource type="PackedScene" uid="uid://cp40guecu2s3u" path="res://Textures (MARTEN)/models/free_3d_model_ashtray/scene.gltf" id="14_stovv"]
 
 [sub_resource type="Environment" id="Environment_0jk37"]
 fog_enabled = true
@@ -144,10 +145,10 @@ material = SubResource("StandardMaterial3D_bmwl4")
 
 [sub_resource type="BoxMesh" id="BoxMesh_vbl6v"]
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sss87"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_und0r"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_e1wtu"]
-material = SubResource("StandardMaterial3D_sss87")
+material = SubResource("StandardMaterial3D_und0r")
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_tn4xo"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
@@ -281,5 +282,11 @@ mesh = SubResource("BoxMesh_e1wtu")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="table/top/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_tn4xo")
 
-[node name="Sketchfab_Scene" parent="." instance=ExtResource("13_qa84b")]
-transform = Transform3D(1.72017, 0, 1.68793, 0, 2.41, 0, -1.68793, 0, 1.72017, 10.3368, 1.04795, 5.06658)
+[node name="Sketchfab_Scene2" parent="table" instance=ExtResource("13_oqstd")]
+transform = Transform3D(3.51513e-08, 1.50782, 1.01048, 1, -8.19589e-08, 1.04712e-16, 2.59821e-08, 1.1145, -1.36709, 0.0856228, 1.01428, 1.41163)
+
+[node name="Sketchfab_Scene3" parent="table" instance=ExtResource("14_stovv")]
+transform = Transform3D(2.26021, 0, 0.836391, 0, 2.41, 0, -0.836391, 0, 2.26021, 0.653568, 1.03434, 1.26255)
+
+[node name="Sketchfab_Scene" parent="table" instance=ExtResource("14_stovv")]
+transform = Transform3D(1.71893, 0, 1.68919, 0, 2.41, 0, -1.68919, 0, 1.71893, 0.239, 1.048, 0.214)
