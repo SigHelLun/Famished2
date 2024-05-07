@@ -1,0 +1,60 @@
+[gd_scene load_steps=6 format=3 uid="uid://d3msaielgnrki"]
+
+[ext_resource type="Script" path="res://endings/MeatEnd.gd" id="1_7y7w2"]
+[ext_resource type="Texture2D" uid="uid://wbunycincrs7" path="res://Textures(Sigurd)/1200px-decomposition00-1621031481.jpg" id="2_51vsw"]
+[ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="3_ije4x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_snjsk"]
+font = ExtResource("3_ije4x")
+font_size = 18
+outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_08550"]
+font = ExtResource("3_ije4x")
+outline_size = 2
+
+[node name="AboutFamished2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_7y7w2")
+
+[node name="1200Px-decomposition00-1621031481" type="Sprite2D" parent="."]
+position = Vector2(327, 179.5)
+scale = Vector2(0.303604, 0.313301)
+texture = ExtResource("2_51vsw")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 27.0
+offset_right = 2139.0
+offset_bottom = 144.0
+text = "Thee consume the deliciously raw meat. Thy slumber is close,
+ but thee feel a tingling. Thy death is close,
+ the raw meat had slumbering maggots & parasites laying, in wait.
+ The maggots consume thy organs in seconds.
+ AFTER MILLENIA YOU FINALLY FEEL NURISHED."
+label_settings = SubResource("LabelSettings_snjsk")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 322.0
+offset_right = 62.0
+offset_bottom = 345.0
+text = "Ending: Raw"
+label_settings = SubResource("LabelSettings_08550")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 321.0
+offset_right = 399.0
+offset_bottom = 352.0
+text = "Return from the dead"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
