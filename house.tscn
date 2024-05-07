@@ -517,3 +517,4 @@ shape = SubResource("ConcavePolygonShape3D_8d4wk")
 
 [node name="Window" parent="." instance=ExtResource("12_mgtee")]
 transform = Transform3D(1.51751e-07, 0, 2.075, 0, 2.215, 0, -2.01, 0, 1.56658e-07, 8.27513, 3.48632, 27.1907)
+promptMessege = "Enter neighbors house"
