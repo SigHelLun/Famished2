@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://loj0jhoowobx"
+path="res://.godot/imported/the-grassrooms-3-hour-loop-of-relaxing-music-ambient-backrooms-liminal-space.mp3-b6a1a1b7a3f9859b1187d97f4b2f8de7.mp3str"
+
+[deps]
+
+source_file="res://Textures (MARTEN)/sound effects/the-grassrooms-3-hour-loop-of-relaxing-music-ambient-backrooms-liminal-space.mp3"
+dest_files=["res://.godot/imported/the-grassrooms-3-hour-loop-of-relaxing-music-ambient-backrooms-liminal-space.mp3-b6a1a1b7a3f9859b1187d97f4b2f8de7.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

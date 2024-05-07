@@ -1,6 +1,7 @@
-[gd_scene load_steps=45 format=3 uid="uid://cvrp6hlxij50r"]
+[gd_scene load_steps=46 format=3 uid="uid://cvrp6hlxij50r"]
 
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
+[ext_resource type="AudioStream" uid="uid://loj0jhoowobx" path="res://Textures (MARTEN)/sound effects/the-grassrooms-3-hour-loop-of-relaxing-music-ambient-backrooms-liminal-space.mp3" id="2_51b1j"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="3_37igx"]
 [ext_resource type="Texture2D" uid="uid://dpg5rvbd2r0pw" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Color.jpg" id="4_cb7qq"]
@@ -153,6 +154,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.18999, 7.15532)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="player"]
 environment = SubResource("Environment_0jk37")
 camera_attributes = SubResource("CameraAttributesPractical_k7j2y")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource("2_51b1j")
+volume_db = -6.0
+autoplay = true
 
 [node name="Floor" type="Node3D" parent="."]
 

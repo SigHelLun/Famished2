@@ -1,8 +1,9 @@
-[gd_scene load_steps=64 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=65 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures (MARTEN)/other/AsphaltTexture.jpg" id="2_qy6af"]
+[ext_resource type="AudioStream" uid="uid://dxhlis3g0ln8v" path="res://Textures (MARTEN)/sound effects/crickets-night-time-sound-fx.mp3" id="3_42aam"]
 [ext_resource type="Texture2D" uid="uid://b18mubg3l8sto" path="res://Textures (MARTEN)/Concrete042C_1K-JPG/Concrete042C_1K-JPG_Displacement.jpg" id="4_448dj"]
 [ext_resource type="Texture2D" uid="uid://d08daplto3po6" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Color.jpg" id="4_kdksl"]
 [ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures (MARTEN)/other/NeighborFence.jpg" id="5_2m0q0"]
@@ -38,6 +39,7 @@ glow_enabled = true
 fog_light_color = Color(0.160784, 0.160784, 0.160784, 1)
 fog_density = 0.0434
 fog_height = 1024.0
+volumetric_fog_enabled = true
 adjustment_enabled = true
 adjustment_brightness = 0.66
 adjustment_saturation = 0.4
@@ -190,6 +192,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38177, 1.43263, 96.5188)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="player"]
 environment = SubResource("Environment_jlspu")
 camera_attributes = SubResource("CameraAttributesPractical_l35lx")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="player"]
+stream = ExtResource("3_42aam")
+volume_db = -35.277
+autoplay = true
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00874454, -0.847354, 0.530956, 0.00350166, -0.530947, -0.847398, -0.0197587, 5.15335, 0.00104618)
