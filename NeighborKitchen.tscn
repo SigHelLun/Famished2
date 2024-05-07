@@ -1,4 +1,4 @@
-[gd_scene load_steps=71 format=3 uid="uid://dcgid2onkfes0"]
+[gd_scene load_steps=74 format=3 uid="uid://dcgid2onkfes0"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5ol37"]
 [ext_resource type="Texture2D" uid="uid://c574xvna2ya41" path="res://Textures (MARTEN)/other/kitchenfloor.jpg" id="1_bc1er"]
@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://cdx3b48un7u8c" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_NormalDX.jpg" id="17_1a0rn"]
 [ext_resource type="Texture2D" uid="uid://bpyv40wyykc25" path="res://Textures (MARTEN)/Plaster003_2K-JPG/Plaster003_2K-JPG_Roughness.jpg" id="18_vhwkh"]
 [ext_resource type="PackedScene" uid="uid://drq7ovl3h5ngn" path="res://Textures (MARTEN)/models/cookies_in_the_jar/scene.gltf" id="20_tpur4"]
+[ext_resource type="Script" path="res://ktichenneighbor.gd" id="21_cjpmr"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8ctt3"]
 albedo_texture = ExtResource("1_bc1er")
@@ -199,10 +200,15 @@ uv1_scale = Vector3(1, 13.105, 1)
 [sub_resource type="BoxMesh" id="BoxMesh_whooa"]
 material = SubResource("StandardMaterial3D_oy80d")
 
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_a86ac"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fvr0g"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_d23kw"]
 material = SubResource("StandardMaterial3D_fvr0g")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oaggj"]
 
 [node name="NeighborKitchen" type="Node3D"]
 
@@ -442,6 +448,11 @@ mesh = SubResource("BoxMesh_eg7jj")
 transform = Transform3D(1.16, 0, 0, 0, 0.125, 0, 0, 0, 1.14, 0.0126476, 0.562, 0.0528745)
 mesh = SubResource("BoxMesh_whooa")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="kitchen/counter2/countertop2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="kitchen/counter2/countertop2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_a86ac")
+
 [node name="lights" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6, 0)
 
@@ -504,3 +515,11 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 4)
 
 [node name="Sketchfab_Scene" parent="models" instance=ExtResource("20_tpur4")]
 transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 6.00735, 1.12957, 5.61515)
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.94548, 0, -2.0386)
+script = ExtResource("21_cjpmr")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(4.43, 0, 0, 0, 3.905, 0, 0, 0, 0.12, 0.142087, 1.95454, 0)
+shape = SubResource("BoxShape3D_oaggj")

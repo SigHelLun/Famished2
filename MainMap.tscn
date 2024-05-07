@@ -187,7 +187,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("1_xfn1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38177, 1.43263, 16.0764)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38177, 1.43263, 97.2536)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="player"]
 environment = SubResource("Environment_jlspu")

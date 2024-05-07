@@ -58,3 +58,9 @@ func _physics_process(_delta):
 			$Prompt.text = detected.get_prompt()
 			if Input.is_action_just_pressed(detected.promptAction):
 				detected.GoToGas(owner)
+		
+		
+		if detected is kitchen_neighbor:
+			$Prompt.text = detected.get_prompt()
+			if Input.is_action_just_pressed(detected.promptAction):
+				detected.neighbor(owner)
