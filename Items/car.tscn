@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://crib5ddaopowf"]
+
+[ext_resource type="Script" path="res://Items/car.gd" id="1_u1tt4"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_u605u"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_h0uaa"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ytu2s"]
+size = Vector3(2.95038, 1.8457, 1)
+
+[node name="Area3D" type="Area3D"]
+script = ExtResource("1_u1tt4")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.39132, 0, 0, 0, 2.10571, 0, 0, 0, 1.92044, 0, 0, 0)
+mesh = SubResource("BoxMesh_u605u")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_h0uaa")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(0.0581728, 0, 0, 0, 1.02941, 0, 0, 0, 0.314347, 0.456751, 0.525232, -0.0682278)
+mesh = SubResource("BoxMesh_u605u")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.92686, 0, 0, 0, 0.870523, 0, 0, 0, 1.58153, 0.0229458, -0.260992, 0)
+shape = SubResource("BoxShape3D_ytu2s")

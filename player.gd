@@ -42,3 +42,13 @@ func _physics_process(delta: float) -> void:
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		walk.play()
 	move_and_slide()
+
+
+func _on_car_body_entered(body):
+	print("death")
+	get_tree().change_scene_to_file("res://endings/death.tscn")
+
+
+func _on_car_2_body_entered(body):
+	print("death")
+	get_tree().change_scene_to_file("res://endings/death.tscn")

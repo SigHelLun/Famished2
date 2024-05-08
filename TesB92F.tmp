@@ -106,5 +106,3 @@ promptMessege = "Lay thy food here"
 
 [node name="car" parent="." instance=ExtResource("10_pmhnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58526, 1.73378, 4.47547)
-
-[connection signal="tree_entered" from="player" to="car" method="_on_player_tree_entered"]

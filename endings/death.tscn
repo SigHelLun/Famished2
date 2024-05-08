@@ -1,0 +1,57 @@
+[gd_scene load_steps=5 format=3 uid="uid://c11gfws1brqa"]
+
+[ext_resource type="Script" path="res://endings/death.gd" id="1_jdpg4"]
+[ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="2_n7fkl"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_snjsk"]
+font = ExtResource("2_n7fkl")
+font_size = 18
+outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_08550"]
+font = ExtResource("2_n7fkl")
+outline_size = 2
+
+[node name="AboutFamished2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jdpg4")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 27.0
+offset_right = 2139.0
+offset_bottom = 144.0
+text = "vehicular homicidevehicular homicidevehicular h
+omicidevehicular homicidevehicular h
+omicidevehicular
+ homicidevehicular homicidevehicular h
+homicidevehicular h
+omicidevehicular homicidevehicular homicidevehicular homicidevehicular 
+homicidevehicular homicidevehicular homicidevehicular h
+omicidevehicular homicid"
+label_settings = SubResource("LabelSettings_snjsk")
+
+[node name="Label3" type="Label" parent="."]
+layout_mode = 0
+offset_left = 22.0
+offset_top = 322.0
+offset_right = 62.0
+offset_bottom = 345.0
+text = "Ending: vehicular homicide"
+label_settings = SubResource("LabelSettings_08550")
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 223.0
+offset_top = 321.0
+offset_right = 399.0
+offset_bottom = 352.0
+text = "Return from the dead"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
