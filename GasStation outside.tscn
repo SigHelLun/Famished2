@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://xv818tg7gyof"]
+[gd_scene load_steps=31 format=3 uid="uid://xv818tg7gyof"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_23dc3"]
 [ext_resource type="Texture2D" uid="uid://d3l4sgkptxubw" path="res://GSOutside Textures/Ground062S_1K-JPG/Ground062S_1K-JPG_Color.jpg" id="1_62qww"]
@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://g2ds1phc4igu" path="res://Joker.tscn" id="15_nraoq"]
 [ext_resource type="PackedScene" uid="uid://n3w85x87lydd" path="res://OliverTextures/DOORS/GasDoorOut.tscn" id="16_vemvo"]
 [ext_resource type="PackedScene" path="res://pause_gui.tscn" id="17_bwm3v"]
+[ext_resource type="PackedScene" uid="uid://fiqrtq5cof5k" path="res://maxwell.tscn" id="18_sa35g"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbk6"]
 albedo_texture = ExtResource("1_62qww")
@@ -1221,3 +1222,6 @@ light_energy = 2.0
 light_size = 0.138
 
 [node name="PauseGUI" parent="." instance=ExtResource("17_bwm3v")]
+
+[node name="Maxwell" parent="." instance=ExtResource("18_sa35g")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0643547, -2.52382e-06, 28.9335)
