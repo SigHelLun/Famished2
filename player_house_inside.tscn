@@ -1,6 +1,6 @@
 [gd_scene load_steps=47 format=3 uid="uid://cvrp6hlxij50r"]
 
-[ext_resource type="PackedScene" path="res://pause_gui.tscn" id="1_stnph"]
+[ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_stnph"]
 [ext_resource type="Texture2D" uid="uid://chaxwg6iaivoj" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Color.jpg" id="1_wm1ya"]
 [ext_resource type="AudioStream" uid="uid://loj0jhoowobx" path="res://Textures (MARTEN)/sound effects/the-grassrooms-3-hour-loop-of-relaxing-music-ambient-backrooms-liminal-space.mp3" id="2_51b1j"]
 [ext_resource type="Texture2D" uid="uid://clmbnk4w6k7sc" path="res://Textures (MARTEN)/ConcreteFloor_2K-JPG/Concrete034_2K-JPG_Roughness.jpg" id="2_fl8vj"]

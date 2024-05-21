@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=65 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_dy76k"]
@@ -20,7 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures (MARTEN)/other/ashpahlttexturepLAYER.jpg" id="14_yci72"]
 [ext_resource type="PackedScene" uid="uid://dud64ogm67n4i" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
 [ext_resource type="Texture2D" uid="uid://ckft8rx0j5jmn" path="res://Textures (MARTEN)/other/treebackground.png" id="17_su3rx"]
-[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="18_64x5w"]
+[ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="18_64x5w"]
 [ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="18_qgxjo"]
 [ext_resource type="Texture2D" uid="uid://mae4iy7pdyq" path="res://Textures(Sigurd)/1461032_l-2912683034-removebg-preview.png" id="20_uu2p8"]
 [ext_resource type="PackedScene" uid="uid://crib5ddaopowf" path="res://Items/car.tscn" id="24_widbp"]
@@ -106,11 +106,6 @@ data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0
 [sub_resource type="BoxMesh" id="BoxMesh_xulh2"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_6hfdc"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
-
-[sub_resource type="BoxMesh" id="BoxMesh_0aw03"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_sdaad"]
 data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [sub_resource type="CompressedTexture2D" id="CompressedTexture2D_o3dvn"]
@@ -206,7 +201,7 @@ autoplay = true
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00874454, -0.847354, 0.530956, 0.00350166, -0.530947, -0.847398, -0.0197587, 5.15335, 0.00104618)
 
 [node name="car" parent="." instance=ExtResource("24_widbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 29.1254, 1.15938, 6.84563)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4955, 1.15938, 6.849)
 
 [node name="PlayerHouse" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
@@ -273,7 +268,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.999
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0434761, 0.261226, 0.0840859)
 
 [node name="BarrierLeft" type="MeshInstance3D" parent="Barriers"]
-transform = Transform3D(0.01, 0, 0, 0, 10, 0, 0, 0, 90, -36.0554, 5, -4.03843)
+transform = Transform3D(0.01, 0, 0, 0, 10, 0, 0, 0, 34.0285, -36.0554, 5, 25.6114)
 visible = false
 mesh = SubResource("BoxMesh_xulh2")
 skeleton = NodePath("")
@@ -285,15 +280,66 @@ promptMessege = "Go to gas station"
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierLeft/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_6hfdc")
 
-[node name="BarrierRight" type="MeshInstance3D" parent="Barriers"]
-transform = Transform3D(0.01, 0, 0, 0, 10, 0, 0, 0, 90, 34.0743, 5, 0)
+[node name="BarrierLeft2" type="MeshInstance3D" parent="Barriers/BarrierLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.957044, 0, 0, -1.5211)
+mesh = SubResource("BoxMesh_xulh2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/BarrierLeft/BarrierLeft2"]
+script = ExtResource("12_pe2rs")
+promptMessege = "Go to gas station"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierLeft/BarrierLeft2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hfdc")
+
+[node name="BarrierLeft3" type="MeshInstance3D" parent="Barriers/BarrierLeft"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.337878, 0, 0, -0.771654)
+mesh = SubResource("BoxMesh_xulh2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/BarrierLeft/BarrierLeft3"]
+script = ExtResource("12_pe2rs")
+promptMessege = "Go to gas station"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierLeft/BarrierLeft3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hfdc")
+
+[node name="BarrierLeft2" type="MeshInstance3D" parent="Barriers"]
+transform = Transform3D(0.01, 0, 0, 0, 10, 0, 0, 0, 34.0285, 34.0768, 5, 25.6114)
 visible = false
-mesh = SubResource("BoxMesh_0aw03")
+mesh = SubResource("BoxMesh_xulh2")
+skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/BarrierRight"]
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/BarrierLeft2"]
+script = ExtResource("12_pe2rs")
+promptMessege = "Go to gas station"
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierRight/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_sdaad")
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierLeft2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hfdc")
+
+[node name="BarrierLeft2" type="MeshInstance3D" parent="Barriers/BarrierLeft2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.957044, 0, 0, -1.5211)
+mesh = SubResource("BoxMesh_xulh2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/BarrierLeft2/BarrierLeft2"]
+script = ExtResource("12_pe2rs")
+promptMessege = "Go to gas station"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierLeft2/BarrierLeft2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hfdc")
+
+[node name="BarrierLeft3" type="MeshInstance3D" parent="Barriers/BarrierLeft2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.337878, 0, 0, -0.771654)
+mesh = SubResource("BoxMesh_xulh2")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/BarrierLeft2/BarrierLeft3"]
+script = ExtResource("12_pe2rs")
+promptMessege = "Go to gas station"
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/BarrierLeft2/BarrierLeft3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_6hfdc")
 
 [node name="Street" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0865326, 0, -0.0032959)
@@ -2001,7 +2047,7 @@ light_indirect_energy = 6.318
 light_volumetric_fog_energy = 19.14
 
 [node name="car2" parent="." instance=ExtResource("24_widbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8358, 1.4601, -8.14732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.7013, 1.4601, -8.14732)
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]
