@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=66 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_dy76k"]
@@ -24,6 +24,7 @@
 [ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="18_qgxjo"]
 [ext_resource type="Texture2D" uid="uid://mae4iy7pdyq" path="res://Textures(Sigurd)/1461032_l-2912683034-removebg-preview.png" id="20_uu2p8"]
 [ext_resource type="PackedScene" uid="uid://crib5ddaopowf" path="res://Items/car.tscn" id="24_widbp"]
+[ext_resource type="PackedScene" uid="uid://b12jurw5xl7uh" path="res://aud/audi.tscn" id="25_6tiuo"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -202,6 +203,9 @@ transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00874454, -0.847354
 
 [node name="car" parent="." instance=ExtResource("24_widbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.496, 1.159, 6.849)
+
+[node name="ref1" parent="car" instance=ExtResource("25_6tiuo")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0.318954, 0.31882, -0.333712)
 
 [node name="PlayerHouse" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
@@ -2048,6 +2052,9 @@ light_volumetric_fog_energy = 19.14
 
 [node name="car2" parent="." instance=ExtResource("24_widbp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.185, 1.46, -8.147)
+
+[node name="ref1" parent="car2" instance=ExtResource("25_6tiuo")]
+transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0.262367, 0, -0.0774455)
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]

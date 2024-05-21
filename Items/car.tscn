@@ -14,17 +14,13 @@ size = Vector3(2.95038, 1.8457, 1)
 script = ExtResource("1_u1tt4")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(5.39132, 0, 0, 0, 2.10571, 0, 0, 0, 1.92044, 0, 0, 0)
+transform = Transform3D(5.39132, 0, 0, 0, 0.756084, 0, 0, 0, 1.09589, 0, 0, 0)
 mesh = SubResource("BoxMesh_u605u")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_h0uaa")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
-transform = Transform3D(0.0581728, 0, 0, 0, 1.02941, 0, 0, 0, 0.314347, 0.456751, 0.525232, -0.0682278)
-mesh = SubResource("BoxMesh_u605u")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.92686, 0, 0, 0, 0.870523, 0, 0, 0, 1.58153, 0.0229458, -0.260992, 0)
