@@ -21,7 +21,12 @@ func endings(_body):
 	if save.pizza == true:
 		print('pizza')
 		get_tree().change_scene_to_file("res://endings/PizzaEnding.tscn")
-	
+		
+	if save.Cookie == true:
+		print('Cookie')
+		get_tree().change_scene_to_file("res://endings/CookieEnd.tscn")
+
+
 		
 	if save.Meat == false && save.pizza == false:
 		print('no ending req')

@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2mdl4vcdqbrp"]
+
+[ext_resource type="Texture2D" uid="uid://b3oh44c2kec1a" path="res://Textures (MARTEN)/other/cookieending.jpg" id="1_k8a8v"]
+[ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="2_6glcp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uar2i"]
+font = ExtResource("2_6glcp")
+font_size = 18
+outline_size = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_lawcu"]
+font = ExtResource("2_6glcp")
+outline_size = 2
+
+[node name="CookieEnd" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1200Px-decomposition00-1621031481" type="Sprite2D" parent="."]
+position = Vector2(319.5, 180)
+scale = Vector2(0.714765, 0.92545)
+texture = ExtResource("1_k8a8v")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 11.0
+offset_top = 27.0
+offset_right = 2139.0
+offset_bottom = 144.0
+text = "Thou hast brought the biscuit home and dost proceed to consume it. 
+Thou feelest nourished and goest to slumber for another millenium.
+ AFTER MILLENIA YOU FINALLY FEEL NURISHED."
+label_settings = SubResource("LabelSettings_uar2i")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 22.0
+offset_top = 322.0
+offset_right = 62.0
+offset_bottom = 345.0
+text = "Ending: Cookie"
+label_settings = SubResource("LabelSettings_lawcu")
+
+[node name="Button" type="Button" parent="."]
+offset_left = 223.0
+offset_top = 321.0
+offset_right = 399.0
+offset_bottom = 352.0
+text = "Return from the dead"
