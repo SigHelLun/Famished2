@@ -201,7 +201,7 @@ autoplay = true
 transform = Transform3D(0.999956, 0.00926933, -0.00167574, 0.00874454, -0.847354, 0.530956, 0.00350166, -0.530947, -0.847398, -0.0197587, 5.15335, 0.00104618)
 
 [node name="car" parent="." instance=ExtResource("24_widbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.4955, 1.15938, 6.849)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.496, 1.159, 6.849)
 
 [node name="PlayerHouse" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
@@ -2047,7 +2047,7 @@ light_indirect_energy = 6.318
 light_volumetric_fog_energy = 19.14
 
 [node name="car2" parent="." instance=ExtResource("24_widbp")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.7013, 1.4601, -8.14732)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.185, 1.46, -8.147)
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]
