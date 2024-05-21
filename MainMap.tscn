@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=67 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_dy76k"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dq6q453hpwmwj" path="res://Textures (MARTEN)/Concrete042C_1K-JPG/Concrete042C_1K-JPG_NormalDX.jpg" id="5_5jn2t"]
 [ext_resource type="Texture2D" uid="uid://bqdu3kc53lqo3" path="res://Textures (MARTEN)/other/PlayerHouseGrass.jpg" id="5_5s2pw"]
 [ext_resource type="Texture2D" uid="uid://d1mptas6q3prh" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Metalness.jpg" id="6_eny6v"]
+[ext_resource type="AudioStream" uid="uid://poqt4yr40orw" path="res://audio/traffic-in-the-city-185203.mp3" id="7_q5jx0"]
 [ext_resource type="Texture2D" uid="uid://cvus2gur4u2gc" path="res://Textures (MARTEN)/rusedmetal/Metal023_2K-JPG_Roughness.jpg" id="8_2n05s"]
 [ext_resource type="PackedScene" uid="uid://4pxlfl2mshw6" path="res://house.tscn" id="8_nqnrp"]
 [ext_resource type="PackedScene" uid="uid://dv507nqxclfvr" path="res://out_of_bound_rightHouse.tscn" id="11_qbgb4"]
@@ -206,6 +207,12 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.496, 1.159, 6.849)
 
 [node name="ref1" parent="car" instance=ExtResource("25_6tiuo")]
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0.318954, 0.31882, -0.333712)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="car/ref1"]
+stream = ExtResource("7_q5jx0")
+volume_db = 63.614
+autoplay = true
+max_distance = 50.0
 
 [node name="PlayerHouse" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 25)
@@ -2055,6 +2062,13 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -90.185, 1.46, -8.147)
 
 [node name="ref1" parent="car2" instance=ExtResource("25_6tiuo")]
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0.262367, 0, -0.0774455)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="car2/ref1"]
+transform = Transform3D(20, 0, 5.68434e-14, 0, 20, 0, -5.68434e-14, 0, 20, 0, 0, 0)
+stream = ExtResource("7_q5jx0")
+volume_db = 63.614
+autoplay = true
+max_distance = 50.0
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]

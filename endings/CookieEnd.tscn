@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8q7e3awl0sx"]
+[gd_scene load_steps=6 format=3 uid="uid://b2mdl4vcdqbrp"]
 
 [ext_resource type="Script" path="res://endings/CookieEnd.gd" id="1_2snhy"]
 [ext_resource type="Texture2D" uid="uid://b3oh44c2kec1a" path="res://Textures (MARTEN)/other/cookieending.jpg" id="1_k8a8v"]

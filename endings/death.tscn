@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://c11gfws1brqa"]
+[gd_scene load_steps=6 format=3 uid="uid://c11gfws1brqa"]
 
 [ext_resource type="Script" path="res://endings/death.gd" id="1_jdpg4"]
+[ext_resource type="Texture2D" uid="uid://cltb6pywk30fw" path="res://Textures (MARTEN)/other/carcrash.jpg" id="2_eubki"]
 [ext_resource type="FontFile" uid="uid://bemq8s5n6c3lj" path="res://papyrus-font-1714435603-0/papyrus.ttf" id="2_n7fkl"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_snjsk"]
@@ -20,6 +21,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jdpg4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(320.5, 178)
+scale = Vector2(0.912857, 0.779443)
+texture = ExtResource("2_eubki")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0

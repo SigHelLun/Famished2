@@ -44,11 +44,11 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 
-func _on_car_body_entered(body):
+func _on_car_body_entered(_body):
 	print("death")
 	get_tree().change_scene_to_file("res://endings/death.tscn")
 
 
-func _on_car_2_body_entered(body):
+func _on_car_2_body_entered(_body):
 	print("death")
 	get_tree().change_scene_to_file("res://endings/death.tscn")
