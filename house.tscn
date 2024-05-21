@@ -1,4 +1,4 @@
-[gd_scene load_steps=63 format=3 uid="uid://4pxlfl2mshw6"]
+[gd_scene load_steps=62 format=3 uid="uid://4pxlfl2mshw6"]
 
 [ext_resource type="Texture2D" uid="uid://b4yy01xc18ujy" path="res://Textures (MARTEN)/other/NeighborArtificialGrass.jpg" id="1_oe3o3"]
 [ext_resource type="Texture2D" uid="uid://br2o28urbgnmo" path="res://Textures (MARTEN)/other/sidewalkTexture.jpg" id="2_odrau"]
@@ -11,7 +11,6 @@
 [ext_resource type="Texture2D" uid="uid://d0mnyfygxrtl8" path="res://Textures (MARTEN)/other/GlassPaneTexture.jpg" id="6_w2e4p"]
 [ext_resource type="Texture2D" uid="uid://ciqf2fplwkq7r" path="res://Textures (MARTEN)/other/NeighborFence.jpg" id="7_ibvar"]
 [ext_resource type="Texture2D" uid="uid://608y3bv0mm7n" path="res://Textures (MARTEN)/other/garagedoor.jpg" id="7_n7x88"]
-[ext_resource type="PackedScene" uid="uid://ctnpi1jvn51f6" path="res://Items/WindowTeleport.tscn" id="12_mgtee"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_w285w"]
 albedo_texture = ExtResource("1_oe3o3")
@@ -514,7 +513,3 @@ mesh = SubResource("BoxMesh_uf3h3")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Fence/FrontLeft Fence2/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_8d4wk")
-
-[node name="Window" parent="." instance=ExtResource("12_mgtee")]
-transform = Transform3D(1.51751e-07, 0, 2.075, 0, 2.215, 0, -2.01, 0, 1.56658e-07, 8.27513, 3.48632, 27.1907)
-promptMessege = "Enter neighbors house"

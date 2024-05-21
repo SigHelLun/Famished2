@@ -1,7 +1,8 @@
-[gd_scene load_steps=67 format=3 uid="uid://vr7nuhlgeb28"]
+[gd_scene load_steps=70 format=3 uid="uid://vr7nuhlgeb28"]
 
 [ext_resource type="MeshLibrary" uid="uid://baf4x48168lwl" path="res://GridMapTiles.tres" id="1_chi5y"]
 [ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_dy76k"]
+[ext_resource type="Script" path="res://MainMap.gd" id="1_sobku"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_xfn1s"]
 [ext_resource type="Texture2D" uid="uid://bytc26auc21lf" path="res://Textures (MARTEN)/other/AsphaltTexture.jpg" id="2_qy6af"]
 [ext_resource type="AudioStream" uid="uid://dxhlis3g0ln8v" path="res://Textures (MARTEN)/sound effects/crickets-night-time-sound-fx.mp3" id="3_42aam"]
@@ -26,6 +27,8 @@
 [ext_resource type="Texture2D" uid="uid://mae4iy7pdyq" path="res://Textures(Sigurd)/1461032_l-2912683034-removebg-preview.png" id="20_uu2p8"]
 [ext_resource type="PackedScene" uid="uid://crib5ddaopowf" path="res://Items/car.tscn" id="24_widbp"]
 [ext_resource type="PackedScene" uid="uid://b12jurw5xl7uh" path="res://aud/audi.tscn" id="25_6tiuo"]
+[ext_resource type="AudioStream" uid="uid://64nmwtxuf16w" path="res://audio/night-village-ambience-dogs-barking-155059.mp3" id="27_ym7d7"]
+[ext_resource type="PackedScene" uid="uid://ctnpi1jvn51f6" path="res://Items/WindowTeleport.tscn" id="28_tl4fa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 sky_top_color = Color(0, 0, 0, 1)
@@ -175,6 +178,7 @@ material = SubResource("StandardMaterial3D_t1xkk")
 
 [node name="Main Map 😁" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.27655, 0.144928, 0.434326)
+script = ExtResource("1_sobku")
 
 [node name="PauseGUI" parent="." instance=ExtResource("1_dy76k")]
 
@@ -188,7 +192,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("1_xfn1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38177, 1.43263, 96.8846)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38177, 1.43263, -49.2449)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="player"]
 environment = SubResource("Environment_jlspu")
@@ -209,6 +213,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 90.496, 1.159, 6.849)
 transform = Transform3D(-2.18557e-09, 0, 0.05, 0, 0.05, 0, -0.05, 0, -2.18557e-09, 0.318954, 0.31882, -0.333712)
 
 [node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="car/ref1"]
+transform = Transform3D(20, 0, 5.68434e-14, 0, 20, 0, -5.68434e-14, 0, 20, 0, 0, 0)
 stream = ExtResource("7_q5jx0")
 volume_db = 63.614
 autoplay = true
@@ -2069,6 +2074,19 @@ stream = ExtResource("7_q5jx0")
 volume_db = 63.614
 autoplay = true
 max_distance = 50.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("27_ym7d7")
+autoplay = true
+
+[node name="Kitchen" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6979, 2.74571, -83.3369)
+
+[node name="Window" parent="." instance=ExtResource("28_tl4fa")]
+transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, 26.3369, 2.5889, -81.9876)
+
+[node name="Main" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.692982, 1.88631, 95.9254)
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]

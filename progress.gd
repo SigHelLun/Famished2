@@ -1,4 +1,14 @@
 extends Node
+
+
+
+#position
+var Kitchen = false;
+var Main;
+func KitchenT():
+	Kitchen = true
+func KitchenF():
+	Kitchen = false
 #save alle globale variabler her
 var Item1 = 0
 var item2 = false
