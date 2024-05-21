@@ -3,7 +3,7 @@ extends StaticBody3D
 
 signal interacted(body)
 
-@export var promptMessege = 'Interact'
+@export var promptMessege = 'Explore?'
 @export var promptAction = 'interact'
 
 func get_prompt():
@@ -20,7 +20,7 @@ func neighbor(body):
 
 #code for dialogue
 #array noPizzaD for dialogue når du møter
-var noItemD = ['get out :3', 'Please feel free to look around.', 'Just come to me when you are ready to pay.','Talk to clerk']
+var noItemD = ['Who is that?!', 'GET. OUT.', 'This is your last warning.']
 #kva dialogue nummer er me på i arrayen noitemD og yesItemD
 var countmsg = 0
 #var holdItem1 = false
