@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://fiqrtq5cof5k"]
+
+[ext_resource type="PackedScene" uid="uid://hjwq3yvj0rik" path="res://OliverTextures/Dingus the cat/maxwell.fbx" id="1_qutb6"]
+
+[node name="Root Scene" instance=ExtResource("1_qutb6")]
