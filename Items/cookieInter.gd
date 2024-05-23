@@ -16,6 +16,8 @@ func get_prompt():
 func cookiePick(_body):
 	if save.cookie == false:
 		save.showC()
+		save.hideM()
+		save.hideP()
 		print(save.cookie)
 	else:
 		save.hideC()

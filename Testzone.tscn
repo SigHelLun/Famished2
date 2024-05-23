@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://0yml7oig55p5"]
+[gd_scene load_steps=22 format=3 uid="uid://0yml7oig55p5"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="2_txwbf"]
 [ext_resource type="Texture2D" uid="uid://mfndhx6ey3b0" path="res://GasStationTextures/Ceramic-Floor-Tiles-3.jpg" id="3_pmsjj"]
@@ -7,9 +7,10 @@
 [ext_resource type="PackedScene" uid="uid://becse8d65e26c" path="res://Items/item.tscn" id="7_ycv0v"]
 [ext_resource type="PackedScene" uid="uid://cyqph2gs5lfw3" path="res://Items/Item2.tscn" id="8_qppgn"]
 [ext_resource type="PackedScene" uid="uid://b1vj83hsq7rr7" path="res://Items/clerktest.tscn" id="8_udaqt"]
-[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="8_xnbaj"]
+[ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="8_xnbaj"]
 [ext_resource type="PackedScene" uid="uid://cl4yjtd10nyv2" path="res://endings/ending.tscn" id="9_gn80r"]
 [ext_resource type="PackedScene" uid="uid://crib5ddaopowf" path="res://Items/car.tscn" id="10_pmhnv"]
+[ext_resource type="PackedScene" uid="uid://c0u6be6rrr7qj" path="res://Items/cookie.tscn" id="11_yhu45"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_kmchk"]
 
@@ -106,5 +107,8 @@ promptMessege = "Lay thy food here"
 
 [node name="car" parent="." instance=ExtResource("10_pmhnv")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.58526, 1.73378, 4.47547)
+
+[node name="cookie" parent="." instance=ExtResource("11_yhu45")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.15831, 1.16546, -6.95837)
 
 [connection signal="tree_entered" from="player" to="car" method="_on_player_tree_entered"]

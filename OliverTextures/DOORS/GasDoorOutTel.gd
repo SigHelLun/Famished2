@@ -21,3 +21,4 @@ func GasDoor(body):
 		get_tree().change_scene_to_file("res://GasStation.tscn")
 	else:
 		get_tree().change_scene_to_file("res://MainMap.tscn")
+		save.StoreT()

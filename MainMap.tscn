@@ -192,7 +192,7 @@ data = {
 metadata/_editor_floor_ = Vector3(0, 0, 0)
 
 [node name="player" parent="." instance=ExtResource("1_xfn1s")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.38177, 1.43263, -49.2449)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0828474, 1.433, 96.7825)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="player"]
 environment = SubResource("Environment_jlspu")
@@ -285,7 +285,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0434761, 0.261226, 0.084085
 
 [node name="BarrierLeft" type="MeshInstance3D" parent="Barriers"]
 transform = Transform3D(0.01, 0, 0, 0, 10, 0, 0, 0, 34.0285, -36.0554, 5, 25.6114)
-visible = false
 mesh = SubResource("BoxMesh_xulh2")
 skeleton = NodePath("")
 
@@ -2080,13 +2079,16 @@ stream = ExtResource("27_ym7d7")
 autoplay = true
 
 [node name="Kitchen" type="Marker3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6979, 2.74571, -83.3369)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6979, 2.27229, -82.2249)
 
 [node name="Window" parent="." instance=ExtResource("28_tl4fa")]
 transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, 26.3369, 2.5889, -81.9876)
 
 [node name="Main" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.692982, 1.88631, 95.9254)
+
+[node name="Store" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4612, 1.7862, 15.0569)
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]
