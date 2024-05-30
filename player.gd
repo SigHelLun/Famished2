@@ -1,8 +1,8 @@
 extends CharacterBody3D
 
-
 const SPEED = 5.0
-const JUMP_VELOCITY = 3
+const SPRINT_MULTIPLIER = 2.0
+const JUMP_VELOCITY = 3.0
 
 var gravity: float = ProjectSettings.get_setting("physics/3d/default_gravity")
 @onready var neck := $Neck
@@ -29,25 +29,30 @@ func _physics_process(delta: float) -> void:
 		breath.play()
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
+
+	var speed = SPEED
+	if Input.is_action_pressed("sprint"):
+		speed *= SPRINT_MULTIPLIER
+		breath.play()
+
 	var input_dir := Input.get_vector("move_left", "move_right", "move_forward", "move_back")
 	var direction = (neck.transform.basis * Vector3(input_dir.x, 0, input_dir.y)).normalized()
 	if direction:
 		anim.play("walkingInplace")
-#		walkMP3.play()
-		velocity.x = direction.x * SPEED
-		velocity.z = direction.z * SPEED
+#        walkMP3.play()
+		velocity.x = direction.x * speed
+		velocity.z = direction.z * speed
 	else:
 		anim.play("idle_001")  # Play the idle animation
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		velocity.z = move_toward(velocity.z, 0, SPEED)
 		walk.play()
+	
 	move_and_slide()
-
 
 func _on_car_body_entered(_body):
 	print("death")
 	get_tree().change_scene_to_file("res://endings/death.tscn")
-
 
 func _on_car_2_body_entered(_body):
 	print("death")

@@ -62,7 +62,7 @@ mesh = SubResource("PlaneMesh_fivpw")
 shape = SubResource("ConcavePolygonShape3D_a1jve")
 
 [node name="Item1" parent="Floor" instance=ExtResource("8_udaqt")]
-transform = Transform3D(0.111111, 0, 0, 0, 1, 0, 0, 0, 0.0833333, -0.698997, 0, 0.67989)
+transform = Transform3D(0.111106, -0.00955252, -2.02857e-05, 0.00106141, 0.999954, 5.87825e-05, 2.6298e-05, -0.000707683, 0.0833333, -0.698997, 0, 0.67989)
 promptMessege = "Talk to Clerk"
 
 [node name="Counter" type="MeshInstance3D" parent="Floor"]

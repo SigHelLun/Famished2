@@ -25,9 +25,6 @@ func endings(_body):
 	if save.cookie == true:
 		print('Cookie')
 		get_tree().change_scene_to_file("res://endings/CookieEnd.tscn")
-
-
-		
 	if save.Meat == false && save.pizza == false && save.cookie == false:
 		print('no ending req')
 		promptMessege = "Thus require nurishment to use this appliance"

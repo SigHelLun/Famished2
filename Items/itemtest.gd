@@ -18,6 +18,7 @@ func pickUp(body):
 	save.item1Pick()
 	if save.pizza == false:
 		save.showP()
+		save.hideC()
 		print(save.pizza)
 		save.item1Pick()
 	else:
