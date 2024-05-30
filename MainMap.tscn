@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures (MARTEN)/other/ashpahlttexturepLAYER.jpg" id="14_yci72"]
 [ext_resource type="PackedScene" uid="uid://dud64ogm67n4i" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
 [ext_resource type="Texture2D" uid="uid://ckft8rx0j5jmn" path="res://Textures (MARTEN)/other/treebackground.png" id="17_su3rx"]
-[ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="18_64x5w"]
+[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="18_64x5w"]
 [ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="18_qgxjo"]
 [ext_resource type="Texture2D" uid="uid://mae4iy7pdyq" path="res://Textures(Sigurd)/1461032_l-2912683034-removebg-preview.png" id="20_uu2p8"]
 [ext_resource type="PackedScene" uid="uid://crib5ddaopowf" path="res://Items/car.tscn" id="24_widbp"]
@@ -282,6 +282,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.999
 
 [node name="Barriers" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0434761, 0.261226, 0.0840859)
+visible = false
 
 [node name="BarrierLeft" type="MeshInstance3D" parent="Barriers"]
 transform = Transform3D(0.01, 0, 0, 0, 10, 0, 0, 0, 34.0285, -36.0554, 5, 25.6114)
