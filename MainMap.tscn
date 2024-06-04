@@ -22,7 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://d34myjv63dn1c" path="res://Textures (MARTEN)/other/ashpahlttexturepLAYER.jpg" id="14_yci72"]
 [ext_resource type="PackedScene" uid="uid://dud64ogm67n4i" path="res://HouseDoorOutside.tscn" id="16_fqyu0"]
 [ext_resource type="Texture2D" uid="uid://ckft8rx0j5jmn" path="res://Textures (MARTEN)/other/treebackground.png" id="17_su3rx"]
-[ext_resource type="PackedScene" path="res://Items/doorbase.tscn" id="18_64x5w"]
+[ext_resource type="PackedScene" uid="uid://6v4m4c15cyo3" path="res://Items/doorbase.tscn" id="18_64x5w"]
 [ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="18_qgxjo"]
 [ext_resource type="Texture2D" uid="uid://mae4iy7pdyq" path="res://Textures(Sigurd)/1461032_l-2912683034-removebg-preview.png" id="20_uu2p8"]
 [ext_resource type="PackedScene" uid="uid://crib5ddaopowf" path="res://Items/car.tscn" id="24_widbp"]
@@ -2083,13 +2083,20 @@ autoplay = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 30.6979, 2.27229, -82.2249)
 
 [node name="Window" parent="." instance=ExtResource("28_tl4fa")]
-transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, 26.3369, 2.5889, -81.9876)
+transform = Transform3D(-1.5, 0, -2.26494e-07, 0, 1.5, 0, 2.26494e-07, 0, -1.5, 26.3369, 2.90754, -81.9876)
 
 [node name="Main" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.692982, 1.88631, 95.9254)
 
 [node name="Store" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4612, 1.7862, 15.0569)
+
+[node name="SpotLight3D2" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.32305e-08, -0.988998, -0.14793, -6.46624e-09, -0.14793, 0.988998, -1, 4.37114e-08, 2.22045e-15, 26.7279, 3.32656, -82.205)
+light_color = Color(0.988235, 1, 0.776471, 1)
+light_energy = 3.48
+light_indirect_energy = 6.318
+light_volumetric_fog_energy = 19.14
 
 [connection signal="body_entered" from="car" to="player" method="_on_car_body_entered"]
 [connection signal="body_entered" from="car2" to="player" method="_on_car_2_body_entered"]
