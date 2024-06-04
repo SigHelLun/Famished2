@@ -9,22 +9,17 @@ To play the game you can either visit out itch page.
 Or you can install the godot project and then play it.
 
 ### Installing
-```
 Go to to this page
 ![FAMISHED 2](https://famished-developers.itch.io/famished-2)
-```
-
 Press download on the version of your liking
 
-```
 execute the exe
-...
 
 ## Authors
 
-* **SigHelLun** - [PurpleBooth]([https://github.com/PurpleBooth](https://github.com/SigHelLun))
-* **OliveSeal** - [PurpleBooth]([https://github.com/PurpleBooth](https://github.com/OliveSeal ))
-* **martenjuus** - [PurpleBooth]([https://github.com/PurpleBooth]((https://github.com/martenjuus))
+**SigHelLun** - [PurpleBooth]([https://github.com/PurpleBooth](https://github.com/SigHelLun))
+**OliveSeal** - [PurpleBooth]([https://github.com/PurpleBooth](https://github.com/OliveSeal ))
+**martenjuus** - [PurpleBooth]([https://github.com/PurpleBooth]((https://github.com/martenjuus))
 
 ## Acknowledgments
 
