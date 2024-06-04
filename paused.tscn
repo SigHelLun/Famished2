@@ -17,7 +17,6 @@ font_size = 41
 
 [node name="paused" type="Control"]
 process_mode = 3
-visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -82,5 +81,20 @@ offset_bottom = 79.0
 text = "quit to desktop :3"
 label_settings = SubResource("LabelSettings_l4t38")
 
+[node name="quit2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "
+"
+
+[node name="rahh" type="Label" parent="CenterContainer/VBoxContainer/quit2"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = -15.0
+offset_right = 423.0
+offset_bottom = 51.0
+text = "go back to main menu :3"
+label_settings = SubResource("LabelSettings_l4t38")
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/back2game" to="." method="_on_back_2_game_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/quit2" to="." method="_on_quit_pressed"]
