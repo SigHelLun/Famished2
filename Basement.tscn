@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://d2gbonb0h1utt"]
+[gd_scene load_steps=31 format=3 uid="uid://d2gbonb0h1utt"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5isct"]
 [ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_pv48s"]
@@ -64,6 +64,14 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_bq3ic"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_o54id"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tnatl"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ylitw"]
+data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_6ouq7"]
 
@@ -633,7 +641,7 @@ promptMessege = "Look inside fridge"
 [node name="Barriers" type="Node3D" parent="."]
 
 [node name="barrier1" type="MeshInstance3D" parent="Barriers"]
-transform = Transform3D(-2.18557e-06, -1, -8.74228e-07, 0, -4.37114e-08, 20, -50, 4.37114e-08, 3.82137e-14, 13, 20, 20)
+transform = Transform3D(-2.40413e-06, -1, -8.74228e-07, 0, -4.37114e-08, 20, -55, 4.37114e-08, 3.82137e-14, 13, 20, 7.85299)
 visible = false
 mesh = SubResource("PlaneMesh_tr8tb")
 
@@ -643,7 +651,7 @@ mesh = SubResource("PlaneMesh_tr8tb")
 shape = SubResource("ConcavePolygonShape3D_kln74")
 
 [node name="barrier2" type="MeshInstance3D" parent="Barriers"]
-transform = Transform3D(-8.74228e-07, 1, 0, -20, -4.37114e-08, 0, 0, 0, 50, -13, 20, 20)
+transform = Transform3D(-8.74228e-07, 1, 0, -20, -4.37114e-08, 0, 0, 0, 55, -13, 20, 16.515)
 visible = false
 mesh = SubResource("PlaneMesh_sfp2f")
 
@@ -653,10 +661,24 @@ mesh = SubResource("PlaneMesh_sfp2f")
 shape = SubResource("ConcavePolygonShape3D_tmvv4")
 
 [node name="barrier3" type="MeshInstance3D" parent="Barriers"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 68.5117)
+transform = Transform3D(13.05, 0, 0, 0, -4.37114e-07, 10, 0, -10, -4.37114e-07, 0.0567565, 9.96012, 50.1257)
+visible = false
 mesh = SubResource("PlaneMesh_bq3ic")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/barrier3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/barrier3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_o54id")
+
 [node name="barrier4" type="MeshInstance3D" parent="Barriers"]
+transform = Transform3D(13.56, 0, 0, 0, -4.37114e-08, -4.24, 0, 1, -1.85336e-07, 0, 4.23995, -38.464)
+visible = false
+mesh = SubResource("PlaneMesh_tnatl")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Barriers/barrier4"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Barriers/barrier4/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_ylitw")
 
 [node name="doorbase" parent="." instance=ExtResource("6_i27wp")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.24891, 17.0206, 45.4176)
