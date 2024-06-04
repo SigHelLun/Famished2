@@ -17,7 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://g2ds1phc4igu" path="res://Joker.tscn" id="15_nraoq"]
 [ext_resource type="PackedScene" uid="uid://n3w85x87lydd" path="res://OliverTextures/DOORS/GasDoorOut.tscn" id="16_vemvo"]
 [ext_resource type="PackedScene" path="res://pause_gui.tscn" id="17_bwm3v"]
-[ext_resource type="PackedScene" uid="uid://fiqrtq5cof5k" path="res://maxwell.tscn" id="18_sa35g"]
+[ext_resource type="PackedScene" uid="uid://blvhpefmweqbt" path="res://maxwellbetter.tscn" id="18_25dq3"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_tbbk6"]
 albedo_texture = ExtResource("1_62qww")
@@ -1153,14 +1153,14 @@ transform = Transform3D(59.92, 0, 0, 0, 15.965, 0, 0, 0, 0.27, 0, 6.70324, -5.28
 shape = SubResource("BoxShape3D_871ht")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="InvisibleWAlls"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -11.7649, 0, -46.5755)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -19.181, 0, -46.5755)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWAlls/StaticBody3D5"]
 transform = Transform3D(59.92, 0, 0, 0, 15.965, 0, 0, 0, 0.27, 0, 6.70324, -5.28767)
 shape = SubResource("BoxShape3D_871ht")
 
 [node name="StaticBody3D6" type="StaticBody3D" parent="InvisibleWAlls"]
-transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0.700802, 0, -46.5755)
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 1.33062, 0, -46.5755)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="InvisibleWAlls/StaticBody3D6"]
 transform = Transform3D(59.92, 0, 0, 0, 15.965, 0, 0, 0, 0.27, 0, 6.70324, -5.28767)
@@ -1223,5 +1223,5 @@ light_size = 0.138
 
 [node name="PauseGUI" parent="." instance=ExtResource("17_bwm3v")]
 
-[node name="Maxwell" parent="." instance=ExtResource("18_sa35g")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0643547, -2.52382e-06, 28.9335)
+[node name="StaticBody3D2" parent="." instance=ExtResource("18_25dq3")]
+transform = Transform3D(0.504678, 0, 0.863307, 0, 1, 0, -0.863307, 0, 0.504678, -12.9917, 2.14539e-06, -43.4051)
