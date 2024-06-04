@@ -5,13 +5,13 @@ This project is a game called famished 2, it is mostly for fun.
 ## Getting Started
 
 To play the game you can either visit out itch page. 
-![FAMISHED 2](https://famished-developers.itch.io/famished-2)
+
+[![Famished 2](https://img.itch.zone/aW1nLzg2Mjg2NzIucG5n/315x250%23c/VlaFGx.png)](https://famished-developers.itch.io/famished-2)
 Or you can install the godot project and then play it.
 
 ### Installing
 Go to to this page
 [![Famished 2](https://img.itch.zone/aW1nLzg2Mjg2NzIucG5n/315x250%23c/VlaFGx.png)](https://famished-developers.itch.io/famished-2)
-You can also visit the page directly by clicking [here](https://famished-developers.itch.io/famished-2).
 Press download on the version of your liking
 
 execute the exe
