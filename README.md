@@ -17,9 +17,9 @@ execute the exe
 
 ## Authors
 
-**SigHelLun** - [PurpleBooth]([https://github.com/PurpleBooth](https://github.com/SigHelLun))
-**OliveSeal** - [PurpleBooth]([https://github.com/PurpleBooth](https://github.com/OliveSeal ))
-**martenjuus** - [PurpleBooth]([https://github.com/PurpleBooth]((https://github.com/martenjuus))
+**SigHelLun** - ![SigHelLun](https://github.com/SigHelLun))
+**OliveSeal** - ![Oliveseal](https://github.com/OliveSeal ))
+**martenjuus** ![martenjuus](https://github.com/martenjuus))
 
 ## Acknowledgments
 
