@@ -11,6 +11,7 @@ Or you can install the godot project and then play it.
 ### Installing
 Go to to this page
 ![FAMISHED 2](https://famished-developers.itch.io/famished-2)
+<iframe frameborder="0" src="https://itch.io/embed/2749272?border_width=5&amp;bg_color=292828&amp;fg_color=ffffff&amp;link_color=fa5c5c&amp;border_color=bebebe" width="560" height="175"><a href="https://famished-developers.itch.io/famished-2">Famished 2 by Famished Developers</a></iframe>
 Press download on the version of your liking
 
 execute the exe
