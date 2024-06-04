@@ -1,5 +1,6 @@
-[gd_scene load_steps=29 format=3 uid="uid://d2gbonb0h1utt"]
+[gd_scene load_steps=30 format=3 uid="uid://d2gbonb0h1utt"]
 
+[ext_resource type="PackedScene" uid="uid://d0bq83cwi0wk" path="res://pause_gui.tscn" id="1_0biha"]
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5isct"]
 [ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_pv48s"]
 [ext_resource type="Texture2D" uid="uid://cxi7v0n53pwfo" path="res://Textures(Sigurd)/dark-stone-surface-2-2548818658.jpg" id="2_1s5e5"]
@@ -74,6 +75,8 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
 
 [node name="basement" type="Node3D"]
+
+[node name="PauseGUI" parent="." instance=ExtResource("1_0biha")]
 
 [node name="player" parent="." instance=ExtResource("1_5isct")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37465, 16.9322, 41.7226)
