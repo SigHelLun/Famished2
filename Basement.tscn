@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://d2gbonb0h1utt"]
+[gd_scene load_steps=29 format=3 uid="uid://d2gbonb0h1utt"]
 
 [ext_resource type="PackedScene" uid="uid://c0x1iwtno5yx1" path="res://player.tscn" id="1_5isct"]
 [ext_resource type="Texture2D" uid="uid://beq0sy3jsvfih" path="res://Textures(Sigurd)/Mud+cracked+dirt+soil+ground+seamless+texture+2048x2048-3327623845.jpg" id="1_pv48s"]
@@ -72,11 +72,6 @@ data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ylitw"]
 data = PackedVector3Array(1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, -1, 1, 0, -1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_6ouq7"]
-
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_vpkux"]
-data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
 
 [node name="basement" type="Node3D"]
 
@@ -689,46 +684,6 @@ transform = Transform3D(1, 0, 0, 0, -0.997699, 0.0678064, 0, -0.0678064, -0.9976
 light_energy = 19.114
 light_indirect_energy = 1.485
 light_volumetric_fog_energy = 3.424
-
-[node name="wall" type="MeshInstance3D" parent="."]
-transform = Transform3D(35.736, 0, 0, 0, 5.49375, 0, 0, 0, 1, 0.147837, 2.78857, -42.1727)
-visible = false
-mesh = SubResource("BoxMesh_6ouq7")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="wall"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_vpkux")
-
-[node name="wall2" type="MeshInstance3D" parent="."]
-transform = Transform3D(35.736, 0, 0, 0, 5.49375, 0, 0, 0, 1, 0.147837, 2.78857, 52.5152)
-visible = false
-mesh = SubResource("BoxMesh_6ouq7")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="wall2"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall2/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_vpkux")
-
-[node name="wall3" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.33897e-06, 0, 1, 0, 5.49375, 0, -99.264, 0, -4.37114e-08, 17.0637, 2.78857, 4.34105)
-visible = false
-mesh = SubResource("BoxMesh_6ouq7")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="wall3"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall3/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_vpkux")
-
-[node name="wall4" type="MeshInstance3D" parent="."]
-transform = Transform3D(-4.33897e-06, 0, 1, 0, 5.49375, 0, -99.264, 0, -4.37114e-08, -17.2685, 2.78857, 4.34105)
-visible = false
-mesh = SubResource("BoxMesh_6ouq7")
-
-[node name="StaticBody3D" type="StaticBody3D" parent="wall4"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="wall4/StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_vpkux")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("7_msk62")
