@@ -18,5 +18,8 @@ func get_prompt():
 func dropItem(body):
 	print(body.name, " Item2!")
 	save.item1Drop()
-
+	if save.Rat == false:
+		save.showR()
+	else:
+		save.hideR()
 
